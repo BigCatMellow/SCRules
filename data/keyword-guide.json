@@ -1,0 +1,244 @@
+{
+  "intro": {
+    "title": "Part XI as a play glossary",
+    "subtitle": "Use the grouped keyword sheets first, then open the full alphabetical glossary when you need exact wording or a less common term."
+  },
+  "groups": [
+    {
+      "title": "Movement and Position",
+      "summary": "Terms that decide how units move, arrive, reposition, and interact with the battlefield.",
+      "keywords": [
+        [
+          "PLACE",
+          "part-11::place"
+        ],
+        [
+          "ACCESS POINT",
+          "part-11::access-point"
+        ],
+        [
+          "ENTRY EDGE",
+          "part-11::entry-edge"
+        ],
+        [
+          "FLYING",
+          "part-11::flying"
+        ],
+        [
+          "RESERVES",
+          "part-11::reserves"
+        ],
+        [
+          "ZONE OF INFLUENCE",
+          "part-11::zone-of-influence"
+        ],
+        [
+          "LEADING MODEL",
+          "part-11::leading-model"
+        ],
+        [
+          "WHOLLY WITHIN",
+          "part-11::wholly-within"
+        ],
+        [
+          "WITHIN",
+          "part-11::within"
+        ]
+      ]
+    },
+    {
+      "title": "Combat and Damage",
+      "summary": "Terms that change how attacks hit, wound, bypass defence, or spill into other targets.",
+      "keywords": [
+        [
+          "PIERCE",
+          "part-11::pierce"
+        ],
+        [
+          "PRECISION",
+          "part-11::precision"
+        ],
+        [
+          "PINPOINT",
+          "part-11::pinpoint"
+        ],
+        [
+          "CRITICAL HIT",
+          "part-11::critical-hit"
+        ],
+        [
+          "IMPACT",
+          "part-11::impact"
+        ],
+        [
+          "INSTANT",
+          "part-11::instant"
+        ],
+        [
+          "ANTI-EVADE",
+          "part-11::anti-evade"
+        ],
+        [
+          "SPILLOVER",
+          "part-11::spillover"
+        ],
+        [
+          "BURST FIRE",
+          "part-11::burst-fire"
+        ],
+        [
+          "CONCENTRATED FIRE",
+          "part-11::concentrated-fire"
+        ]
+      ]
+    },
+    {
+      "title": "Statuses and Defensive States",
+      "summary": "Terms that change what a unit counts as, what it can do, and what can target it.",
+      "keywords": [
+        [
+          "HIDDEN",
+          "part-11::hidden"
+        ],
+        [
+          "BURROWED",
+          "part-11::burrowed"
+        ],
+        [
+          "SHIELDED",
+          "part-11::shielded"
+        ],
+        [
+          "READY",
+          "part-11::ready"
+        ],
+        [
+          "LOCKED IN",
+          "part-11::locked-in"
+        ],
+        [
+          "STATUS",
+          "part-11::status"
+        ],
+        [
+          "TOUGH",
+          "part-11::tough"
+        ],
+        [
+          "DODGE",
+          "part-11::dodge"
+        ]
+      ]
+    },
+    {
+      "title": "Engagement and Control",
+      "summary": "Terms that govern melee state, objective control, and battlefield presence.",
+      "keywords": [
+        [
+          "ENGAGED",
+          "part-11::engaged"
+        ],
+        [
+          "UNENGAGED",
+          "part-11::unengaged"
+        ],
+        [
+          "ENGAGEMENT RANGE",
+          "part-11::engagement-range"
+        ],
+        [
+          "TACTICAL MASS",
+          "part-11::tactical-mass"
+        ],
+        [
+          "MISSION MARKERS",
+          "part-11::mission-markers"
+        ],
+        [
+          "CURRENT SUPPLY VALUE",
+          "part-11::current-supply-value"
+        ],
+        [
+          "AVAILABLE SUPPLY",
+          "part-11::available-supply"
+        ],
+        [
+          "SUPPLY VALUE",
+          "part-11::supply-value"
+        ]
+      ]
+    },
+    {
+      "title": "Targeting, Visibility, and Terrain",
+      "summary": "Terms that govern what can be seen, what blocks sight, and how terrain changes legality.",
+      "keywords": [
+        [
+          "LINE OF SIGHT (LoS)",
+          "part-11::line-of-sight-los"
+        ],
+        [
+          "VISIBLE",
+          "part-11::visible"
+        ],
+        [
+          "BLOCKING TERRAIN",
+          "part-11::blocking-terrain"
+        ],
+        [
+          "EFFECTIVE SIZE",
+          "part-11::effective-size"
+        ],
+        [
+          "IMPASSABLE TERRAIN",
+          "part-11::impassable-terrain"
+        ],
+        [
+          "GRASS",
+          "part-11::grass"
+        ],
+        [
+          "ON CREEP",
+          "part-11::on-creep"
+        ]
+      ]
+    },
+    {
+      "title": "Army Building and Card Logic",
+      "summary": "Terms that matter before the game or when reading unit, faction, and tactical card rules.",
+      "keywords": [
+        [
+          "ARMY SLOT",
+          "part-11::army-slot"
+        ],
+        [
+          "FACTION TAGS",
+          "part-11::faction-tags"
+        ],
+        [
+          "COMBAT TAGS",
+          "part-11::combat-tags"
+        ],
+        [
+          "SPECIAL ABILITY",
+          "part-11::special-ability"
+        ],
+        [
+          "SPECIALIST",
+          "part-11::specialist"
+        ],
+        [
+          "SUMMON",
+          "part-11::summon"
+        ],
+        [
+          "RESPAWN",
+          "part-11::respawn"
+        ],
+        [
+          "STAY IN PLAY",
+          "part-11::stay-in-play"
+        ]
+      ]
+    }
+  ]
+}

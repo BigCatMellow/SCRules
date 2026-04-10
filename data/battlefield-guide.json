@@ -1,0 +1,230 @@
+{
+  "intro": {
+    "title": "Part VII as a battlefield manual",
+    "subtitle": "Use this section to answer sight, cover, engagement, and marker/token questions during play. Open the full Part VII text below when you need the exact source wording."
+  },
+  "foundations": [
+    {
+      "title": "Line of Sight Core",
+      "ref": "7.1",
+      "target": "part-7::7-1-line-of-sight",
+      "summary": "Trace a straight line from any part of the acting base to any part of the target base using the game\u2019s top-down 2D system.",
+      "bullets": [
+        "Start with visibility first, then check whether terrain actually blocks the shot.",
+        "Base posture and miniature silhouette do not matter; the base is what the rules see."
+      ]
+    },
+    {
+      "title": "Cover and Blocking Terrain",
+      "ref": "7.1.1\u20137.1.2",
+      "target": "part-7::7-1-line-of-sight::7-1-1-cover",
+      "summary": "Terrain only matters when it meets the cover requirements. A line crossing terrain does not automatically mean the target is hidden.",
+      "bullets": [
+        "Use cover to decide whether terrain gives Full Cover, Direct Cover, or no meaningful block at all.",
+        "Effective Size and elevation decide whether a terrain piece actually matters for the shot."
+      ]
+    },
+    {
+      "title": "Engagement State",
+      "ref": "7.2",
+      "target": "part-7::7-2-engagement-and-engagement-range",
+      "summary": "Engagement governs who is tied up in combat, who can shoot freely, and who controls combat space.",
+      "bullets": [
+        "Ask first whether the unit is engaged before checking many shooting and movement restrictions.",
+        "Engagement is one of the fastest ways to make a target illegal even when it is visible."
+      ]
+    }
+  ],
+  "systems": [
+    {
+      "title": "Line of Sight",
+      "ref": "7.1",
+      "target": "part-7::7-1-line-of-sight",
+      "phaseClass": "system-battle",
+      "purpose": "Decide whether a model can see a target and whether a shot is even legal to start.",
+      "actions": [
+        "Trace line",
+        "Check terrain",
+        "Confirm visibility"
+      ],
+      "notes": [
+        "Use top-down base-to-base tracing.",
+        "Terrain in the line only matters when the cover rules say it matters."
+      ],
+      "procedures": [
+        {
+          "title": "Visibility Check",
+          "ref": "7.1",
+          "target": "part-7::7-1-line-of-sight",
+          "what": "The core test for whether an acting model can see a target model.",
+          "when": "Whenever a shot, ability, or rule requires line of sight.",
+          "how": [
+            "Trace a straight line from any part of the acting model\u2019s base to any part of the target model\u2019s base.",
+            "Check whether the line passes through blocking terrain.",
+            "If it does, use the cover rules to decide whether the terrain actually blocks the shot or whether the target stays visible."
+          ],
+          "cannot": [
+            "Assume any crossed terrain automatically blocks the shot.",
+            "Use miniature pose, weapon barrel, or head position instead of the base."
+          ],
+          "see": [
+            "7.1.1 Cover",
+            "7.1.2 Verticality and Effective Size",
+            "11 EFFECTIVE SIZE",
+            "11 BLOCKING TERRAIN"
+          ]
+        },
+        {
+          "title": "Terrain Footprint",
+          "ref": "7.1",
+          "target": "part-7::7-1-line-of-sight",
+          "what": "The area a terrain piece occupies for sight and cover checks.",
+          "when": "Any time a line crosses terrain or a model interacts with openings and interiors.",
+          "how": [
+            "Use the terrain\u2019s physical base, or if it has no base, the outermost solid edges viewed from above.",
+            "Treat windows, doorways, gaps, and interiors according to what players agreed during battlefield setup.",
+            "Keep the same footprint ruling consistent for the whole game."
+          ],
+          "cannot": [
+            "Change the footprint ruling mid-game.",
+            "Assume movement openings and line-of-sight openings are always the same thing."
+          ],
+          "see": [
+            "4.6 Gap Clearance",
+            "9.3 Battlefield Setup"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cover and Effective Size",
+      "ref": "7.1.1\u20137.1.4",
+      "target": "part-7::7-1-line-of-sight::7-1-1-cover",
+      "phaseClass": "system-battle",
+      "purpose": "Decide whether terrain blocks the shot completely, partially, or not at all.",
+      "actions": [
+        "Full Cover",
+        "Direct Cover",
+        "High Ground",
+        "Flying"
+      ],
+      "notes": [
+        "Sight and cover are linked; terrain crossing alone is not enough.",
+        "High ground and effective size are where most arguments happen."
+      ],
+      "procedures": [
+        {
+          "title": "Cover Decision",
+          "ref": "7.1.1",
+          "target": "part-7::7-1-line-of-sight::7-1-1-cover",
+          "what": "The test that decides whether terrain gives Full Cover, Direct Cover, or no block.",
+          "when": "After the line-of-sight trace crosses terrain.",
+          "how": [
+            "Check whether the terrain and target relationship meets the Full Cover rule.",
+            "If not, check whether it meets the Direct Cover rule.",
+            "If neither applies, the target remains visible despite the terrain crossing."
+          ],
+          "cannot": [
+            "Skip the cover step and declare the target hidden immediately.",
+            "Ignore effective size when checking whether terrain really matters."
+          ],
+          "see": [
+            "7.1.2 Verticality and Effective Size",
+            "7.1.3 High Ground Cover",
+            "7.1.4 Flying Units and Cover"
+          ]
+        },
+        {
+          "title": "High Ground Reading",
+          "ref": "7.1.2\u20137.1.3",
+          "target": "part-7::7-1-line-of-sight::7-1-3-high-ground-cover",
+          "what": "The part of the cover system that determines how elevation changes visibility and protection.",
+          "when": "When the acting model and target are on different elevations or terrain pieces interact with height.",
+          "how": [
+            "Check the model and terrain effective sizes first.",
+            "Then apply the specific high-ground cover rule if the target would otherwise benefit from terrain.",
+            "Keep the 2D tracing method, then use height rules only where the cover text calls for them."
+          ],
+          "see": [
+            "11 EFFECTIVE SIZE",
+            "11 HIGH GROUND COVER"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Engagement and Engagement Range",
+      "ref": "7.2",
+      "target": "part-7::7-2-engagement-and-engagement-range",
+      "phaseClass": "system-battle",
+      "purpose": "Determine when units are tied up in combat and when engagement-based restrictions apply.",
+      "actions": [
+        "1\" range",
+        "Ground units",
+        "Restrictions"
+      ],
+      "notes": [
+        "Always ask whether a unit is engaged before checking many assault and shooting questions.",
+        "One engaged model can make the whole unit count as engaged under the rules framework."
+      ],
+      "procedures": [
+        {
+          "title": "Engagement Check",
+          "ref": "7.2",
+          "target": "part-7::7-2-engagement-and-engagement-range",
+          "what": "The test for whether enemy units are in engagement range and therefore locked into combat logic.",
+          "when": "During movement, assault, combat, and any rules question that depends on being engaged or unengaged.",
+          "how": [
+            "Measure engagement range using the game\u2019s standard horizontal measurement method.",
+            "Apply the engagement restrictions for ground units, terrain, and elevation.",
+            "Then decide whether the unit counts as engaged for other rules."
+          ],
+          "cannot": [
+            "Assume ranged combat alone makes a unit engaged.",
+            "Ignore terrain and elevation restrictions when checking whether bases really engage."
+          ],
+          "see": [
+            "7.2.1 Engagement Restrictions",
+            "11 ENGAGED",
+            "11 UNENGAGED",
+            "11 ENGAGEMENT RANGE"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Markers and Tokens",
+      "ref": "7.3",
+      "target": "part-7::7-3-markers-and-tokens",
+      "phaseClass": "system-battle",
+      "purpose": "Handle mission markers, force fields, faction indicators, and other battlefield objects consistently.",
+      "actions": [
+        "Tokens",
+        "Markers",
+        "Measure to edge"
+      ],
+      "notes": [
+        "Tokens and markers are physical game objects with their own footprint logic.",
+        "Measure to their nearest physical edge unless a rule says otherwise."
+      ],
+      "procedures": [
+        {
+          "title": "Token Handling",
+          "ref": "7.3.1",
+          "target": "part-7::7-3-markers-and-tokens::7-3-1-tokens",
+          "what": "How battlefield tokens function as physical objects for measurement and interaction.",
+          "when": "When a rule creates or references a token such as a force field or indicator.",
+          "how": [
+            "Use the token\u2019s physical edge for range and placement checks.",
+            "Treat the token according to its own rule text plus the battlefield token rules.",
+            "Do not invent line-of-sight or cover behavior unless the token\u2019s rules give it."
+          ],
+          "see": [
+            "7.3.2 Markers",
+            "4.1 Measuring Distances"
+          ]
+        }
+      ]
+    }
+  ]
+}

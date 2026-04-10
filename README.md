@@ -25,3 +25,10 @@ Do **not** upload the zip itself.
 ## Local testing
 Because the app loads JSON with `fetch()`, test it through GitHub Pages or a local web server.
 Opening `index.html` directly with `file://` may not work in some browsers.
+
+
+Additional modular guide layers:
+- `data/play-guide.json` — Part VIII field manual
+- `data/battlefield-guide.json` — Part VII rulings layer
+- `data/movement-guide.json` — Part IV movement/coherency layer
+- `data/keyword-guide.json` — Part XI grouped glossary

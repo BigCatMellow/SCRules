@@ -55,3 +55,5 @@
 .rule-entry,.part-card,.sheet-card{scroll-margin-top:82px}
 @media (max-width:420px){.proc-row{grid-template-columns:1fr;gap:4px}.phase-spine-manual{grid-template-columns:1fr 1fr}.proc-title{font-size:14px}}
 @media (min-width:560px){.phase-spine-manual{grid-template-columns:repeat(3,1fr)}}
+
+.tag.system{background:#e9eff4;border-color:#d1dbe3;color:#506578}.battlefield-spine .phase-card.system{border-top-color:#93aac7}.keyword-chip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:10px}.keyword-chip{min-height:40px;padding:8px 10px;border:1px solid var(--line);background:var(--sheet-2);border-radius:2px;text-align:left;font-weight:700;color:var(--ink);cursor:pointer}.keyword-chip:active{transform:translateY(1px)}.keyword-toplinks{padding:10px}.manual-stack.keyword-groups{margin-bottom:10px}.manual-phase.system-battle .phase-action-row{justify-content:flex-start}.manual-phase .tag.system,.proc-card .tag.system{background:#ebf2f6;border-color:#d3dee6;color:#576d80}.proc-card.system .proc-head{background:linear-gradient(180deg,var(--sheet),var(--sheet-2))}.proc-card.system{border-color:var(--line)}

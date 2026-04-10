@@ -1,0 +1,293 @@
+{
+  "intro": {
+    "title": "Movement manual",
+    "subtitle": "Use this layer to resolve measuring, movement anchors, coherency, and pathing legality before you drop into the exact Part IV text."
+  },
+  "foundations": [
+    {
+      "ref": "4.1",
+      "title": "Measuring and Distance Logic",
+      "summary": "Everything in movement starts with correct measurement. Resolve distance from bases, not model poses, and measure horizontally for most battlefield checks.",
+      "target": "part-4::4-1-measuring-distances",
+      "bullets": [
+        "Measure in inches from the nearest point of one base to the nearest point of the other.",
+        "Ignore overhang, weapons, wings, and scenic details beyond the base rim.",
+        "Base-to-base contact is 0 inches.",
+        "Range, engagement, and most ability distances use top-down horizontal measurement."
+      ]
+    },
+    {
+      "ref": "4.2\u20134.4",
+      "title": "Unit Repositioning Logic",
+      "summary": "Most unit movement follows the same backbone: move the anchor model, then rebuild the unit legally around it.",
+      "target": "part-4::4-4-unit-coherency",
+      "bullets": [
+        "Choose and move the Leading Model first.",
+        "Rebuild the rest of the unit in legal coherency after that move.",
+        "Models must end wholly within the allowed distance and trace a legal coherency link.",
+        "If a model cannot be placed legally, it is removed."
+      ]
+    }
+  ],
+  "systems": [
+    {
+      "ref": "4.1",
+      "title": "Measuring Distances",
+      "purpose": "Resolve what is being measured, from where, and whether elevation changes the check.",
+      "target": "part-4::4-1-measuring-distances",
+      "actions": [
+        "Base to base",
+        "Horizontal only",
+        "Pre-measuring",
+        "Tokens and markers"
+      ],
+      "notes": [
+        "Measure from bases, not from the miniature pose.",
+        "Players may pre-measure before declaring actions.",
+        "Movement distance itself follows the action being performed, but most range checks are horizontal."
+      ],
+      "procedures": [
+        {
+          "ref": "4.1",
+          "title": "Check a distance",
+          "target": "part-4::4-1-measuring-distances",
+          "what": "Determine the exact inches between models, markers, or terrain for legality or range.",
+          "when": "Any time a rule asks for range, engagement, or distance, or when players want to pre-measure before committing.",
+          "how": [
+            "Measure from the nearest point of one base to the nearest point of the other base or object edge.",
+            "Use the bottom of a flight stand as the base for measurement.",
+            "Ignore overhang, weapons, wings, and scenic details beyond the base rim.",
+            "If bases are touching, treat the distance as 0 inches."
+          ],
+          "cannot": [
+            "Measure from decorative model elements instead of the base.",
+            "Include vertical height in normal range and engagement checks."
+          ],
+          "ifFails": "If the measured distance is too great, the action or effect is not legal at that range.",
+          "see": [
+            "Within",
+            "Wholly Within",
+            "Engagement Range",
+            "Elevation"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "4.2",
+      "title": "Within vs. Wholly Within",
+      "purpose": "Resolve whether a base merely touches a legal area or must fit inside it completely.",
+      "target": "part-4::4-2-within-vs-wholly-within",
+      "actions": [
+        "Touching",
+        "Fully inside",
+        "Area limits"
+      ],
+      "notes": [
+        "Within is looser than wholly within.",
+        "Wholly within means the entire base must fit inside the required distance or area."
+      ],
+      "procedures": [
+        {
+          "ref": "4.2",
+          "title": "Check WITHIN",
+          "target": "part-4::4-2-within-vs-wholly-within",
+          "what": "Determine whether any part of a model base is close enough to count.",
+          "when": "Use when a rule says a model or unit must be WITHIN a distance.",
+          "how": [
+            "Measure to the required point, model, or area.",
+            "If any part of the base is inside the allowed distance, the model is within."
+          ],
+          "cannot": [
+            "Treat WITHIN as though the whole base must fit."
+          ],
+          "ifFails": "If no part of the base reaches the allowed area, the model is not within.",
+          "see": [
+            "Wholly Within",
+            "PLACE",
+            "Coherency"
+          ]
+        },
+        {
+          "ref": "4.2",
+          "title": "Check WHOLLY WITHIN",
+          "target": "part-4::4-2-within-vs-wholly-within",
+          "what": "Determine whether the entire base fits inside the required area or distance.",
+          "when": "Use when a rule says a model must be wholly within a distance or zone.",
+          "how": [
+            "Measure the required area first.",
+            "Confirm the entire base fits inside it with no part crossing the boundary."
+          ],
+          "cannot": [
+            "Count a base that merely clips the area edge."
+          ],
+          "ifFails": "If any part of the base extends beyond the limit, the model is not wholly within.",
+          "see": [
+            "Within",
+            "Deploy",
+            "Charge",
+            "Coherency"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "4.3",
+      "title": "The Leading Model",
+      "purpose": "Resolve which model acts as the movement anchor and why the rest of the unit follows it.",
+      "target": "part-4::4-3-the-leading-model",
+      "actions": [
+        "Anchor model",
+        "Move first",
+        "Rebuild around it"
+      ],
+      "notes": [
+        "The Leading Model is the movement anchor for the unit.",
+        "It does not need to be the front-most model unless another rule says so."
+      ],
+      "procedures": [
+        {
+          "ref": "4.3",
+          "title": "Use a Leading Model",
+          "target": "part-4::4-3-the-leading-model",
+          "what": "Anchor a unit reposition around one selected model.",
+          "when": "Whenever a unit uses a leading-model repositioning procedure.",
+          "how": [
+            "Choose the model that will act as the anchor for the reposition.",
+            "Move or place that model first according to the action being used.",
+            "Rebuild the rest of the unit around that model in legal coherency."
+          ],
+          "cannot": [
+            "Skip the anchor step and reposition the whole unit as one blob."
+          ],
+          "ifFails": "If the Leading Model cannot complete the action legally, the unit cannot complete the reposition through that attempt.",
+          "see": [
+            "Coherency",
+            "Move",
+            "Charge",
+            "Deploy"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "4.4",
+      "title": "Unit Coherency",
+      "purpose": "Resolve whether the unit finishes movement as one legal formation and what happens when it does not.",
+      "target": "part-4::4-4-unit-coherency",
+      "actions": [
+        "3 inches",
+        "Leading Model",
+        "Coherency link",
+        "Removal if illegal"
+      ],
+      "notes": [
+        "Coherency is checked after the reposition finishes.",
+        "The unit reforms around the Leading Model rather than stretching across the board."
+      ],
+      "procedures": [
+        {
+          "ref": "4.4",
+          "title": "Rebuild a unit in coherency",
+          "target": "part-4::4-4-unit-coherency",
+          "what": "Place the remaining models of a unit so the formation is legal after a reposition.",
+          "when": "After a unit moves, deploys, runs, charges, disengages, or otherwise repositions by a leading-model procedure.",
+          "how": [
+            "Move or place the Leading Model first.",
+            "Place the remaining models wholly within the required distance of that anchor, unless another rule changes it.",
+            "Ensure each model can trace a legal coherency link back through the unit.",
+            "Finish the full reposition before checking whether the unit is coherent."
+          ],
+          "cannot": [
+            "Use a long daisy chain that breaks the coherency-link logic.",
+            "Leave a model stranded without a legal final position."
+          ],
+          "ifFails": "Any model that cannot find a legal final position is removed.",
+          "see": [
+            "Leading Model",
+            "Coherency Link",
+            "Out of Coherency"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "4.5",
+      "title": "Directly Towards and Directly Away",
+      "purpose": "Resolve forced or required movement that has to follow a straight relationship to another point or model.",
+      "target": "part-4::4-5-directly-towards-directly-away",
+      "actions": [
+        "Straight line",
+        "Closest path",
+        "Relative position"
+      ],
+      "notes": [
+        "These phrases care about the relationship between starting point and destination.",
+        "They are most important when a rule forces movement or restricts where a model may end."
+      ],
+      "procedures": [
+        {
+          "ref": "4.5",
+          "title": "Move directly towards or away",
+          "target": "part-4::4-5-directly-towards-directly-away",
+          "what": "Resolve movement that must follow a direct relationship to a reference point, model, or unit.",
+          "when": "Whenever a rule instructs a model or unit to move directly towards or directly away.",
+          "how": [
+            "Identify the reference point or model.",
+            "Trace the straightest legal line that satisfies the direction requirement.",
+            "Move along that line for the instructed distance or until the rule stops the move."
+          ],
+          "cannot": [
+            "Curve the path to gain extra positioning advantages."
+          ],
+          "ifFails": "If no legal path satisfies the requirement, resolve only as far as the source rule allows or the move fails if the source rule requires full completion.",
+          "see": [
+            "Measuring Distances",
+            "Gap Clearance",
+            "Impassable Terrain"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "4.6",
+      "title": "Gap Clearance and Model Size",
+      "purpose": "Resolve whether the Leading Model can legally pass through a space, doorway, or terrain gap.",
+      "target": "part-4::4-6-gap-clearance-and-model-size",
+      "actions": [
+        "Physical fit",
+        "Path legality",
+        "Terrain gaps"
+      ],
+      "notes": [
+        "Gap legality is about whether the model could physically fit through the passage.",
+        "A gap that is passable for movement is not automatically open for line of sight."
+      ],
+      "procedures": [
+        {
+          "ref": "4.6",
+          "title": "Check a gap",
+          "target": "part-4::4-6-gap-clearance-and-model-size",
+          "what": "Determine whether a model may legally pass through a passage, gap, or opening during movement.",
+          "when": "Whenever a model path would take it through a narrow opening or terrain gap.",
+          "how": [
+            "Check the model size and base against the opening.",
+            "Confirm that the Leading Model can physically fit through the passage.",
+            "Apply any terrain or keyword exceptions that alter normal movement through the gap."
+          ],
+          "cannot": [
+            "Assume that because a gap looks open, the model may automatically pass through it.",
+            "Use a gap the Leading Model could not legally fit through and then rebuild the unit past it."
+          ],
+          "ifFails": "If the model cannot legally fit through the gap, that path is not legal.",
+          "see": [
+            "Blocking Terrain",
+            "Access Point",
+            "Leading Model",
+            "Coherency Link"
+          ]
+        }
+      ]
+    }
+  ]
+}

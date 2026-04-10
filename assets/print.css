@@ -1,5 +1,5 @@
 
-:root{--paper:#ffffff;--ink:#111;--muted:#5d6770;--line:#b8c0c7;--panel:#f4f6f7;--part:#e6ebef}
+:root{--paper:#ffffff;--ink:#111821;--muted:#62707c;--line:#c5ced6;--panel:#f5f8fa;--part:#e9eef2}
 *{box-sizing:border-box}
 body{margin:0;background:#fff;color:var(--ink);font:10.5pt/1.32 Arial, Helvetica, sans-serif}
 .book{width:min(860px,100% - 24px);margin:0 auto;padding:16px 0 28px}
@@ -8,10 +8,10 @@ h1{margin:0;font-size:24pt;line-height:1;text-transform:uppercase;letter-spacing
 .sub{color:var(--muted);font-size:10pt;margin-top:4px}
 .part{break-before:page;margin:0 0 14pt}
 .part:first-of-type{break-before:auto}
-.part-bar{background:var(--part,#e6ebef);color:#111;padding:7pt 10pt;font-size:10pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-top:1pt solid var(--line);border-bottom:1pt solid var(--line)}
+.part-bar{background:transparent;color:#17222b;padding:7pt 10pt;font-size:10pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-top:1pt solid var(--line);border-bottom:1pt solid var(--line)}
 .part-intro{padding:8pt 10pt;border:1px solid var(--line);border-top:none;background:var(--panel);color:var(--muted)}
 .rule{margin-top:10pt;border:1px solid var(--line);page-break-inside:avoid}
-.rule-title{padding:6pt 8pt;background:#eef2f4;font-weight:800}
+.rule-title{padding:6pt 8pt;background:transparent;border-bottom:1px solid var(--line);font-weight:800}
 .rule-prose{padding:8pt}
 .sub-rule{margin:8pt;border-top:1px dashed #ccc;padding-top:8pt}
 .sub-title{font-weight:800;font-size:9.5pt;margin-bottom:4pt}
@@ -25,4 +25,4 @@ h1{margin:0;font-size:24pt;line-height:1;text-transform:uppercase;letter-spacing
 .stack-label{font-size:7.5pt;letter-spacing:.08em;text-transform:uppercase;color:#555;font-weight:700}
 @page{margin:12mm}
 
-.inline-subhead{margin:8pt 0 4pt;padding:5pt 6pt;background:#eef2f4;border:1px solid var(--line);font-size:8.6pt;letter-spacing:.06em;text-transform:uppercase;font-weight:800}
+.inline-subhead{margin:8pt 0 4pt;padding:5pt 6pt;background:#f3f7f9;border:1px solid var(--line);font-size:8.6pt;letter-spacing:.06em;text-transform:uppercase;font-weight:800}

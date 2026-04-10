@@ -3,74 +3,499 @@
   "kicker": "Part XII",
   "title": "Quick Reference",
   "id": "part-12",
-  "color": "#4b8a86",
-  "intro": "This Part compiles the most frequently referenced rules, sequences and tables into a single location for quick reference during play. It is not a substitute for the full rules, but it should answer most questions that arise mid-game without the need to search through earlier Parts.",
+  "color": "#96a6b8",
+  "group": "reference",
+  "introRows": [
+    {
+      "type": "text",
+      "html": "This Part compiles the most frequently referenced rules, sequences and tables into a single location for quick reference during play. It is not a substitute for the full rules, but it should answer most questions that arise mid-game without the need to search through earlier Parts.",
+      "plain": "This Part compiles the most frequently referenced rules, sequences and tables into a single location for quick reference during play. It is not a substitute for the full rules, but it should answer most questions that arise mid-game without the need to search through earlier Parts."
+    }
+  ],
   "rules": [
     {
+      "id": "12-1-pre-game-protocol",
       "title": "12.1 Pre-Game Protocol",
-      "id": "121-pre-game-protocol",
-      "html": "• Select a <strong>Mission Card</strong>and a <strong><span class=\"kw\">Deployment</span>Card</strong>.<br/><br/>• Set <strong><span class=\"kw\">Mission Markers</span></strong>at the coordinates on the <strong><span class=\"kw\">Deployment</span>Card</strong>.<br/><br/>• Set Terrain pieces (balanced across four quarters, at least 3\" between major structures).<br/><br/>• Roll-Off - winner assigns the <strong><span class=\"kw\">First Player Marker</span></strong>for Round 1.",
+      "rows": [
+        {
+          "type": "bullet",
+          "html": "Select a <b>Mission Card</b> and a <b><span class=\"kw\">Deployment</span> Card</b>.",
+          "plain": "Select a Mission Card and a Deployment Card ."
+        },
+        {
+          "type": "bullet",
+          "html": "Set <b><span class=\"kw\">Mission Markers</span></b> at the coordinates on the <b><span class=\"kw\">Deployment</span> Card</b>.",
+          "plain": "Set Mission Markers at the coordinates on the Deployment Card ."
+        },
+        {
+          "type": "bullet",
+          "html": "Set Terrain pieces (balanced across four quarters, at least 3&quot; between major structures).",
+          "plain": "Set Terrain pieces (balanced across four quarters, at least 3\" between major structures)."
+        },
+        {
+          "type": "bullet",
+          "html": "Roll-Off - winner assigns the <b><span class=\"kw\">First Player Marker</span></b> for Round 1.",
+          "plain": "Roll-Off - winner assigns the First Player Marker for Round 1."
+        }
+      ],
       "children": []
     },
     {
+      "id": "12-2-round-sequence",
       "title": "12.2 Round Sequence",
-      "id": "122-round-sequence",
-      "html": "START OF THE ROUND EFFECTS<br/><br/>↓<br/><br/><span class=\"kw\">PHASE 1: MOVEMENT</span><br/><br/><span class=\"kw\">Deploy</span>/ <span class=\"kw\">Move</span>/ <span class=\"kw\">Disengage</span>/ <span class=\"kw\">Hold</span><br/><br/>↓<br/><br/><span class=\"kw\">PHASE 2: ASSAULT</span><br/><br/><span class=\"kw\">Ranged Attack</span>/ <span class=\"kw\">Charge</span>/ Run / <span class=\"kw\">Hold</span><br/><br/>↓<br/><br/><span class=\"kw\">PHASE 3: COMBAT</span><br/><br/>Close Combat Attack<br/><br/>↓<br/><br/><span class=\"kw\">PHASE 4: SCORING &amp; CLEANUP</span><br/><br/>Control <span class=\"kw\">Markers</span>→ Score VP → <span class=\"kw\">End of Game Check</span>→ End of the Round Effects → Cleanup → Initiative",
+      "rows": [
+        {
+          "type": "microhead",
+          "html": "START OF THE ROUND EFFECTS",
+          "plain": "START OF THE ROUND EFFECTS"
+        },
+        {
+          "type": "text",
+          "html": "↓",
+          "plain": "↓"
+        },
+        {
+          "type": "microhead",
+          "html": "<span class=\"kw\">PHASE 1: MOVEMENT</span>",
+          "plain": "PHASE 1: MOVEMENT"
+        },
+        {
+          "type": "text",
+          "html": "<span class=\"kw\">Deploy</span> / <span class=\"kw\">Move</span> / <span class=\"kw\">Disengage</span> / <span class=\"kw\">Hold</span>",
+          "plain": "Deploy / Move / Disengage / Hold"
+        },
+        {
+          "type": "text",
+          "html": "↓",
+          "plain": "↓"
+        },
+        {
+          "type": "microhead",
+          "html": "<span class=\"kw\">PHASE 2: ASSAULT</span>",
+          "plain": "PHASE 2: ASSAULT"
+        },
+        {
+          "type": "text",
+          "html": "<span class=\"kw\">Ranged Attack</span> / <span class=\"kw\">Charge</span> / Run / <span class=\"kw\">Hold</span>",
+          "plain": "Ranged Attack / Charge / Run / Hold"
+        },
+        {
+          "type": "text",
+          "html": "↓",
+          "plain": "↓"
+        },
+        {
+          "type": "microhead",
+          "html": "<span class=\"kw\">PHASE 3: COMBAT</span>",
+          "plain": "PHASE 3: COMBAT"
+        },
+        {
+          "type": "text",
+          "html": "Close Combat Attack",
+          "plain": "Close Combat Attack"
+        },
+        {
+          "type": "text",
+          "html": "↓",
+          "plain": "↓"
+        },
+        {
+          "type": "microhead",
+          "html": "<span class=\"kw\">PHASE 4: SCORING &amp; CLEANUP</span>",
+          "plain": "PHASE 4: SCORING & CLEANUP"
+        },
+        {
+          "type": "text",
+          "html": "Control <span class=\"kw\">Markers</span> → Score VP → <span class=\"kw\">End of Game Check</span> → End of the Round Effects → Cleanup → Initiative",
+          "plain": "Control Markers → Score VP → End of Game Check → End of the Round Effects → Cleanup → Initiative"
+        }
+      ],
       "children": []
     },
     {
+      "id": "12-3-phase-1-movement",
       "title": "12.3 Phase 1: Movement",
-      "id": "123-phase-1-movement",
-      "html": "<strong>Actions (choose one per Unit):</strong><br/><br/>• <strong><span class=\"kw\">Move</span>:</strong><span class=\"kw\">Move</span>across the Battlefield.<br/><br/>• <strong><span class=\"kw\">Deploy</span>:</strong><span class=\"kw\">Move</span>from <strong><span class=\"kw\">Reserves</span></strong>via <strong><span class=\"kw\">Entry Edge</span></strong>(<strong>must</strong>have <strong><span class=\"kw\">Available Supply</span></strong>; <strong>cannot</strong>end in <strong><span class=\"kw\">Enemy</span><span class=\"kw\">Zone of Influence</span></strong>) to the Battlefield.<br/><br/>• <strong><span class=\"kw\">Disengage</span>:</strong>If <strong><span class=\"kw\">Engaged</span></strong>- <span class=\"kw\">move</span>out of combat. <strong>Cannot</strong>perform <strong><span class=\"kw\">Ranged Attack</span></strong>or <strong><span class=\"kw\">Charge</span></strong>next Phase unless own Supply &gt; <strong><span class=\"kw\">Enemy</span></strong>Combined Supply.<br/><br/>• <strong><span class=\"kw\">Hold</span>:</strong>Do nothing.<br/><br/><strong>First to Pass</strong>takes <strong><span class=\"kw\">First Player Marker</span></strong>for Phase 2.<div class=\"stack-table\"><div class=\"stack-row\"><div class=\"stack-single\"><p><span>Moving a Unit:</span><span><span class=\"kw\">Leading Model</span></span><span>moves up to Speed. Set the rest of the unit</span><span>In</span><span>Coherency</span><span>.</span></p></div></div></div><div class=\"stack-table\"><div class=\"stack-row\"><div class=\"stack-single\"><p><span><span class=\"kw\">Available Supply</span></span><span>=</span><span>Supply Pool</span><span>−</span><span>Total Supply</span><span>of</span><span><span class=\"kw\">Friendly</span></span><span><span class=\"kw\">Units</span>on the Battlefield.</span></p></div></div></div>",
+      "rows": [
+        {
+          "type": "text",
+          "html": "<b>Actions (choose one per Unit):</b>",
+          "plain": "Actions (choose one per Unit):"
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Move</span>:</b> <span class=\"kw\">Move</span> across the Battlefield.<b></b>",
+          "plain": "Move : Move across the Battlefield."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Deploy</span>:</b> <span class=\"kw\">Move</span> from <b><span class=\"kw\">Reserves</span></b> via <b><span class=\"kw\">Entry Edge</span></b> (<b>must</b> have <b><span class=\"kw\">Available Supply</span></b>; <b>cannot</b> end in <b><span class=\"kw\">Enemy</span> <span class=\"kw\">Zone of Influence</span></b>) to the Battlefield.",
+          "plain": "Deploy : Move from Reserves via Entry Edge ( must have Available Supply ; cannot end in Enemy Zone of Influence ) to the Battlefield."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Disengage</span>:</b> If <b><span class=\"kw\">Engaged</span></b> - <span class=\"kw\">move</span> out of combat. <b>Cannot</b> perform <b><span class=\"kw\">Ranged Attack</span></b> or <b><span class=\"kw\">Charge</span></b> next Phase unless own Supply &gt; <b><span class=\"kw\">Enemy</span></b> Combined Supply.",
+          "plain": "Disengage : If Engaged - move out of combat. Cannot perform Ranged Attack or Charge next Phase unless own Supply > Enemy Combined Supply."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Hold</span>:</b> Do nothing.",
+          "plain": "Hold : Do nothing."
+        },
+        {
+          "type": "text",
+          "html": "<b>First to Pass</b> takes <b><span class=\"kw\">First Player Marker</span></b> for Phase 2.",
+          "plain": "First to Pass takes First Player Marker for Phase 2."
+        },
+        {
+          "type": "block",
+          "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/></colgroup><tbody><tr><td><p><span>Moving a Unit:</span><span></span><span><span class=\"kw\">Leading Model</span></span><span> moves up to Speed. Set the rest of the unit</span><span>In</span><span></span><span>Coherency</span><span>.</span></p></td></tr></tbody></table>",
+          "plain": "Moving a Unit: Leading Model moves up to Speed. Set the rest of the unit In Coherency ."
+        },
+        {
+          "type": "block",
+          "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/></colgroup><tbody><tr><td><p><span><span class=\"kw\">Available Supply</span></span><span> =</span><span>Supply Pool</span><span>−</span><span>Total Supply</span><span> of</span><span><span class=\"kw\">Friendly</span></span><span><span class=\"kw\">Units</span> on the Battlefield.</span></p></td></tr></tbody></table>",
+          "plain": "Available Supply = Supply Pool − Total Supply of Friendly Units on the Battlefield."
+        }
+      ],
       "children": []
     },
     {
+      "id": "12-4-phase-2-assault",
       "title": "12.4 Phase 2: Assault",
-      "id": "124-phase-2-assault",
-      "html": "<strong>Actions (choose one per Unit):</strong><br/><br/>• <strong><span class=\"kw\">Ranged Attack</span>:</strong>Use ranged weapons to attack <strong>Enemies</strong>.<br/><br/>• <strong><span class=\"kw\">Charge</span>:</strong><span class=\"kw\">Move</span>to <strong>Engage Enemies</strong>.<br/><br/>• <strong>Run:</strong><span class=\"kw\">Move</span>across the battlefield.<br/><br/>• <strong><span class=\"kw\">Hold</span>:</strong>Do nothing.<br/><br/><strong>First to Pass</strong>takes <strong><span class=\"kw\">First Player Marker</span></strong>for Phase 3.<div class=\"stack-table\"><div class=\"stack-row\"><div class=\"stack-single\"><p><span><span class=\"kw\">Ranged Attack</span>:</span></p><ol><li><p><span>Declare a target:</span><span>Select an</span><span><span class=\"kw\">Enemy</span></span><span>not</span><span><span class=\"kw\">Engaged</span></span><span>with any other Unit. Check the weapon’s Range,</span><span>LoS</span><span>and if the Target’s tag matches.</span></p></li><li><p><span>Build Attack Pool:</span><span>Sum</span><span>RoA</span><span>of eligible <span class=\"kw\">models</span>+ <span class=\"kw\">modifiers</span>+</span><span>Surge</span><span>Die</span><span>(if weapon has S <span class=\"kw\">Dice</span>).</span></p></li><li><p><span>Roll to Hit:</span><span>Each die result equal to or higher than the Hit characteristic is a success and moves to the</span><span>Armour Pool</span><span>.</span></p></li><li><p><span>Resolve Surge:</span><span>If the target’s Combat Tag matches the weapon’s</span><span>Surge Type</span><span>, a number of <span class=\"kw\">dice</span>equal to the</span><span>Surge Die</span><span>are not included in the</span><span>Armour Roll</span><span>.</span></p></li><li><p><span>Armour Roll:</span><span>Each die result equal to or higher than the</span><span>Armour</span><span>characteristic is saved and discarded.</span></p></li><li><p><span>Evade Roll:</span><span>If eligible, each die result equal to or higher than the</span><span>Evade</span><span>characteristic is saved and discarded.</span></p></li><li><p><span>Damage &amp; Casualties:</span><span>Multiply all remaining <span class=\"kw\">dice</span>by the weapon’s</span><span>Damage</span><span>characteristic. Remove <span class=\"kw\">models</span>accordingly.</span></p></li></ol></div></div></div><div class=\"stack-table\"><div class=\"stack-row\"><div class=\"stack-single\"><p><span><span class=\"kw\">Charge</span>:</span></p><ol><li><p><span>Declare Targets:</span><span>Select an</span><span><span class=\"kw\">Enemy</span>Ground</span><span><span class=\"kw\">Units</span>(no</span><span>LoS</span><span>needed).</span></p></li><li><p><span>Determine <span class=\"kw\">Charge</span>Distance:</span><span>Roll a D6; the</span><span><span class=\"kw\">Leading Model</span></span><span>moves up to Speed + the result.</span></p></li><li><p><span>Success:</span><span>If <span class=\"kw\">the leading model</span>is able to end a movement</span><span><span class=\"kw\">Within</span></span><span>the</span><span><span class=\"kw\">Engagement Range</span></span><span>(1\") of all targets, <span class=\"kw\">move</span>it. Set the rest of the unitsquad</span><span>In Coherency</span><span>, following <span class=\"kw\">the priority</span>:</span></p></li><ol><li><p><span>Base-to-Base,</span></p></li><li><p><span><span class=\"kw\">Engagement Range</span>,</span></p></li><li><p><span>Coherency.</span></p></li></ol><li><p><span>Fail:</span><span>Unit stays, activation ends.</span></p></li></ol></div></div></div>",
+      "rows": [
+        {
+          "type": "text",
+          "html": "<b>Actions (choose one per Unit):</b>",
+          "plain": "Actions (choose one per Unit):"
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Ranged Attack</span>:</b> Use ranged weapons to attack <b>Enemies</b>.",
+          "plain": "Ranged Attack : Use ranged weapons to attack Enemies ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Charge</span>:</b> <span class=\"kw\">Move</span> to <b>Engage Enemies</b>.",
+          "plain": "Charge : Move to Engage Enemies ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Run:</b> <span class=\"kw\">Move</span> across the battlefield.",
+          "plain": "Run: Move across the battlefield."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Hold</span>:</b> Do nothing.",
+          "plain": "Hold : Do nothing."
+        },
+        {
+          "type": "text",
+          "html": "<b>First to Pass</b> takes <b><span class=\"kw\">First Player Marker</span></b> for Phase 3.",
+          "plain": "First to Pass takes First Player Marker for Phase 3."
+        },
+        {
+          "type": "block",
+          "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/></colgroup><tbody><tr><td><p><span><span class=\"kw\">Ranged Attack</span>:</span></p><ol><li aria-level=\"1\"><p role=\"presentation\"><span>Declare a target:</span><span> Select an</span><span><span class=\"kw\">Enemy</span></span><span>not</span><span><span class=\"kw\">Engaged</span></span><span>with any other Unit. Check the weapon’s Range,</span><span>LoS</span><span>and if the Target’s tag matches.</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Build Attack Pool:</span><span> Sum</span><span>RoA</span><span>of eligible <span class=\"kw\">models</span> + <span class=\"kw\">modifiers</span> +</span><span>Surge</span><span></span><span>Die</span><span>(if weapon has S <span class=\"kw\">Dice</span>).</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Roll to Hit:</span><span> Each die result equal to or higher than the Hit characteristic is a success and moves to the</span><span>Armour Pool</span><span>.</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Resolve Surge:</span><span> If the target’s Combat Tag matches the weapon’s</span><span>Surge Type</span><span>, a number of <span class=\"kw\">dice</span> equal to the</span><span>Surge Die</span><span>are not included in the</span><span>Armour Roll</span><span>.</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Armour Roll:</span><span>Each die result equal to or higher than the</span><span>Armour</span><span>characteristic is saved and discarded.</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Evade Roll:</span><span>If eligible, each die result equal to or higher than the</span><span>Evade</span><span>characteristic is saved and discarded.</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Damage &amp; Casualties:</span><span>Multiply all remaining <span class=\"kw\">dice</span> by the weapon’s</span><span>Damage</span><span> characteristic. Remove <span class=\"kw\">models</span> accordingly.</span></p></li></ol></td></tr></tbody></table>",
+          "plain": "Ranged Attack : Declare a target: Select an Enemy not Engaged with any other Unit. Check the weapon’s Range, LoS and if the Target’s tag matches. Build Attack Pool: Sum RoA of eligible models + modifiers + Surge Die (if weapon has S Dice ). Roll to Hit: Each die result equal to or higher than the Hit characteristic is a success and moves to the Armour Pool . Resolve Surge: If the target’s Combat Tag matches the weapon’s Surge Type , a number of dice equal to the Surge Die are not included in the Armour Roll . Armour Roll: Each die result equal to or higher than the Armour characteristic is saved and discarded. Evade Roll: If eligible, each die result equal to or higher than the Evade characteristic is saved and discarded. Damage & Casualties: Multiply all remaining dice by the weapon’s Damage characteristic. Remove models accordingly."
+        },
+        {
+          "type": "block",
+          "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/></colgroup><tbody><tr><td><p><span><span class=\"kw\">Charge</span>:</span></p><ol><li aria-level=\"1\"><p role=\"presentation\"><span>Declare Targets:</span><span> Select an</span><span><span class=\"kw\">Enemy</span> Ground</span><span> <span class=\"kw\">Units</span> (no</span><span>LoS</span><span>needed).</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Determine <span class=\"kw\">Charge</span> Distance:</span><span>Roll a D6; the</span><span><span class=\"kw\">Leading Model</span></span><span> moves up to Speed + the result.</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Success:</span><span> If <span class=\"kw\">the leading model</span> is able to end a movement</span><span><span class=\"kw\">Within</span></span><span> the</span><span><span class=\"kw\">Engagement Range</span></span><span> (1\") of all targets, <span class=\"kw\">move</span> it. Set the rest of the unitsquad</span><span>In Coherency</span><span>, following <span class=\"kw\">the priority</span>:</span></p></li><ol><li aria-level=\"2\"><p role=\"presentation\"><span>Base-to-Base,</span></p></li><li aria-level=\"2\"><p role=\"presentation\"><span><span class=\"kw\">Engagement Range</span>,</span></p></li><li aria-level=\"2\"><p role=\"presentation\"><span>Coherency.</span></p></li></ol><li aria-level=\"1\"><p role=\"presentation\"><span>Fail:</span><span>Unit stays, activation ends.</span></p></li></ol></td></tr></tbody></table>",
+          "plain": "Charge : Declare Targets: Select an Enemy Ground Units (no LoS needed). Determine Charge Distance: Roll a D6; the Leading Model moves up to Speed + the result. Success: If the leading model is able to end a movement Within the Engagement Range (1\") of all targets, move it. Set the rest of the unitsquad In Coherency , following the priority : Base-to-Base, Engagement Range , Coherency. Fail: Unit stays, activation ends."
+        }
+      ],
       "children": []
     },
     {
+      "id": "12-5-phase-3-combat",
       "title": "12.5 Phase 3: Combat",
-      "id": "125-phase-3-combat",
-      "html": "All <strong><span class=\"kw\">Engaged</span></strong><span class=\"kw\">Units</span><strong>must</strong>activate. Players alternate.<br/><br/><strong>Actions:</strong><br/><br/>• <strong>Close Combat Attack:</strong>Use a Close Combat weapon to attack <strong>Enemies</strong>.<br/><br/><strong>Pass</strong>only when no<strong><span class=\"kw\">Engaged</span></strong><span class=\"kw\">Units</span>remain.<div class=\"stack-table\"><div class=\"stack-row\"><div class=\"stack-single\"><p><span>Close Combat Attack:</span></p><ol><li><p><span>Close Ranks (Optional):</span><span><span class=\"kw\">Move</span></span><span><span class=\"kw\">Leading Model</span></span><span>up to 3\" -</span><span>must</span><span>end closer to the <span class=\"kw\">enemy</span>. Reposition the rest of the Unit for maximum</span><span>Base-to-Base</span><span>.</span></p></li><li><p><span>Declare Ranks:</span><span><span class=\"kw\">Fighting Rank</span>(</span><span><span class=\"kw\">Within</span>1\"</span><span>) + <span class=\"kw\">Supporting Rank</span>(</span><span>Base-to-Base</span><span>with <span class=\"kw\">Fighting Rank</span>model). <span class=\"kw\">Models</span>in those ranks are eligible for attacking in step 3.</span></p></li><li><p><span>Roll Attacks:</span><span>Follow the</span><span><span class=\"kw\">Ranged Attack</span></span><span>sequence, but as a target, choose an</span><span><span class=\"kw\">Enemy</span></span><span><span class=\"kw\">Engaged</span></span><span>with this Unit.</span></p></li><li><p><span>Remove Casualties:</span><span>Use</span><span><span class=\"kw\">Engaged</span></span><span>Unit priority (Priority 1 → 2 → 3).</span></p></li></ol></div></div></div>",
+      "rows": [
+        {
+          "type": "text",
+          "html": "All <b><span class=\"kw\">Engaged</span></b> <span class=\"kw\">Units</span><b>must</b> activate. Players alternate.",
+          "plain": "All Engaged Units must activate. Players alternate."
+        },
+        {
+          "type": "text",
+          "html": "<b>Actions:</b>",
+          "plain": "Actions:"
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Close Combat Attack:</b> Use a Close Combat weapon to attack <b>Enemies</b>.",
+          "plain": "Close Combat Attack: Use a Close Combat weapon to attack Enemies ."
+        },
+        {
+          "type": "text",
+          "html": "<b>Pass</b> only when no<b> <span class=\"kw\">Engaged</span></b> <span class=\"kw\">Units</span> remain.",
+          "plain": "Pass only when no Engaged Units remain."
+        },
+        {
+          "type": "block",
+          "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/></colgroup><tbody><tr><td><p><span>Close Combat Attack:</span></p><ol><li aria-level=\"1\"><p role=\"presentation\"><span>Close Ranks (Optional):</span><span> <span class=\"kw\">Move</span></span><span><span class=\"kw\">Leading Model</span></span><span> up to 3\" -</span><span>must</span><span> end closer to the <span class=\"kw\">enemy</span>. Reposition the rest of the Unit for maximum</span><span>Base-to-Base</span><span>.</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Declare Ranks:</span><span> <span class=\"kw\">Fighting Rank</span> (</span><span><span class=\"kw\">Within</span> 1\"</span><span>) + <span class=\"kw\">Supporting Rank</span> (</span><span>Base-to-Base</span><span> with <span class=\"kw\">Fighting Rank</span> model). <span class=\"kw\">Models</span> in those ranks are eligible for attacking in step 3.</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Roll Attacks:</span><span> Follow the</span><span><span class=\"kw\">Ranged Attack</span></span><span> sequence, but as a target, choose an</span><span><span class=\"kw\">Enemy</span></span><span></span><span><span class=\"kw\">Engaged</span></span><span>with this Unit.</span></p></li><li aria-level=\"1\"><p role=\"presentation\"><span>Remove Casualties:</span><span> Use</span><span><span class=\"kw\">Engaged</span></span><span> Unit priority (Priority 1 → 2 → 3).</span></p></li></ol></td></tr></tbody></table>",
+          "plain": "Close Combat Attack: Close Ranks (Optional): Move Leading Model up to 3\" - must end closer to the enemy . Reposition the rest of the Unit for maximum Base-to-Base . Declare Ranks: Fighting Rank ( Within 1\" ) + Supporting Rank ( Base-to-Base with Fighting Rank model). Models in those ranks are eligible for attacking in step 3. Roll Attacks: Follow the Ranged Attack sequence, but as a target, choose an Enemy Engaged with this Unit. Remove Casualties: Use Engaged Unit priority (Priority 1 → 2 → 3)."
+        }
+      ],
       "children": []
     },
     {
+      "id": "12-6-phase-4-scoring-cleanup",
       "title": "12.6 Phase 4: Scoring & Cleanup",
-      "id": "126-phase-4-scoring-cleanup",
-      "html": "• <strong>Control:</strong>Sum Supply <strong><span class=\"kw\">Within</span>3\"</strong>of each Marker. Higher total controls. Ties = Contested.<br/><br/>• <strong>Score VP:</strong>Per <strong>Mission Card</strong>conditions.<br/><br/>• <strong>End of Game:</strong>Check winning conditions.<br/><br/>• <strong>End of the Round Effects:</strong>Resolve triggered abilities.<br/><br/>• <strong>Cleanup:</strong>Remove <span class=\"kw\">Tokens</span>/<span class=\"kw\">Markers</span>(keep <strong><span class=\"kw\">STAY IN PLAY</span></strong>, <strong>Damage <span class=\"kw\">Markers</span></strong>, <strong><span class=\"kw\">Mission Markers</span></strong>, <strong>Faction Indicator</strong>s). Refresh all <strong>Exhausted</strong>cards.<br/><br/>• <strong>Initiative:</strong>Fewer <strong>VP</strong>= <strong><span class=\"kw\">First Player Marker</span></strong>. Tie = Roll-Off.",
+      "rows": [
+        {
+          "type": "bullet",
+          "html": "<b>Control:</b> Sum Supply <b><span class=\"kw\">Within</span> 3\"</b> of each Marker. Higher total controls. Ties = Contested.",
+          "plain": "Control: Sum Supply Within 3\" of each Marker. Higher total controls. Ties = Contested."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Score VP:</b> Per <b>Mission Card</b> conditions.",
+          "plain": "Score VP: Per Mission Card conditions."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>End of Game:</b> Check winning conditions.",
+          "plain": "End of Game: Check winning conditions."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>End of the Round Effects:</b> Resolve triggered abilities.",
+          "plain": "End of the Round Effects: Resolve triggered abilities."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Cleanup:</b> Remove <span class=\"kw\">Tokens</span>/<span class=\"kw\">Markers</span> (keep <b><span class=\"kw\">STAY IN PLAY</span></b>, <b>Damage <span class=\"kw\">Markers</span></b>, <b><span class=\"kw\">Mission Markers</span></b>, <b>Faction Indicator</b> s). Refresh all <b>Exhausted</b> cards.",
+          "plain": "Cleanup: Remove Tokens / Markers (keep STAY IN PLAY , Damage Markers , Mission Markers , Faction Indicator s). Refresh all Exhausted cards."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Initiative:</b> Fewer <b>VP</b> = <b><span class=\"kw\">First Player Marker</span></b>. Tie = Roll-Off.",
+          "plain": "Initiative: Fewer VP = First Player Marker . Tie = Roll-Off."
+        }
+      ],
       "children": []
     },
     {
+      "id": "12-7-casualty-removal",
       "title": "12.7 Casualty Removal",
-      "id": "127-casualty-removal",
-      "html": "<strong><span class=\"kw\">Unengaged</span>target:</strong><br/><br/>• <strong>Cannot</strong>remove more <span class=\"kw\">models</span>than are <span class=\"kw\">Visible</span>to the attacker.<br/><br/>• Excess <strong>Damage</strong>beyond <span class=\"kw\">Visible</span>kills is discarded.<br/><br/><strong><span class=\"kw\">Engaged</span>target (strict order):</strong><br/><br/>• <span class=\"kw\">Models</span>not <strong><span class=\"kw\">Within</span></strong>the <strong><span class=\"kw\">Engagement Range</span></strong>of any <span class=\"kw\">Enemy</span>Unit.<br/><br/>• <span class=\"kw\">Models</span><strong><span class=\"kw\">Within</span></strong>the <strong><span class=\"kw\">Engagement Range</span></strong>but not in <strong>Base-to-Base</strong>contact.<br/><br/>• <span class=\"kw\">Models</span>in <strong>Base-to-Base</strong>contact with an <strong><span class=\"kw\">Enemy</span></strong>model.<br/><br/><strong><em>Cannot</em></strong><em>remove a model if doing so breaks Engagement with an <span class=\"kw\">enemy</span>, provided another valid casualty exists.</em>",
+      "rows": [
+        {
+          "type": "text",
+          "html": "<b><span class=\"kw\">Unengaged</span> target:</b>",
+          "plain": "Unengaged target:"
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Cannot</b> remove more <span class=\"kw\">models</span> than are <span class=\"kw\">Visible</span> to the attacker.",
+          "plain": "Cannot remove more models than are Visible to the attacker."
+        },
+        {
+          "type": "bullet",
+          "html": "Excess <b>Damage</b> beyond <span class=\"kw\">Visible</span> kills is discarded.",
+          "plain": "Excess Damage beyond Visible kills is discarded."
+        },
+        {
+          "type": "text",
+          "html": "<b><span class=\"kw\">Engaged</span> target (strict order):</b>",
+          "plain": "Engaged target (strict order):"
+        },
+        {
+          "type": "bullet",
+          "html": "<span class=\"kw\">Models</span> not <b><span class=\"kw\">Within</span></b> the <b><span class=\"kw\">Engagement Range</span></b> of any <span class=\"kw\">Enemy</span> Unit.",
+          "plain": "Models not Within the Engagement Range of any Enemy Unit."
+        },
+        {
+          "type": "bullet",
+          "html": "<span class=\"kw\">Models</span><b><span class=\"kw\">Within</span></b> the <b><span class=\"kw\">Engagement Range</span></b> but not in <b>Base-to-Base</b> contact.",
+          "plain": "Models Within the Engagement Range but not in Base-to-Base contact."
+        },
+        {
+          "type": "bullet",
+          "html": "<span class=\"kw\">Models</span> in <b>Base-to-Base</b> contact with an <b><span class=\"kw\">Enemy</span></b> model.",
+          "plain": "Models in Base-to-Base contact with an Enemy model."
+        },
+        {
+          "type": "text",
+          "html": "<b><i>Cannot</i></b><i> remove a model if doing so breaks Engagement with an <span class=\"kw\">enemy</span>, provided another valid casualty exists.</i>",
+          "plain": "Cannot remove a model if doing so breaks Engagement with an enemy , provided another valid casualty exists."
+        }
+      ],
       "children": []
     },
     {
+      "id": "12-8-template-weapons",
       "title": "12.8 Template Weapons",
-      "id": "128-template-weapons",
-      "html": "<div class=\"stack-table\"><div class=\"stack-table-head\"><span>Blast (BT)</span><span>Flamer (FT)</span></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Alignment</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Blast (BT)</div><div class=\"stack-value\"><p><span>Centre hole over the target base</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Flamer (FT)</div><div class=\"stack-value\"><p><span>Narrow end flush with the attacker base</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>LoS check</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Blast (BT)</div><div class=\"stack-value\"><p><span>From the centre hole to each model</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Flamer (FT)</div><div class=\"stack-value\"><p><span>From the attacker base through the template to each model</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Hit roll</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Blast (BT)</div><div class=\"stack-value\"><p><span>Roll to Hit as normal</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Flamer (FT)</div><div class=\"stack-value\"><p><span>Roll to Hit as normal</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Surge Die</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Blast (BT)</div><div class=\"stack-value\"><p><span>No Surge Die is rolled</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Flamer (FT)</div><div class=\"stack-value\"><p><span>No Surge Die is rolled</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Surge Result</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Blast (BT)</div><div class=\"stack-value\"><p><span>Equals affected <span class=\"kw\">models</span>in the Main target Unit only</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Flamer (FT)</div><div class=\"stack-value\"><p><span>Equals affected <span class=\"kw\">models</span>in the Main target Unit only</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span><span class=\"kw\">Spillover</span></span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Blast (BT)</div><div class=\"stack-value\"><p><span>Resolve each affected Unit as a separate Batch. Do not apply Rate of Attack <span class=\"kw\">modifiers</span>or Surge to <span class=\"kw\">Spillover</span>attacks</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Flamer (FT)</div><div class=\"stack-value\"><p><span>Resolve each affected Unit as a separate Batch. Do not apply Rate of Attack <span class=\"kw\">modifiers</span>or Surge to <span class=\"kw\">Spillover</span>attacks</span></p></div></div></div></div></div></div>",
+      "rows": [
+        {
+          "type": "block",
+          "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/><col/></colgroup><tbody><tr><td><br/></td><td><p><span>Blast (BT)</span></p></td><td><p><span>Flamer (FT)</span></p></td></tr><tr><td><p><span>Alignment</span></p></td><td><p><span>Centre hole over the target base</span></p></td><td><p><span>Narrow end flush with the attacker base</span></p></td></tr><tr><td><p><span>LoS check</span></p></td><td><p><span>From the centre hole to each model</span></p></td><td><p><span>From the attacker base through the template to each model</span></p></td></tr><tr><td><p><span>Hit roll</span></p></td><td><p><span>Roll to Hit as normal</span></p></td><td><p><span>Roll to Hit as normal</span></p></td></tr><tr><td><p><span>Surge Die</span></p></td><td><p><span>No Surge Die is rolled</span></p></td><td><p><span>No Surge Die is rolled</span></p></td></tr><tr><td><p><span>Surge Result</span></p></td><td><p><span>Equals affected <span class=\"kw\">models</span> in the Main target Unit only</span></p></td><td><p><span>Equals affected <span class=\"kw\">models</span> in the Main target Unit only</span></p></td></tr><tr><td><p><span><span class=\"kw\">Spillover</span></span></p></td><td><p><span>Resolve each affected Unit as a separate Batch. Do not apply Rate of Attack <span class=\"kw\">modifiers</span> or Surge to <span class=\"kw\">Spillover</span> attacks</span></p></td><td><p><span>Resolve each affected Unit as a separate Batch. Do not apply Rate of Attack <span class=\"kw\">modifiers</span> or Surge to <span class=\"kw\">Spillover</span> attacks</span></p></td></tr></tbody></table>",
+          "plain": "Blast (BT) Flamer (FT) Alignment Centre hole over the target base Narrow end flush with the attacker base LoS check From the centre hole to each model From the attacker base through the template to each model Hit roll Roll to Hit as normal Roll to Hit as normal Surge Die No Surge Die is rolled No Surge Die is rolled Surge Result Equals affected models in the Main target Unit only Equals affected models in the Main target Unit only Spillover Resolve each affected Unit as a separate Batch. Do not apply Rate of Attack modifiers or Surge to Spillover attacks Resolve each affected Unit as a separate Batch. Do not apply Rate of Attack modifiers or Surge to Spillover attacks"
+        }
+      ],
       "children": []
     },
     {
+      "id": "12-9-dispute-resolution",
       "title": "12.9 Dispute Resolution",
-      "id": "129-dispute-resolution",
-      "html": "If a rules dispute <strong>cannot</strong>be resolved swiftly:<br/><br/>• Both players Roll-Off (2D6). Higher total wins.<br/><br/>• The winner decides how the rule applies in this specific instance.<br/><br/>• Continue playing. Verify the ruling after the match.<br/><br/><em>This rule exists to keep the game moving, not to provide a tactical loophole.</em>",
+      "rows": [
+        {
+          "type": "text",
+          "html": "If a rules dispute <b>cannot</b> be resolved swiftly:",
+          "plain": "If a rules dispute cannot be resolved swiftly:"
+        },
+        {
+          "type": "bullet",
+          "html": "Both players Roll-Off (2D6). Higher total wins.",
+          "plain": "Both players Roll-Off (2D6). Higher total wins."
+        },
+        {
+          "type": "bullet",
+          "html": "The winner decides how the rule applies in this specific instance.",
+          "plain": "The winner decides how the rule applies in this specific instance."
+        },
+        {
+          "type": "bullet",
+          "html": "Continue playing. Verify the ruling after the match.",
+          "plain": "Continue playing. Verify the ruling after the match."
+        },
+        {
+          "type": "text",
+          "html": "<i>This rule exists to keep the game moving, not to provide a tactical loophole.</i>",
+          "plain": "This rule exists to keep the game moving, not to provide a tactical loophole."
+        }
+      ],
       "children": []
     },
     {
+      "id": "12-10-units-and-upgrade-points",
       "title": "12.10 Units and upgrade points.",
-      "id": "1210-units-and-upgrade-points",
-      "html": "This section lists the Mineral Cost and available Composition Options for each Unit in the game. When mustering a Unit during <span class=\"kw\">Army Building</span>(Part <span class=\"ref\">9.1.6</span>), select one Composition Option from the Unit’s entry below. The chosen option determines the number of <span class=\"kw\">models</span>in the Unit, the Mineral Cost paid, and the Unit’s initial <span class=\"kw\">Supply Value</span>as shown on its <strong>Unit Card’s Supply Profile</strong>.<br/><br/>Upgrade costs are listed separately beneath each Unit’s Composition Options. A purchased upgrade applies to every model in the Unit unless it has the <strong><span class=\"kw\">SPECIALIST</span></strong>keyword (Part <span class=\"ref\">9.1.7</span>).<span>Terran</span><span>Zerg</span><span>Protoss</span>",
-      "children": []
+      "rows": [
+        {
+          "type": "text",
+          "html": "This section lists the Mineral Cost and available Composition Options for each Unit in the game. When mustering a Unit during <span class=\"kw\">Army Building</span> (Part <span class=\"ref\">9. 1. 6</span>), select one Composition Option from the Unit’s entry below. The chosen option determines the number of <span class=\"kw\">models</span> in the Unit, the Mineral Cost paid, and the Unit’s initial <span class=\"kw\">Supply Value</span> as shown on its <b>Unit Card’s Supply Profile</b>.",
+          "plain": "This section lists the Mineral Cost and available Composition Options for each Unit in the game. When mustering a Unit during Army Building (Part 9. 1. 6 ), select one Composition Option from the Unit’s entry below. The chosen option determines the number of models in the Unit, the Mineral Cost paid, and the Unit’s initial Supply Value as shown on its Unit Card’s Supply Profile ."
+        },
+        {
+          "type": "text",
+          "html": "Upgrade costs are listed separately beneath each Unit’s Composition Options. A purchased upgrade applies to every model in the Unit unless it has the <b><span class=\"kw\">SPECIALIST</span></b> keyword (Part <span class=\"ref\">9. 1. 7</span>).",
+          "plain": "Upgrade costs are listed separately beneath each Unit’s Composition Options. A purchased upgrade applies to every model in the Unit unless it has the SPECIALIST keyword (Part 9. 1. 7 )."
+        }
+      ],
+      "children": [
+        {
+          "id": "terran",
+          "title": "Terran",
+          "rows": [
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span><span class=\"kw\">Models</span></span></p></th><th scope=\"col\"><p><span>Mineral Cost</span></p></th><th scope=\"col\"><p><span><span class=\"kw\">Supply Value</span></span></p></th></tr></thead><tbody><tr><td><p><span>6</span></p></td><td><p><span>160</span></p></td><td><p><span>1</span></p></td></tr><tr><td><p><span>9</span></p></td><td><p><span>210</span></p></td><td><p><span>2</span></p></td></tr></tbody></table>",
+              "plain": "Models Mineral Cost Supply Value 6 160 1 9 210 2"
+            },
+            {
+              "type": "text",
+              "html": "<b><i>Upgrades:</i></b>",
+              "plain": "Upgrades:"
+            },
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span>Upgrade</span></p></th><th scope=\"col\"><p><span>Type</span></p></th><th scope=\"col\"><p><span>Mineral Cost</span></p><p><span>(6-<span class=\"kw\">Models</span>)</span></p></th><th scope=\"col\"><p><span>Mineral Cost</span></p><p><span>(9-<span class=\"kw\">Models</span>)</span></p></th></tr></thead><tbody><tr><td><p><span>AGG-12</span></p></td><td><p><span><span class=\"kw\">SPECIALIST</span>,</span></p><p><span>↑ FOR C-14 Rifle</span></p></td><td><p><span>10</span></p></td><td><p><span>10</span></p></td></tr><tr><td><p><span>Bayonet</span></p></td><td><p><span>-</span></p></td><td><p><span>20</span></p></td><td><p><span>30</span></p></td></tr><tr><td><p><span>Combat Shield</span></p></td><td><p><span>-</span></p></td><td><p><span>20</span></p></td><td><p><span>30</span></p></td></tr><tr><td><p><span>Grenades - Frag</span></p></td><td><p><span>-</span></p></td><td><p><span>10</span></p></td><td><p><span>10</span></p></td></tr><tr><td><p><span>Rocket Launcher</span></p></td><td><p><span><span class=\"kw\">SPECIALIST</span></span></p></td><td><p><span>40</span></p></td><td><p><span>40</span></p></td></tr><tr><td><p><span>Slugthrower</span></p></td><td><p><span>-</span></p></td><td><p><span>10</span></p></td><td><p><span>20</span></p></td></tr></tbody></table>",
+              "plain": "Upgrade Type Mineral Cost (6- Models ) Mineral Cost (9- Models ) AGG-12 SPECIALIST , ↑ FOR C-14 Rifle 10 10 Bayonet - 20 30 Combat Shield - 20 30 Grenades - Frag - 10 10 Rocket Launcher SPECIALIST 40 40 Slugthrower - 10 20"
+            }
+          ]
+        },
+        {
+          "id": "zerg",
+          "title": "Zerg",
+          "rows": [
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span><span class=\"kw\">Models</span></span></p></th><th scope=\"col\"><p><span>Mineral Cost</span></p></th><th scope=\"col\"><p><span><span class=\"kw\">Supply Value</span></span></p></th></tr></thead><tbody><tr><td><p><span>12</span></p></td><td><p><span>180</span></p></td><td><p><span>1</span></p></td></tr><tr><td><p><span>18</span></p></td><td><p><span>220</span></p></td><td><p><span>2</span></p></td></tr></tbody></table>",
+              "plain": "Models Mineral Cost Supply Value 12 180 1 18 220 2"
+            },
+            {
+              "type": "text",
+              "html": "<b><i>Upgrades:</i></b>",
+              "plain": "Upgrades:"
+            },
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span>Upgrade</span></p></th><th scope=\"col\"><p><span>Type</span></p></th><th scope=\"col\"><p><span>Mineral Cost</span></p><p><span>(12-<span class=\"kw\">Models</span>)</span></p></th><th scope=\"col\"><p><span>Mineral Cost</span></p><p><span>(18-<span class=\"kw\">Models</span>)</span></p></th></tr></thead><tbody><tr><td><p><span>Adrenal Glands</span></p></td><td><p><span>-</span></p></td><td><p><span>30</span></p></td><td><p><span>30</span></p></td></tr><tr><td><p><span>Burrow Ambush</span></p></td><td><p><span>-</span></p></td><td><p><span>20</span></p></td><td><p><span>30</span></p></td></tr><tr><td><p><span>Shredding Claws</span></p></td><td><p><span>↑ Claws</span></p></td><td><p><span>20</span></p></td><td><p><span>20</span></p></td></tr></tbody></table>",
+              "plain": "Upgrade Type Mineral Cost (12- Models ) Mineral Cost (18- Models ) Adrenal Glands - 30 30 Burrow Ambush - 20 30 Shredding Claws ↑ Claws 20 20"
+            }
+          ]
+        },
+        {
+          "id": "protoss",
+          "title": "Protoss",
+          "rows": [
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span><span class=\"kw\">Models</span></span></p></th><th scope=\"col\"><p><span>Mineral Cost</span></p></th><th scope=\"col\"><p><span><span class=\"kw\">Supply Value</span></span></p></th></tr></thead><tbody><tr><td><p><span>3</span></p></td><td><p><span>160</span></p></td><td><p><span>2</span></p></td></tr></tbody></table>",
+              "plain": "Models Mineral Cost Supply Value 3 160 2"
+            },
+            {
+              "type": "text",
+              "html": "<b><i>Upgrades:</i></b>",
+              "plain": "Upgrades:"
+            },
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span>Upgrade</span></p></th><th scope=\"col\"><p><span>Type</span></p></th><th scope=\"col\"><p><span>Mineral Cost</span></p><p><span>(3-<span class=\"kw\">Models</span>)</span></p></th><th scope=\"col\"><p><span>Mineral Cost</span></p><br/></th></tr></thead><tbody><tr><td><p><span>Leg Enhancements</span></p></td><td><p><span>-</span></p></td><td><p><span>20</span></p></td><td><p><span>-</span></p></td></tr><tr><td><p><span>My Life for Aiur</span></p></td><td><p><span>-</span></p></td><td><p><span>10</span></p></td><td><p><span>-</span></p></td></tr><tr><td><p><span>We Stand as One</span></p></td><td><p><span>-</span></p></td><td><p><span>20</span></p></td><td><p><span>-</span></p></td></tr><tr><td><p><span>Zealous Round</span></p></td><td><p><span>-</span></p></td><td><p><span>10</span></p></td><td><p><span>-</span></p></td></tr></tbody></table>",
+              "plain": "Upgrade Type Mineral Cost (3- Models ) Mineral Cost Leg Enhancements - 20 - My Life for Aiur - 10 - We Stand as One - 20 - Zealous Round - 10 -"
+            }
+          ]
+        }
+      ]
     },
     {
+      "id": "12-11-tactical-card-points",
       "title": "12.11 Tactical Card points.",
-      "id": "1211-tactical-card-points",
-      "html": "<span>TERRAN</span><div class=\"stack-table\"><div class=\"stack-table-head\"><span>Name</span><span>Vespene Gas Cost</span></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Barracks</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>25</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Barracks (Proxy)</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>40</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Barracks (Tech Lab)</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>45</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Supply Depot</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>40</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Factory</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>35</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Engineering Bay</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>30</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Armory</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>30</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Academy</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>35</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Orbital Command</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>25</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Dropship</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>40</span></p></div></div></div></div></div></div><span>Zerg</span><div class=\"stack-table\"><div class=\"stack-table-head\"><span>Name</span><span>Vespene Gas Cost</span></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Spawning Pool</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>25</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Spawning Pool (Six Pool)</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>40</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span><span class=\"kw\">Roach</span>Warren</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>25</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span><span class=\"kw\">Hydralisk</span>Den</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>35</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Evolution Chamber</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>30</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Hatchery</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>30</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Lair</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>35</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Overseer</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>25</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Overlord</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>45</span></p></div></div></div></div></div></div><strong><em>Creep cards:</em></strong><div class=\"stack-table\"><div class=\"stack-table-head\"><span>Name</span><span>Vespene Gas Cost</span></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Accelerating Creep</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>0</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Malignant Creep</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>10</span></p></div></div></div></div></div></div><span>Protoss</span><div class=\"stack-table\"><div class=\"stack-table-head\"><span>Name</span><span>Vespene Gas Cost</span></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Gateway</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>25</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Warp Gate</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>40</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Gate Chronoboosted</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>40</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Observer</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>25</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Nexus</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>35</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Nexus Overcharged</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>35</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Power Field</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>40</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Forge</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>30</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Warp Prism</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>45</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Twilight Council</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Vespene Gas Cost</div><div class=\"stack-value\"><p><span>40</span></p></div></div></div></div></div></div>",
-      "children": []
+      "rows": [],
+      "children": [
+        {
+          "id": "terran",
+          "title": "TERRAN",
+          "rows": [
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span>Name</span></p></th><th scope=\"col\"><p><span><span class=\"kw\">Vespene Gas</span> Cost</span></p></th></tr></thead><tbody><tr><td><p><span>Barracks</span></p></td><td><p><span>25</span></p></td></tr><tr><td><p><span>Barracks (Proxy)</span></p></td><td><p><span>40</span></p></td></tr><tr><td><p><span>Barracks (Tech Lab)</span></p></td><td><p><span>45</span></p></td></tr><tr><td><p><span>Supply Depot</span></p></td><td><p><span>40</span></p></td></tr><tr><td><p><span>Factory</span></p></td><td><p><span>35</span></p></td></tr><tr><td><p><span>Engineering Bay</span></p></td><td><p><span>30</span></p></td></tr><tr><td><p><span>Armory</span></p></td><td><p><span>30</span></p></td></tr><tr><td><p><span>Academy</span></p></td><td><p><span>35</span></p></td></tr><tr><td><p><span>Orbital Command</span></p></td><td><p><span>25</span></p></td></tr><tr><td><p><span>Dropship</span></p></td><td><p><span>40</span></p></td></tr></tbody></table>",
+              "plain": "Name Vespene Gas Cost Barracks 25 Barracks (Proxy) 40 Barracks (Tech Lab) 45 Supply Depot 40 Factory 35 Engineering Bay 30 Armory 30 Academy 35 Orbital Command 25 Dropship 40"
+            }
+          ]
+        },
+        {
+          "id": "zerg",
+          "title": "Zerg",
+          "rows": [
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span>Name</span></p></th><th scope=\"col\"><p><span><span class=\"kw\">Vespene Gas</span> Cost</span></p></th></tr></thead><tbody><tr><td><p><span>Spawning Pool</span></p></td><td><p><span>25</span></p></td></tr><tr><td><p><span>Spawning Pool (Six Pool)</span></p></td><td><p><span>40</span></p></td></tr><tr><td><p><span><span class=\"kw\">Roach</span> Warren</span></p></td><td><p><span>25</span></p></td></tr><tr><td><p><span><span class=\"kw\">Hydralisk</span> Den</span></p></td><td><p><span>35</span></p></td></tr><tr><td><p><span>Evolution Chamber</span></p></td><td><p><span>30</span></p></td></tr><tr><td><p><span>Hatchery</span></p></td><td><p><span>30</span></p></td></tr><tr><td><p><span>Lair</span></p></td><td><p><span>35</span></p></td></tr><tr><td><p><span>Overseer</span></p></td><td><p><span>25</span></p></td></tr><tr><td><p><span>Overlord</span></p></td><td><p><span>45</span></p></td></tr></tbody></table>",
+              "plain": "Name Vespene Gas Cost Spawning Pool 25 Spawning Pool (Six Pool) 40 Roach Warren 25 Hydralisk Den 35 Evolution Chamber 30 Hatchery 30 Lair 35 Overseer 25 Overlord 45"
+            },
+            {
+              "type": "text",
+              "html": "<b><i>Creep cards:</i></b>",
+              "plain": "Creep cards:"
+            },
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span>Name</span></p></th><th scope=\"col\"><p><span><span class=\"kw\">Vespene Gas</span> Cost</span></p></th></tr></thead><tbody><tr><td><p><span>Accelerating Creep</span></p></td><td><p><span>0</span></p></td></tr><tr><td><p><span>Malignant Creep</span></p></td><td><p><span>10</span></p></td></tr></tbody></table>",
+              "plain": "Name Vespene Gas Cost Accelerating Creep 0 Malignant Creep 10"
+            }
+          ]
+        },
+        {
+          "id": "protoss",
+          "title": "Protoss",
+          "rows": [
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/></colgroup><thead><tr><th scope=\"col\"><p><span>Name</span></p></th><th scope=\"col\"><p><span><span class=\"kw\">Vespene Gas</span> Cost</span></p></th></tr></thead><tbody><tr><td><p><span>Gateway</span></p></td><td><p><span>25</span></p></td></tr><tr><td><p><span>Warp Gate</span></p></td><td><p><span>40</span></p></td></tr><tr><td><p><span>Gate Chronoboosted</span></p></td><td><p><span>40</span></p></td></tr><tr><td><p><span>Observer</span></p></td><td><p><span>25</span></p></td></tr><tr><td><p><span>Nexus</span></p></td><td><p><span>35</span></p></td></tr><tr><td><p><span>Nexus Overcharged</span></p></td><td><p><span>35</span></p></td></tr><tr><td><p><span>Power Field</span></p></td><td><p><span>40</span></p></td></tr><tr><td><p><span>Forge</span></p></td><td><p><span>30</span></p></td></tr><tr><td><p><span>Warp Prism</span></p></td><td><p><span>45</span></p></td></tr><tr><td><p><span>Twilight Council</span></p></td><td><p><span>40</span></p></td></tr></tbody></table>",
+              "plain": "Name Vespene Gas Cost Gateway 25 Warp Gate 40 Gate Chronoboosted 40 Observer 25 Nexus 35 Nexus Overcharged 35 Power Field 40 Forge 30 Warp Prism 45 Twilight Council 40"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -3,43 +3,364 @@
   "kicker": "Part IV",
   "title": "Measuring and Movement",
   "id": "part-4",
-  "color": "#4a72b0",
-  "intro": "Positioning is everything. A few inches can be the difference between a deadly flanking <span class=\"kw\">charge</span>and an exposed Unit caught out in the open. This Part covers how distances are measured, how <span class=\"kw\">models</span><span class=\"kw\">move</span>across the battlefield, and the rules of Coherency that bind a Unit together.",
+  "color": "#93aac7",
+  "group": "systems",
+  "introRows": [
+    {
+      "type": "text",
+      "html": "Positioning is everything. A few inches can be the difference between a deadly flanking <span class=\"kw\">charge</span> and an exposed Unit caught out in the open. This Part covers how distances are measured, how <span class=\"kw\">models</span> <span class=\"kw\">move</span> across the battlefield, and the rules of Coherency that bind a Unit together.",
+      "plain": "Positioning is everything. A few inches can be the difference between a deadly flanking charge and an exposed Unit caught out in the open. This Part covers how distances are measured, how models move across the battlefield, and the rules of Coherency that bind a Unit together."
+    }
+  ],
   "rules": [
     {
+      "id": "4-1-measuring-distances",
       "title": "4.1 Measuring Distances",
-      "id": "41-measuring-distances",
-      "html": "All distances are measured in inches (\") using a tape measure or ruler.<br/><br/>Players may measure any distance at any time, including before declaring an action, during an opponent's activation, and between Phases. There are no restrictions on pre-measuring. Players are encouraged to measure thoroughly and agree on distances before committing to an action.<br/><br/><strong>Between <span class=\"kw\">Models</span>:</strong>Measure from the nearest point of one model's base to the nearest point of the other model's base. For <span class=\"kw\">models</span>on flight stands, the bottom of the stand is treated as the model's base for all measurements (Part <span class=\"ref\">2.3</span>).<br/><br/>• <strong>Ignore Overhang:</strong>Weapons, wings, limbs, and scenic elements extending beyond the base rim are ignored.<br/><br/>• <strong>Base-to-Base Contact:</strong>If two <span class=\"kw\">bases</span>are physically touching, the distance between them is <strong>0\"</strong>.<br/><br/>• <strong><span class=\"kw\">Tokens</span>and <span class=\"kw\">Markers</span>:</strong>Measure to the nearest physical edge.<br/><br/>• <strong>Elevation:</strong>When calculating distances between <span class=\"kw\">models</span>at different elevations, always measure horizontally from a top-down perspective. The vertical height difference should not be included in your measurements. This applies to Range, <strong><span class=\"kw\">Engagement Range</span></strong>, and the ranges of abilities. Movement distances are measured as specified by the action being performed (see Part <span class=\"ref\">8.5.3</span>).<br><br><strong>&lt;&gt;</strong><br/><br/><strong><em>In this example,</em></strong><em>the</em>distance between <span class=\"kw\">models</span>is measured from the closest point of one model’s base to the closest point of the other model’s base.<br/><br/><strong>&lt;&gt;</strong><br/><br/><strong><em>In this example,</em></strong><em>the</em>distance between a model and a terrain piece is measured from the closest point of the model’s base to the closest edge of the terrain piece.<br/><br/><strong>&lt;&gt;</strong><br/><br/><strong><em>In this example,</em></strong>the distance measurement from <span class=\"kw\">Marine</span>on <strong>HIGH GROUND</strong>to a <span class=\"kw\">Marine</span>at <strong>GROUND LEVEL</strong>is measured horizontally from a direct overhead view, ignoring the vertical height of the terrain.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "All distances are measured in inches (&quot; ) using a tape measure or ruler.",
+          "plain": "All distances are measured in inches (\" ) using a tape measure or ruler."
+        },
+        {
+          "type": "text",
+          "html": "Players may measure any distance at any time, including before declaring an action, during an opponent&#x27; s activation, and between Phases. There are no restrictions on pre-measuring. Players are encouraged to measure thoroughly and agree on distances before committing to an action.",
+          "plain": "Players may measure any distance at any time, including before declaring an action, during an opponent' s activation, and between Phases. There are no restrictions on pre-measuring. Players are encouraged to measure thoroughly and agree on distances before committing to an action."
+        },
+        {
+          "type": "text",
+          "html": "<b>Between <span class=\"kw\">Models</span>:</b> Measure from the nearest point of one model&#x27; s base to the nearest point of the other model&#x27; s base. For <span class=\"kw\">models</span> on flight stands, the bottom of the stand is treated as the model&#x27; s base for all measurements (Part <span class=\"ref\">2. 3</span>).",
+          "plain": "Between Models : Measure from the nearest point of one model' s base to the nearest point of the other model' s base. For models on flight stands, the bottom of the stand is treated as the model' s base for all measurements (Part 2. 3 )."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Ignore Overhang:</b> Weapons, wings, limbs, and scenic elements extending beyond the base rim are ignored.",
+          "plain": "Ignore Overhang: Weapons, wings, limbs, and scenic elements extending beyond the base rim are ignored."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Base-to-Base Contact:</b> If two <span class=\"kw\">bases</span> are physically touching, the distance between them is <b>0\"</b>.",
+          "plain": "Base-to-Base Contact: If two bases are physically touching, the distance between them is 0\" ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Tokens</span> and <span class=\"kw\">Markers</span>:</b> Measure to the nearest physical edge.",
+          "plain": "Tokens and Markers : Measure to the nearest physical edge."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Elevation:</b> When calculating distances between <span class=\"kw\">models</span> at different elevations, always measure horizontally from a top-down perspective. The vertical height difference should not be included in your measurements. This applies to Range, <b><span class=\"kw\">Engagement Range</span></b>, and the ranges of abilities. Movement distances are measured as specified by the action being performed (see Part <span class=\"ref\">8. 5. 3</span>).",
+          "plain": "Elevation: When calculating distances between models at different elevations, always measure horizontally from a top-down perspective. The vertical height difference should not be included in your measurements. This applies to Range, Engagement Range , and the ranges of abilities. Movement distances are measured as specified by the action being performed (see Part 8. 5. 3 )."
+        },
+        {
+          "type": "text",
+          "html": "<b>&lt;</b>",
+          "plain": "<"
+        },
+        {
+          "type": "text",
+          "html": "<b><i>In this example,</i></b><i> the</i> distance between <span class=\"kw\">models</span> is measured from the closest point of one model’s base to the closest point of the other model’s base.",
+          "plain": "In this example, the distance between models is measured from the closest point of one model’s base to the closest point of the other model’s base."
+        },
+        {
+          "type": "text",
+          "html": "<b>&lt;</b>",
+          "plain": "<"
+        },
+        {
+          "type": "text",
+          "html": "<b><i>In this example,</i></b><i> the</i> distance between a model and a terrain piece is measured from the closest point of the model’s base to the closest edge of the terrain piece.",
+          "plain": "In this example, the distance between a model and a terrain piece is measured from the closest point of the model’s base to the closest edge of the terrain piece."
+        },
+        {
+          "type": "text",
+          "html": "<b>&lt;</b>",
+          "plain": "<"
+        },
+        {
+          "type": "text",
+          "html": "<b><i>In this example,</i></b> the distance measurement from <span class=\"kw\">Marine</span> on <b>HIGH GROUND</b> to a <span class=\"kw\">Marine</span> at <b>GROUND LEVEL</b> is measured horizontally from a direct overhead view, ignoring the vertical height of the terrain.",
+          "plain": "In this example, the distance measurement from Marine on HIGH GROUND to a Marine at GROUND LEVEL is measured horizontally from a direct overhead view, ignoring the vertical height of the terrain."
+        }
+      ],
       "children": []
     },
     {
+      "id": "4-2-within-vs-wholly-within",
       "title": "4.2 Within vs. Wholly Within",
-      "id": "42-within-vs-wholly-within",
-      "html": "<strong><span class=\"kw\">WITHIN</span></strong><br/><br/>A model is <strong><span class=\"kw\">Within</span></strong>a distance if any part of its base touches or crosses into that range. A Unit is <strong><span class=\"kw\">Within</span></strong>a distance if at least one model’s base touches or crosses into that range.<br/><br/><strong><span class=\"kw\">WHOLLY WITHIN</span></strong><br/><br/>A model is <strong><span class=\"kw\">Wholly Within</span></strong>a distance only if its entire base sits inside that range - no part of the base may extend beyond the edge. A Unit is <strong><span class=\"kw\">Wholly Within</span></strong>only if every model’s base in the Unit satisfies this condition.<br/><br/><strong>&lt;&gt;</strong><br/><br/><strong><em>In this example,</em></strong>a <span class=\"kw\">Marine</span>measures 3\" from its base. <span class=\"kw\">Zergling</span>A is <strong><span class=\"kw\">Wholly Within</span></strong>this 3\" range - its entire base sits inside it. <span class=\"kw\">Zergling</span>B is <strong><span class=\"kw\">Within</span></strong>3\" of the <span class=\"kw\">Marine</span>- part of its base touches the range, but not all of it. <span class=\"kw\">Zergling</span>C is outside the 3\" range entirely. The <span class=\"kw\">Zergling</span>Unit is considered to be <strong><span class=\"kw\">Within</span></strong>3\" of the <span class=\"kw\">Marine</span>because at least one model (<span class=\"kw\">Zergling</span>A) is in range. However, the <span class=\"kw\">Zergling</span>Unit is not <strong><span class=\"kw\">Wholly Within</span></strong>3\" since <span class=\"kw\">models</span>B and C are not <strong><span class=\"kw\">Wholly Within</span></strong>this range.<br/><br/>Maly side EXAMPLE 2.<br/><br/><strong>&lt;&gt;</strong><br/><br/><strong><em>In this example,</em></strong><em>a Unit of Raptors with all of its <span class=\"kw\">models</span></em><strong><em><span class=\"kw\">Wholly Within</span></em></strong><em>3\" of its</em><strong><em><span class=\"kw\">Leading Model</span></em></strong><em>that is on</em><strong><em>HIGH GROUND</em></strong><em>. The distance is measured horizontally as viewed from directly above - the vertical height of the terrain is ignored.</em><br/><br/><strong>Designer’s Note:</strong>Some <span class=\"kw\">Units</span>have special rules that allow their <span class=\"kw\">models</span>to occupy different elevations. When this occurs, all distances between <span class=\"kw\">models</span><span class=\"kw\">within</span>the Unit are still measured horizontally.",
+      "rows": [
+        {
+          "type": "microhead",
+          "html": "<b><span class=\"kw\">WITHIN</span></b>",
+          "plain": "WITHIN"
+        },
+        {
+          "type": "text",
+          "html": "A model is <b><span class=\"kw\">Within</span></b> a distance if any part of its base touches or crosses into that range. A Unit is <b><span class=\"kw\">Within</span></b> a distance if at least one model’s base touches or crosses into that range.",
+          "plain": "A model is Within a distance if any part of its base touches or crosses into that range. A Unit is Within a distance if at least one model’s base touches or crosses into that range."
+        },
+        {
+          "type": "microhead",
+          "html": "<b><span class=\"kw\">WHOLLY WITHIN</span></b>",
+          "plain": "WHOLLY WITHIN"
+        },
+        {
+          "type": "text",
+          "html": "A model is <b><span class=\"kw\">Wholly Within</span></b> a distance only if its entire base sits inside that range - no part of the base may extend beyond the edge. A Unit is <b><span class=\"kw\">Wholly Within</span></b> only if every model’s base in the Unit satisfies this condition.",
+          "plain": "A model is Wholly Within a distance only if its entire base sits inside that range - no part of the base may extend beyond the edge. A Unit is Wholly Within only if every model’s base in the Unit satisfies this condition."
+        },
+        {
+          "type": "text",
+          "html": "<b>&lt;</b>",
+          "plain": "<"
+        },
+        {
+          "type": "text",
+          "html": "<b><i>In this example,</i></b><i></i> a <span class=\"kw\">Marine</span> measures 3&quot; from its base. <span class=\"kw\">Zergling</span> A is <b><span class=\"kw\">Wholly Within</span></b> this 3&quot; range - its entire base sits inside it. <span class=\"kw\">Zergling</span> B is <b><span class=\"kw\">Within</span></b> 3&quot; of the <span class=\"kw\">Marine</span> - part of its base touches the range, but not all of it. <span class=\"kw\">Zergling</span> C is outside the 3&quot; range entirely. The <span class=\"kw\">Zergling</span> Unit is considered to be <b><span class=\"kw\">Within</span></b> 3&quot; of the <span class=\"kw\">Marine</span> because at least one model (<span class=\"kw\">Zergling</span> A) is in range. However, the <span class=\"kw\">Zergling</span> Unit is not <b><span class=\"kw\">Wholly Within</span></b> 3&quot; since <span class=\"kw\">models</span> B and C are not <b><span class=\"kw\">Wholly Within</span></b> this range.",
+          "plain": "In this example, a Marine measures 3\" from its base. Zergling A is Wholly Within this 3\" range - its entire base sits inside it. Zergling B is Within 3\" of the Marine - part of its base touches the range, but not all of it. Zergling C is outside the 3\" range entirely. The Zergling Unit is considered to be Within 3\" of the Marine because at least one model ( Zergling A) is in range. However, the Zergling Unit is not Wholly Within 3\" since models B and C are not Wholly Within this range."
+        },
+        {
+          "type": "text",
+          "html": "Maly side EXAMPLE 2.",
+          "plain": "Maly side EXAMPLE 2."
+        },
+        {
+          "type": "text",
+          "html": "<b>&lt;<a6 example=\"\" side=\"\">&gt;</a6></b>",
+          "plain": "< >"
+        },
+        {
+          "type": "text",
+          "html": "<b><i>In this example,</i></b><i>a Unit of Raptors with all of its <span class=\"kw\">models</span></i><b><i><span class=\"kw\">Wholly Within</span></i></b><i> 3\" of its</i><b><i><span class=\"kw\">Leading Model</span></i></b><i> that is on</i><b><i>HIGH GROUND</i></b><i>. The distance is measured horizontally as viewed from directly above - the vertical height of the terrain is ignored.</i>",
+          "plain": "In this example, a Unit of Raptors with all of its models Wholly Within 3\" of its Leading Model that is on HIGH GROUND . The distance is measured horizontally as viewed from directly above - the vertical height of the terrain is ignored."
+        },
+        {
+          "type": "note",
+          "html": "<b>Designer’s Note:</b> Some <span class=\"kw\">Units</span> have special rules that allow their <span class=\"kw\">models</span> to occupy different elevations. When this occurs, all distances between <span class=\"kw\">models</span> <span class=\"kw\">within</span> the Unit are still measured horizontally.",
+          "plain": "Designer’s Note: Some Units have special rules that allow their models to occupy different elevations. When this occurs, all distances between models within the Unit are still measured horizontally."
+        }
+      ],
       "children": []
     },
     {
+      "id": "4-3-the-leading-model",
       "title": "4.3 The Leading Model",
-      "id": "43-the-leading-model",
-      "html": "The <strong><span class=\"kw\">Leading Model</span></strong>is a temporary reference point used to execute a Unit’s movement. Whenever a Unit resolves a <strong><span class=\"kw\">Move</span>, <span class=\"kw\">Deploy</span>, Run, <span class=\"kw\">Charge</span>, <span class=\"kw\">Disengage</span>, or Close Ranks</strong>action, or any other action or ability that instructs the Unit to nominate a <strong><span class=\"kw\">Leading Model</span></strong>.<br/><br/><span class=\"kw\">Move</span>the <strong><span class=\"kw\">Leading Model</span></strong>first, measuring its exact path. Then set the remaining <span class=\"kw\">models</span>in valid Coherency around the <strong><span class=\"kw\">Leading Model</span>'s</strong>new position. The <strong><span class=\"kw\">Leading Model</span></strong>nomination ends once the action resolves.<br/><br/>",
+      "rows": [
+        {
+          "type": "text",
+          "html": "The <b><span class=\"kw\">Leading Model</span></b> is a temporary reference point used to execute a Unit’s movement. Whenever a Unit resolves a <b><span class=\"kw\">Move</span>, <span class=\"kw\">Deploy</span>, Run, <span class=\"kw\">Charge</span>, <span class=\"kw\">Disengage</span>, or Close Ranks</b> action, or any other action or ability that instructs the Unit to nominate a <b><span class=\"kw\">Leading Model</span></b>.",
+          "plain": "The Leading Model is a temporary reference point used to execute a Unit’s movement. Whenever a Unit resolves a Move , Deploy , Run, Charge , Disengage , or Close Ranks action, or any other action or ability that instructs the Unit to nominate a Leading Model ."
+        },
+        {
+          "type": "text",
+          "html": "<span class=\"kw\">Move</span> the <b><span class=\"kw\">Leading Model</span></b> first, measuring its exact path. Then set the remaining <span class=\"kw\">models</span> in valid Coherency around the <b><span class=\"kw\">Leading Model</span>'s</b> new position. The <b><span class=\"kw\">Leading Model</span></b> nomination ends once the action resolves.",
+          "plain": "Move the Leading Model first, measuring its exact path. Then set the remaining models in valid Coherency around the Leading Model 's new position. The Leading Model nomination ends once the action resolves."
+        }
+      ],
       "children": []
     },
     {
+      "id": "4-4-unit-coherency",
       "title": "4.4 Unit Coherency",
-      "id": "44-unit-coherency",
-      "html": "<strong>Coherency</strong>is checked at the end of any action that repositions <span class=\"kw\">models</span>, including <strong><span class=\"kw\">Move</span></strong>, <strong><span class=\"kw\">Deploy</span></strong>, <strong><span class=\"kw\">Charge</span></strong>, <strong><span class=\"kw\">Disengage</span></strong>, <strong>Close Ranks</strong>, <strong>Run</strong>, <strong><span class=\"kw\">PLACE</span></strong>, and <strong><span class=\"kw\">SUMMON</span></strong>.<br/><br/>At the end of such an action, all <span class=\"kw\">models</span>in the Unit must be<strong><span class=\"kw\">Wholly Within</span>3\"</strong>of the <strong><span class=\"kw\">Leading Model</span></strong>and able to trace a valid <strong><span class=\"kw\">Coherency Link</span></strong>to it. If this condition is met, the Unit is <strong>In</strong><strong>Coherency</strong>.<br/><br/>The battlefield is rarely so accommodating. Terrain and crowded positions may prevent a model from reaching a legal position <strong><span class=\"kw\">Wholly Within</span>3\"</strong>of the <strong><span class=\"kw\">Leading Model</span></strong>. When this occurs, set the affected model as close as possible to the <strong><span class=\"kw\">Leading Model</span></strong>. The model <strong>must</strong>still maintain a valid <strong><span class=\"kw\">Coherency Link</span></strong>. A Unit with one or more <span class=\"kw\">models</span>set beyond 3\" is <strong><span class=\"kw\">Out of Coherency</span></strong>.<br/><br/>If a model cannot be set in any legal position while maintaining a valid <strong><span class=\"kw\">Coherency Link</span></strong>, it is removed as a casualty immediately.<br/><br/>A Unit that is <strong>In Coherency</strong>remains so until its next repositioning action. Casualties from any source never trigger a <strong>Coherency</strong>check and never cause a Unit to become <strong>Out of</strong><strong>Coherency</strong>.<br/><br/>A Unit is<strong><span class=\"kw\">Out of Coherency</span></strong>only if this condition was not met at the end of its last repositioning action.<br/><br/>While<strong>In Coherency</strong>, the Unit may control and contest <strong><span class=\"kw\">Mission Markers</span></strong>normally (see <span class=\"ref\">8.9.1</span>).<span>COHERENCY LINK</span>When placing <span class=\"kw\">models</span>after a <span class=\"kw\">move</span>, set the <strong><span class=\"kw\">Leading Model</span></strong>first. Then set each remaining model one at a time, <strong><span class=\"kw\">Wholly Within</span></strong>3\" of <span class=\"kw\">the Leading Model</span>, and able to trace a <strong><span class=\"kw\">Coherency Link</span></strong>to it.<br/><br/>A <strong><span class=\"kw\">Coherency Link</span></strong>is a chain of imaginary lines drawn model-to-model through <span class=\"kw\">models</span>of the same Unit. Links <strong>cannot</strong>pass through <span class=\"kw\">models</span>from other <span class=\"kw\">Units</span>, terrain, or gaps that the <strong><span class=\"kw\">Leading Model</span></strong>itself could not <span class=\"kw\">move</span>through. A link <strong>may</strong>pass through <strong><span class=\"kw\">Enemy</span></strong><span class=\"kw\">models</span>that the Unit is currently <strong><span class=\"kw\">Engaged</span></strong>with.<br/><br/>Any model that <strong>cannot</strong>find a legal position maintaining the <strong><span class=\"kw\">Coherency Link</span></strong>is immediately <strong>removed as a casualty</strong>.<br/><br/><strong>&lt;&gt;</strong><br/><br/><strong><em>In this example,</em></strong><em>a Unit of Marines</em><strong><em>In Coherency</em></strong><em>. All of its <span class=\"kw\">models</span>are</em><strong><em><span class=\"kw\">Wholly Within</span>3”</em></strong><em>of the</em><strong><em><span class=\"kw\">Leading Model</span></em></strong><em>(marked in blue) with</em><strong><em>Coherency Links</em></strong><em>(marked in red) drawn from its other <span class=\"kw\">models</span>to the</em><strong><em><span class=\"kw\">Leading Model</span></em></strong><em>. The <span class=\"kw\">Marine</span>model on the left links to the</em><strong><em><span class=\"kw\">Leading Model</span></em></strong><em>through another model from its Unit to bypass the <span class=\"kw\">blocking terrain</span>.</em><br/><br/><strong>&lt;&gt;</strong><br/><br/><strong>In this example,</strong>a Unit of Marines with <strong>illegal placement</strong>. All <span class=\"kw\">models</span>in the Unit are <strong><span class=\"kw\">Wholly Within</span>3”</strong>of its <strong><span class=\"kw\">Leading Model</span></strong>, but the model behind the wall (marked in red) <strong>cannot draw</strong>a <strong><span class=\"kw\">Coherency Link</span></strong>to another model from its Unit without <span class=\"kw\">passing</span>through the terrain shown. Since the model cannot draw a link through another model without <span class=\"kw\">passing</span>through restricted terrain, the player cannot set the model here.<br/><br/><strong><span class=\"kw\">Flying</span></strong><span class=\"kw\">Units</span>and <strong>Coherency Links</strong>:<br/><br/>When drawing <strong>Coherency Links</strong>for a <strong><span class=\"kw\">Flying</span></strong>Unit, ignore terrain. Links may pass freely through terrain pieces of any Size, and may also pass through <span class=\"kw\">models</span>from other <span class=\"kw\">Units</span>.<span>OUT OF COHERENCY</span>If at the end of an action that repositions <span class=\"kw\">models</span>, any model is not <strong><span class=\"kw\">Wholly Within</span></strong>3\" of the <strong><span class=\"kw\">Leading Model</span></strong>, the Unit is <strong><span class=\"kw\">Out of Coherency</span></strong>. <strong><span class=\"kw\">Out of Coherency</span></strong><span class=\"kw\">Units</span><strong>cannot control or contest</strong><strong><span class=\"kw\">Mission Markers</span></strong>(Part <span class=\"ref\">8.9.1</span>).",
-      "children": []
+      "rows": [
+        {
+          "type": "text",
+          "html": "<b>Coherency</b> is checked at the end of any action that repositions <span class=\"kw\">models</span>, including <b><span class=\"kw\">Move</span></b>, <b><span class=\"kw\">Deploy</span></b>, <b><span class=\"kw\">Charge</span></b>, <b><span class=\"kw\">Disengage</span></b>, <b>Close Ranks</b>, <b>Run</b>, <b><span class=\"kw\">PLACE</span></b>, and <b><span class=\"kw\">SUMMON</span></b>.",
+          "plain": "Coherency is checked at the end of any action that repositions models , including Move , Deploy , Charge , Disengage , Close Ranks , Run , PLACE , and SUMMON ."
+        },
+        {
+          "type": "text",
+          "html": "At the end of such an action, all <span class=\"kw\">models</span> in the Unit must be<b> <span class=\"kw\">Wholly Within</span> 3\"</b> of the <b><span class=\"kw\">Leading Model</span></b> and able to trace a valid <b><span class=\"kw\">Coherency Link</span></b> to it. If this condition is met, the Unit is <b>In</b><b>Coherency</b>.",
+          "plain": "At the end of such an action, all models in the Unit must be Wholly Within 3\" of the Leading Model and able to trace a valid Coherency Link to it. If this condition is met, the Unit is In Coherency ."
+        },
+        {
+          "type": "text",
+          "html": "The battlefield is rarely so accommodating. Terrain and crowded positions may prevent a model from reaching a legal position <b><span class=\"kw\">Wholly Within</span> 3\"</b> of the <b><span class=\"kw\">Leading Model</span></b>. When this occurs, set the affected model as close as possible to the <b><span class=\"kw\">Leading Model</span></b>. The model <b>must</b> still maintain a valid <b><span class=\"kw\">Coherency Link</span></b>. A Unit with one or more <span class=\"kw\">models</span> set beyond 3&quot; is <b><span class=\"kw\">Out of Coherency</span></b>.",
+          "plain": "The battlefield is rarely so accommodating. Terrain and crowded positions may prevent a model from reaching a legal position Wholly Within 3\" of the Leading Model . When this occurs, set the affected model as close as possible to the Leading Model . The model must still maintain a valid Coherency Link . A Unit with one or more models set beyond 3\" is Out of Coherency ."
+        },
+        {
+          "type": "text",
+          "html": "If a model cannot be set in any legal position while maintaining a valid <b><span class=\"kw\">Coherency Link</span></b>, it is removed as a casualty immediately.",
+          "plain": "If a model cannot be set in any legal position while maintaining a valid Coherency Link , it is removed as a casualty immediately."
+        },
+        {
+          "type": "text",
+          "html": "A Unit that is <b>In Coherency</b> remains so until its next repositioning action. Casualties from any source never trigger a <b>Coherency</b> check and never cause a Unit to become <b>Out of</b><b>Coherency</b>.",
+          "plain": "A Unit that is In Coherency remains so until its next repositioning action. Casualties from any source never trigger a Coherency check and never cause a Unit to become Out of Coherency ."
+        },
+        {
+          "type": "text",
+          "html": "A Unit is<b> <span class=\"kw\">Out of Coherency</span></b> only if this condition was not met at the end of its last repositioning action.",
+          "plain": "A Unit is Out of Coherency only if this condition was not met at the end of its last repositioning action."
+        },
+        {
+          "type": "text",
+          "html": "While<b> In Coherency</b>, the Unit may control and contest <b><span class=\"kw\">Mission Markers</span></b> normally (see <span class=\"ref\">8. 9. 1</span>).",
+          "plain": "While In Coherency , the Unit may control and contest Mission Markers normally (see 8. 9. 1 )."
+        }
+      ],
+      "children": [
+        {
+          "id": "coherency-link",
+          "title": "COHERENCY LINK",
+          "rows": [
+            {
+              "type": "text",
+              "html": "When placing <span class=\"kw\">models</span> after a <span class=\"kw\">move</span>, set the <b><span class=\"kw\">Leading Model</span></b> first. Then set each remaining model one at a time, <b><span class=\"kw\">Wholly Within</span></b> 3&quot; of <span class=\"kw\">the Leading Model</span>, and able to trace a <b><span class=\"kw\">Coherency Link</span></b> to it.",
+              "plain": "When placing models after a move , set the Leading Model first. Then set each remaining model one at a time, Wholly Within 3\" of the Leading Model , and able to trace a Coherency Link to it."
+            },
+            {
+              "type": "text",
+              "html": "A <b><span class=\"kw\">Coherency Link</span></b> is a chain of imaginary lines drawn model-to-model through <span class=\"kw\">models</span> of the same Unit. Links <b>cannot</b> pass through <span class=\"kw\">models</span> from other <span class=\"kw\">Units</span>, terrain, or gaps that the <b><span class=\"kw\">Leading Model</span></b> itself could not <span class=\"kw\">move</span> through. A link <b>may</b> pass through <b><span class=\"kw\">Enemy</span></b> <span class=\"kw\">models</span> that the Unit is currently <b><span class=\"kw\">Engaged</span></b> with.",
+              "plain": "A Coherency Link is a chain of imaginary lines drawn model-to-model through models of the same Unit. Links cannot pass through models from other Units , terrain, or gaps that the Leading Model itself could not move through. A link may pass through Enemy models that the Unit is currently Engaged with."
+            },
+            {
+              "type": "text",
+              "html": "Any model that <b>cannot</b> find a legal position maintaining the <b><span class=\"kw\">Coherency Link</span></b> is immediately <b>removed as a casualty</b>.",
+              "plain": "Any model that cannot find a legal position maintaining the Coherency Link is immediately removed as a casualty ."
+            },
+            {
+              "type": "text",
+              "html": "<b>&lt;</b>",
+              "plain": "<"
+            },
+            {
+              "type": "text",
+              "html": "<b><i>In this example,</i></b><i>a Unit of Marines</i><b><i>In Coherency</i></b><i>. All of its <span class=\"kw\">models</span> are</i><b><i><span class=\"kw\">Wholly Within</span> 3”</i></b><i> of the</i><b><i><span class=\"kw\">Leading Model</span></i></b><i>(marked in blue) with</i><b><i>Coherency Links</i></b><i>(marked in red) drawn from its other <span class=\"kw\">models</span> to the</i><b><i><span class=\"kw\">Leading Model</span></i></b><i>. The <span class=\"kw\">Marine</span> model on the left links to the</i><b><i><span class=\"kw\">Leading Model</span></i></b><i> through another model from its Unit to bypass the <span class=\"kw\">blocking terrain</span>.</i>",
+              "plain": "In this example, a Unit of Marines In Coherency . All of its models are Wholly Within 3” of the Leading Model (marked in blue) with Coherency Links (marked in red) drawn from its other models to the Leading Model . The Marine model on the left links to the Leading Model through another model from its Unit to bypass the blocking terrain ."
+            },
+            {
+              "type": "text",
+              "html": "<b>&lt;</b>",
+              "plain": "<"
+            },
+            {
+              "type": "text",
+              "html": "<b>In this example,</b> a Unit of Marines with <b>illegal placement</b>. All <span class=\"kw\">models</span> in the Unit are <b><span class=\"kw\">Wholly Within</span> 3”</b> of its <b><span class=\"kw\">Leading Model</span></b>, but the model behind the wall (marked in red) <b>cannot draw</b> a <b><span class=\"kw\">Coherency Link</span></b> to another model from its Unit without <span class=\"kw\">passing</span> through the terrain shown. Since the model cannot draw a link through another model without <span class=\"kw\">passing</span> through restricted terrain, the player cannot set the model here.",
+              "plain": "In this example, a Unit of Marines with illegal placement . All models in the Unit are Wholly Within 3” of its Leading Model , but the model behind the wall (marked in red) cannot draw a Coherency Link to another model from its Unit without passing through the terrain shown. Since the model cannot draw a link through another model without passing through restricted terrain, the player cannot set the model here."
+            },
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Flying</span></b> <span class=\"kw\">Units</span> and <b>Coherency Links</b>:",
+              "plain": "Flying Units and Coherency Links :"
+            },
+            {
+              "type": "text",
+              "html": "When drawing <b>Coherency Links</b> for a <b><span class=\"kw\">Flying</span></b> Unit, ignore terrain. Links may pass freely through terrain pieces of any Size, and may also pass through <span class=\"kw\">models</span> from other <span class=\"kw\">Units</span>.",
+              "plain": "When drawing Coherency Links for a Flying Unit, ignore terrain. Links may pass freely through terrain pieces of any Size, and may also pass through models from other Units ."
+            }
+          ]
+        },
+        {
+          "id": "out-of-coherency",
+          "title": "OUT OF COHERENCY",
+          "rows": [
+            {
+              "type": "text",
+              "html": "If at the end of an action that repositions <span class=\"kw\">models</span>, any model is not <b><span class=\"kw\">Wholly Within</span></b> 3&quot; of the <b><span class=\"kw\">Leading Model</span></b>, the Unit is <b><span class=\"kw\">Out of Coherency</span></b>. <b><span class=\"kw\">Out of Coherency</span></b> <span class=\"kw\">Units</span><b>cannot control or contest</b><b><span class=\"kw\">Mission Markers</span></b> (Part <span class=\"ref\">8. 9. 1</span>).",
+              "plain": "If at the end of an action that repositions models , any model is not Wholly Within 3\" of the Leading Model , the Unit is Out of Coherency . Out of Coherency Units cannot control or contest Mission Markers (Part 8. 9. 1 )."
+            }
+          ]
+        }
+      ]
     },
     {
+      "id": "4-5-directly-towards-directly-away",
       "title": "4.5 Directly Towards & Directly Away",
-      "id": "45-directly-towards-directly-away",
-      "html": "Some abilities force a Unit to <span class=\"kw\">move</span>directly towards or directly away from another Unit. Draw an imaginary straight line from the centre of the acting model’s base through the centre of the target model’s base. The affected model follows this line.<br/><br/>If terrain or another model blocks the path, the affected model bypasses it via the <strong>shortest possible route</strong>, then continues in the original direction. If two routes are equally short, the <span class=\"kw\">controlling player</span>chooses.<br/><br/><strong>After completing the <span class=\"kw\">move</span>:</strong><br/><br/>• A model moving <strong>directly towards</strong><strong>cannot</strong>end further from the target than it started.<br/><br/>• A model moving <strong>directly away</strong><strong>cannot</strong>end closer to the target than it started.<br/><br/><strong>Multi-model <span class=\"kw\">Units</span>moving directly towards:</strong>The <strong><span class=\"kw\">Leading Model</span></strong><strong>must</strong>be the one with the shortest route to the target. <span class=\"kw\">Move</span>it first. Set the remaining <span class=\"kw\">models</span>as close to the target as possible while maintaining <strong>Coherency</strong>.<br/><br/><strong>Multi-model <span class=\"kw\">Units</span>moving directly away:</strong>The <strong><span class=\"kw\">Leading Model</span></strong><strong>must</strong>be the one with the shortest route to the target. <span class=\"kw\">Move</span>it first. Set the remaining <span class=\"kw\">models</span>as far from the target as possible while maintaining <strong>Coherency</strong>.<br/><br/>When multiple <span class=\"kw\">models</span>exist in the target Unit, draw an imaginary line to the model that is physically closest (when moving towards) or furthest (when moving away) from the acting model.<br/><br/>If a model is forced to <span class=\"kw\">move</span>off the battlefield edge by any involuntary movement effect, it stops at the edge of the battlefield in contact with the table edge. The model cannot be moved beyond the battlefield boundary.<br/><br/>",
+      "rows": [
+        {
+          "type": "text",
+          "html": "Some abilities force a Unit to <span class=\"kw\">move</span> directly towards or directly away from another Unit. Draw an imaginary straight line from the centre of the acting model’s base through the centre of the target model’s base. The affected model follows this line.",
+          "plain": "Some abilities force a Unit to move directly towards or directly away from another Unit. Draw an imaginary straight line from the centre of the acting model’s base through the centre of the target model’s base. The affected model follows this line."
+        },
+        {
+          "type": "text",
+          "html": "If terrain or another model blocks the path, the affected model bypasses it via the <b>shortest possible route</b>, then continues in the original direction. If two routes are equally short, the <span class=\"kw\">controlling player</span> chooses.",
+          "plain": "If terrain or another model blocks the path, the affected model bypasses it via the shortest possible route , then continues in the original direction. If two routes are equally short, the controlling player chooses."
+        },
+        {
+          "type": "text",
+          "html": "<b>After completing the <span class=\"kw\">move</span>:</b>",
+          "plain": "After completing the move :"
+        },
+        {
+          "type": "bullet",
+          "html": "A model moving <b>directly towards</b><b>cannot</b> end further from the target than it started.",
+          "plain": "A model moving directly towards cannot end further from the target than it started."
+        },
+        {
+          "type": "bullet",
+          "html": "A model moving <b>directly away</b><b>cannot</b> end closer to the target than it started.",
+          "plain": "A model moving directly away cannot end closer to the target than it started."
+        },
+        {
+          "type": "text",
+          "html": "<b>Multi-model <span class=\"kw\">Units</span> moving directly towards:</b> The <b><span class=\"kw\">Leading Model</span></b><b>must</b> be the one with the shortest route to the target. <span class=\"kw\">Move</span> it first. Set the remaining <span class=\"kw\">models</span> as close to the target as possible while maintaining <b>Coherency</b>.",
+          "plain": "Multi-model Units moving directly towards: The Leading Model must be the one with the shortest route to the target. Move it first. Set the remaining models as close to the target as possible while maintaining Coherency ."
+        },
+        {
+          "type": "text",
+          "html": "<b>Multi-model <span class=\"kw\">Units</span> moving directly away:</b> The <b><span class=\"kw\">Leading Model</span></b><b>must</b> be the one with the shortest route to the target. <span class=\"kw\">Move</span> it first. Set the remaining <span class=\"kw\">models</span> as far from the target as possible while maintaining <b>Coherency</b>.",
+          "plain": "Multi-model Units moving directly away: The Leading Model must be the one with the shortest route to the target. Move it first. Set the remaining models as far from the target as possible while maintaining Coherency ."
+        },
+        {
+          "type": "text",
+          "html": "When multiple <span class=\"kw\">models</span> exist in the target Unit, draw an imaginary line to the model that is physically closest (when moving towards) or furthest (when moving away) from the acting model.",
+          "plain": "When multiple models exist in the target Unit, draw an imaginary line to the model that is physically closest (when moving towards) or furthest (when moving away) from the acting model."
+        },
+        {
+          "type": "text",
+          "html": "If a model is forced to <span class=\"kw\">move</span> off the battlefield edge by any involuntary movement effect, it stops at the edge of the battlefield in contact with the table edge. The model cannot be moved beyond the battlefield boundary.",
+          "plain": "If a model is forced to move off the battlefield edge by any involuntary movement effect, it stops at the edge of the battlefield in contact with the table edge. The model cannot be moved beyond the battlefield boundary."
+        }
+      ],
       "children": []
     },
     {
+      "id": "4-6-gap-clearance-and-model-size",
       "title": "4.6 Gap Clearance and Model Size",
-      "id": "46-gap-clearance-and-model-size",
-      "html": "Not every gap in the terrain is wide enough to squeeze through, and a Siege Tank does not thread the same needle as a <span class=\"kw\">Zergling</span>.<br/><br/>The <strong><span class=\"kw\">Leading Model</span></strong>can pass through gaps depending on the Unit’s Size:<br/><br/>• <strong>Size 2 or lower:</strong>May pass through gaps at least <strong>1\"</strong>wide. Infantry and smaller creatures exploit narrow corridors that larger <span class=\"kw\">Units</span>cannot.<br/><br/>• <strong>Size 3 or larger:</strong>Requires a gap at least <strong>3\"</strong>wide.<br/><br/>Regardless of clearance, a model <strong>cannot</strong>be set where its base doesn’t physically fit. Clearance governs movement through a space, not stopping inside one.<br/><br/>Openings in terrain pieces - such as archways, doorways, and breaches - are treated as gaps for the purpose of Gap Clearance, even if the surrounding terrain piece is Size 2 or larger. The gap must be wide enough for the model’s Size category. Players should agree on which terrain openings are passable during <span class=\"kw\">Battlefield Setup</span>.<br/><br/>This applies to all movement types: <strong><span class=\"kw\">Move</span></strong>, <strong>Run</strong>, <strong><span class=\"kw\">Charge</span></strong>, <strong><span class=\"kw\">Disengage</span></strong>, and <strong>Close Ranks</strong>.<br/><br/><strong><span class=\"kw\">Flying</span></strong><span class=\"kw\">Units</span>ignore Gap Clearance during movement. Their <strong><span class=\"kw\">Leading Model</span></strong>moves point-to-point, bypassing all terrain in transit. However, the <strong><span class=\"kw\">Leading Model</span></strong>must still end in a legal position where its base or stand physically fits without overlapping another model’s base or stand, or terrain.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "Not every gap in the terrain is wide enough to squeeze through, and a Siege Tank does not thread the same needle as a <span class=\"kw\">Zergling</span>.",
+          "plain": "Not every gap in the terrain is wide enough to squeeze through, and a Siege Tank does not thread the same needle as a Zergling ."
+        },
+        {
+          "type": "text",
+          "html": "The <b><span class=\"kw\">Leading Model</span></b> can pass through gaps depending on the Unit’s Size:",
+          "plain": "The Leading Model can pass through gaps depending on the Unit’s Size:"
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Size 2 or lower:</b> May pass through gaps at least <b>1\"</b> wide. Infantry and smaller creatures exploit narrow corridors that larger <span class=\"kw\">Units</span> cannot.",
+          "plain": "Size 2 or lower: May pass through gaps at least 1\" wide. Infantry and smaller creatures exploit narrow corridors that larger Units cannot."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Size 3 or larger:</b> Requires a gap at least <b>3\"</b> wide.",
+          "plain": "Size 3 or larger: Requires a gap at least 3\" wide."
+        },
+        {
+          "type": "text",
+          "html": "Regardless of clearance, a model <b>cannot</b> be set where its base doesn’t physically fit. Clearance governs movement through a space, not stopping inside one.",
+          "plain": "Regardless of clearance, a model cannot be set where its base doesn’t physically fit. Clearance governs movement through a space, not stopping inside one."
+        },
+        {
+          "type": "text",
+          "html": "Openings in terrain pieces - such as archways, doorways, and breaches - are treated as gaps for the purpose of Gap Clearance, even if the surrounding terrain piece is Size 2 or larger. The gap must be wide enough for the model’s Size category. Players should agree on which terrain openings are passable during <span class=\"kw\">Battlefield Setup</span>.",
+          "plain": "Openings in terrain pieces - such as archways, doorways, and breaches - are treated as gaps for the purpose of Gap Clearance, even if the surrounding terrain piece is Size 2 or larger. The gap must be wide enough for the model’s Size category. Players should agree on which terrain openings are passable during Battlefield Setup ."
+        },
+        {
+          "type": "text",
+          "html": "This applies to all movement types: <b><span class=\"kw\">Move</span></b>, <b>Run</b>, <b><span class=\"kw\">Charge</span></b>, <b><span class=\"kw\">Disengage</span></b>, and <b>Close Ranks</b>.",
+          "plain": "This applies to all movement types: Move , Run , Charge , Disengage , and Close Ranks ."
+        },
+        {
+          "type": "text",
+          "html": "<b><span class=\"kw\">Flying</span></b> <span class=\"kw\">Units</span> ignore Gap Clearance during movement. Their <b><span class=\"kw\">Leading Model</span></b> moves point-to-point, bypassing all terrain in transit. However, the <b><span class=\"kw\">Leading Model</span></b> must still end in a legal position where its base or stand physically fits without overlapping another model’s base or stand, or terrain.",
+          "plain": "Flying Units ignore Gap Clearance during movement. Their Leading Model moves point-to-point, bypassing all terrain in transit. However, the Leading Model must still end in a legal position where its base or stand physically fits without overlapping another model’s base or stand, or terrain."
+        }
+      ],
       "children": []
     }
   ]

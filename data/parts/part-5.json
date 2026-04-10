@@ -3,43 +3,276 @@
   "kicker": "Part V",
   "title": "Cards and Characteristics",
   "id": "part-5",
-  "color": "#6f7882",
-  "intro": "Each Unit, weapon, and ability in the game has a set of characteristics represented on cards. This Part explains the anatomy of <strong><span class=\"kw\">Unit Cards</span></strong>and <strong>Weapon Profiles</strong>, what each statistic means, and how to read the data that drives every action on the battlefield.",
+  "color": "#9ca7b1",
+  "group": "systems",
+  "introRows": [
+    {
+      "type": "text",
+      "html": "Each Unit, weapon, and ability in the game has a set of characteristics represented on cards. This Part explains the anatomy of <b><span class=\"kw\">Unit Cards</span></b> and <b>Weapon Profiles</b>, what each statistic means, and how to read the data that drives every action on the battlefield.",
+      "plain": "Each Unit, weapon, and ability in the game has a set of characteristics represented on cards. This Part explains the anatomy of Unit Cards and Weapon Profiles , what each statistic means, and how to read the data that drives every action on the battlefield."
+    }
+  ],
   "rules": [
     {
+      "id": "5-1-unit-cards",
       "title": "5.1 Unit Cards",
-      "id": "51-unit-cards",
-      "html": "Every Unit has a <strong>Unit Card</strong>that provides all the information needed to use it in a game.<br><br><strong>1. Unit Name</strong><strong><br/>2. Speed:</strong>The maximum distance in inches the <strong><span class=\"kw\">Leading Model</span></strong>may traverse in a standard <strong><span class=\"kw\">Move</span></strong>.<em>Split Values</em>(e.g. <strong>4\"/7\"</strong>): Use the second value only when the Unit is reduced to a single remaining model, or when the Unit started with a single model.<em>Null Value (-)</em>: The Unit <strong>cannot</strong><span class=\"kw\">move</span>or be repositioned by any means, including <strong><span class=\"kw\">PLACE</span></strong>and involuntary movement effects.<br/><strong><br/></strong><strong>3. Evade:</strong>A secondary defensive characteristic representing agility. Used only when a rule or condition specifically grants an <strong>Evade Roll</strong>.<em>A Null Value (-</em>): The Unit cannot make <strong>Evade Rolls</strong>. An ability that explicitly grants an <strong>Evade Roll</strong>does not override this.<strong><br/></strong><strong>4. Armour:</strong>The Target Number the defender <strong>must</strong>meet or exceed on a D6 to cancel a hit.<br/><strong><br/></strong><strong>5. Hit Points (HP):</strong><strong>Damage</strong>a single model must sustain before it is removed.<br/><strong><br/></strong><strong>5A. Shields (Optional):</strong>If this value is present on a <strong>Unit Card</strong>, add it to the<strong>Hit Points (HP)</strong>of the first model. The Unit is <strong><span class=\"kw\">Shielded</span></strong>. The Unit loses its <strong><span class=\"kw\">Shielded</span><span class=\"kw\">Status</span></strong>when the Total <strong>Damage</strong>assigned to it exceeds its <strong>Shield</strong>value or when the first model in the Unit is removed. The <strong><span class=\"kw\">Shielded</span><span class=\"kw\">Status</span></strong>is referenced by other abilities. Losing <strong><span class=\"kw\">Shielded</span><span class=\"kw\">Status</span></strong>does not remove any remaining <strong>Hit Points,</strong>it only ends effects that require the Unit to be <strong><span class=\"kw\">Shielded</span></strong>.<br/><strong><br/></strong><strong>6. Size:</strong>The model’s vertical height category, used for <strong><span class=\"kw\">Line of Sight</span></strong>and terrain interaction.<br/><strong><br/></strong><strong>7. Supply Profile:</strong>Links the number of remaining <span class=\"kw\">models</span>in the Unit to its <strong><span class=\"kw\">Current Supply Value</span></strong>. Update immediately when casualties reduce the model count to a lower bracket. Supply is used for <span class=\"kw\">Deployment</span>, <strong>Mission Marker</strong>Control, and <strong><span class=\"kw\">Disengage</span></strong>checks.<br/><strong><br/></strong><strong>8. Phase Boxes:</strong><strong><span class=\"kw\">Special Abilities</span></strong>available during specific Phases.<br/><strong><br/></strong><strong>9. Weapon Profiles:</strong>Each weapon is assigned to either the Assault Phase or the Combat Phase and may be used only during that phase. Each weapon profile lists:<strong>Phase:</strong>The phase in which this weapon may be used - Assault Phase (ranged weapons) or Combat Phase (melee weapons).<strong>[RNG] Range:</strong>Maximum effective distance. Melee weapons list <strong>E</strong>(<strong><span class=\"kw\">Engagement Range</span></strong>). <span class=\"kw\">Template weapons</span>list <strong>FT</strong>or <strong>BT</strong>.<strong>Target:</strong>What the weapon can hit. <strong>Ground</strong>(Ground <span class=\"kw\">Units</span>only), <strong><span class=\"kw\">Flying</span></strong>(<span class=\"kw\">Flying</span><span class=\"kw\">Units</span>only), or <strong>All</strong>(both Ground and <span class=\"kw\">Flying</span><span class=\"kw\">Units</span>).<strong>[RoA] Rate of Attack:</strong><span class=\"kw\">Dice</span>rolled per firing model.<strong>Hit:</strong>Target Number required on a D6 to score a hit.<strong>Surge Type:</strong>The <strong>Combat Tag</strong>that triggers the weapon’s Surge efficiency.<strong>S <span class=\"kw\">Dice</span>:</strong>Die type rolled to determine Surge results (D3 or D6).<strong>[DMG] Damage:</strong><strong>Damage</strong>inflicted per die in the <strong>Damage Pool</strong>.<strong><span class=\"kw\">Keywords</span>:</strong>Special rules on the weapon (e.g., <strong><span class=\"kw\">PIERCE</span></strong>, <strong><span class=\"kw\">SIDEARM</span></strong>).<br/><strong><br/></strong><strong>10. <span class=\"kw\">Combat Tags</span>:</strong>The Unit’s <strong>Combat Tag</strong>s.<br/><strong><br/></strong><strong>11. Faction Tag:</strong>The Faction the Unit belongs to.<br/>",
+      "rows": [
+        {
+          "type": "text",
+          "html": "Every Unit has a <b>Unit Card</b> that provides all the information needed to use it in a game.",
+          "plain": "Every Unit has a Unit Card that provides all the information needed to use it in a game."
+        },
+        {
+          "type": "text",
+          "html": "<b>1. Unit Name</b>",
+          "plain": "1. Unit Name"
+        },
+        {
+          "type": "block",
+          "html": "<div><b><br/>2. Speed:</b> The maximum distance in inches the <b><span class=\"kw\">Leading Model</span></b> may traverse in a standard <b><span class=\"kw\">Move</span></b>.</div>",
+          "plain": "2. Speed: The maximum distance in inches the Leading Model may traverse in a standard Move ."
+        },
+        {
+          "type": "block",
+          "html": "<div><div><i>Split Values</i> (e. g. <b>4\"/7\"</b>): Use the second value only when the Unit is reduced to a single remaining model, or when the Unit started with a single model.</div><div><i>Null Value (-)</i>: The Unit <b>cannot</b> <span class=\"kw\">move</span> or be repositioned by any means, including <b><span class=\"kw\">PLACE</span></b> and involuntary movement effects.<br/><b><br/></b></div><div><b>3. Evade:</b> A secondary defensive characteristic representing agility. Used only when a rule or condition specifically grants an <b>Evade Roll</b>.</div><div><i>A Null Value (-</i>): The Unit cannot make <b>Evade Rolls</b>. An ability that explicitly grants an <b>Evade Roll</b> does not override this.</div><div><b><br/></b></div><div><b>4. Armour:</b> The Target Number the defender <b>must</b> meet or exceed on a D6 to cancel a hit.<br/><b><br/></b></div><div><b>5. Hit Points (HP):</b> <b>Damage</b> a single model must sustain before it is removed.<br/><b><br/></b></div><div><b>5A. Shields (Optional):</b> If this value is present on a <b>Unit Card</b>, add it to the<b> Hit Points (HP)</b> of the first model. The Unit is <b><span class=\"kw\">Shielded</span></b>. The Unit loses its <b><span class=\"kw\">Shielded</span> <span class=\"kw\">Status</span></b> when the Total <b>Damage</b> assigned to it exceeds its <b>Shield</b> value or when the first model in the Unit is removed. The <b><span class=\"kw\">Shielded</span> <span class=\"kw\">Status</span></b> is referenced by other abilities. Losing <b><span class=\"kw\">Shielded</span> <span class=\"kw\">Status</span></b> does not remove any remaining <b>Hit Points,</b> it only ends effects that require the Unit to be <b><span class=\"kw\">Shielded</span></b>.<br/><b><br/></b></div><div><b>6. Size:</b> The model’s vertical height category, used for <b><span class=\"kw\">Line of Sight</span></b> and terrain interaction.<br/><b><br/></b></div><div><b>7. Supply Profile:</b> Links the number of remaining <span class=\"kw\">models</span> in the Unit to its <b><span class=\"kw\">Current Supply Value</span></b>. Update immediately when casualties reduce the model count to a lower bracket. Supply is used for <span class=\"kw\">Deployment</span>, <b>Mission Marker</b> Control, and <b><span class=\"kw\">Disengage</span></b> checks.<br/><b><br/></b></div><div><b>8. Phase Boxes:</b> <b><span class=\"kw\">Special Abilities</span></b> available during specific Phases.<br/><b><br/></b></div><div><b>9. Weapon Profiles:</b> Each weapon is assigned to either the Assault Phase or the Combat Phase and may be used only during that phase. Each weapon profile lists:<div><b>Phase:</b> The phase in which this weapon may be used - Assault Phase (ranged weapons) or Combat Phase (melee weapons).</div><div><b>[RNG] Range:</b> Maximum effective distance. Melee weapons list <b>E</b> (<b><span class=\"kw\">Engagement Range</span></b>). <span class=\"kw\">Template weapons</span> list <b>FT</b> or <b>BT</b>.</div><div><b>Target:</b> What the weapon can hit. <b>Ground</b> (Ground <span class=\"kw\">Units</span> only), <b><span class=\"kw\">Flying</span></b> (<span class=\"kw\">Flying</span> <span class=\"kw\">Units</span> only), or <b>All</b> (both Ground and <span class=\"kw\">Flying</span> <span class=\"kw\">Units</span>).</div><div><b>[RoA] Rate of Attack:</b> <span class=\"kw\">Dice</span> rolled per firing model.</div><div><b>Hit:</b> Target Number required on a D6 to score a hit.</div><div><b>Surge Type:</b> The <b>Combat Tag</b> that triggers the weapon’s Surge efficiency.</div><div><b>S <span class=\"kw\">Dice</span>:</b> Die type rolled to determine Surge results (D3 or D6).</div><div><b>[DMG] Damage:</b> <b>Damage</b> inflicted per die in the <b>Damage Pool</b>.</div><div><b><span class=\"kw\">Keywords</span>:</b> Special rules on the weapon (e. g. , <b><span class=\"kw\">PIERCE</span></b>, <b><span class=\"kw\">SIDEARM</span></b>).<br/><b><br/></b></div><div><b>10. <span class=\"kw\">Combat Tags</span>:</b> The Unit’s <b>Combat Tag</b> s.<br/><b><br/></b></div><div><b>11. Faction Tag:</b> The Faction the Unit belongs to.<br/></div></div></div>",
+          "plain": "Split Values (e. g. 4\"/7\" ): Use the second value only when the Unit is reduced to a single remaining model, or when the Unit started with a single model. Null Value (-) : The Unit cannot move or be repositioned by any means, including PLACE and involuntary movement effects. 3. Evade: A secondary defensive characteristic representing agility. Used only when a rule or condition specifically grants an Evade Roll . A Null Value (- ): The Unit cannot make Evade Rolls . An ability that explicitly grants an Evade Roll does not override this. 4. Armour: The Target Number the defender must meet or exceed on a D6 to cancel a hit. 5. Hit Points (HP): Damage a single model must sustain before it is removed. 5A. Shields (Optional): If this value is present on a Unit Card , add it to the Hit Points (HP) of the first model. The Unit is Shielded . The Unit loses its Shielded Status when the Total Damage assigned to it exceeds its Shield value or when the first model in the Unit is removed. The Shielded Status is referenced by other abilities. Losing Shielded Status does not remove any remaining Hit Points, it only ends effects that require the Unit to be Shielded . 6. Size: The model’s vertical height category, used for Line of Sight and terrain interaction. 7. Supply Profile: Links the number of remaining models in the Unit to its Current Supply Value . Update immediately when casualties reduce the model count to a lower bracket. Supply is used for Deployment , Mission Marker Control, and Disengage checks. 8. Phase Boxes: Special Abilities available during specific Phases. 9. Weapon Profiles: Each weapon is assigned to either the Assault Phase or the Combat Phase and may be used only during that phase. Each weapon profile lists: Phase: The phase in which this weapon may be used - Assault Phase (ranged weapons) or Combat Phase (melee weapons). [RNG] Range: Maximum effective distance. Melee weapons list E ( Engagement Range ). Template weapons list FT or BT . Target: What the weapon can hit. Ground (Ground Units only), Flying ( Flying Units only), or All (both Ground and Flying Units ). [RoA] Rate of Attack: Dice rolled per firing model. Hit: Target Number required on a D6 to score a hit. Surge Type: The Combat Tag that triggers the weapon’s Surge efficiency. S Dice : Die type rolled to determine Surge results (D3 or D6). [DMG] Damage: Damage inflicted per die in the Damage Pool . Keywords : Special rules on the weapon (e. g. , PIERCE , SIDEARM ). 10. Combat Tags : The Unit’s Combat Tag s. 11. Faction Tag: The Faction the Unit belongs to."
+        }
+      ],
       "children": []
     },
     {
+      "id": "5-2-special-rules-and-upgrades",
       "title": "5.2 Special Rules and Upgrades",
-      "id": "52-special-rules-and-upgrades",
-      "html": "The reverse of each <strong>Unit Card</strong>lists optional Upgrades available during <span class=\"kw\">Army Building</span>.<br><br>• <strong>Upgrades:</strong>New abilities or weapons added to the profile.<br/><br/>• <strong>Replacements (↑ FOR):</strong>An entry showing \"<strong>↑ FOR [Weapon Name]</strong>\" means the new weapon replaces the original entirely.<br/><br/>• <strong>Null Value (-):</strong>The Unit lacks this capability. No roll is possible.<br/><br/>• <strong><span class=\"kw\">Army Slot</span>:</strong>The slot type (Core, Elite, Support, Air, or Hero) required to field this Unit. Each Unit occupies a number of slots of this type equal to its starting <strong><span class=\"kw\">Supply Value</span></strong>(Part <span class=\"ref\">9.1.6</span>).<br/><br/>• Flavour text describing the Unit’s role.<br/>• <strong><span class=\"kw\">Army Slot</span>:</strong>The slot type (Core, Elite, Support, Air, or Hero) the Unit occupies. The number of occupied slots equals the unit's starting <strong><span class=\"kw\">Supply Value</span></strong>.<br/>• Base diameter on which the model <strong>must</strong>be mounted on.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "The reverse of each <b>Unit Card</b> lists optional Upgrades available during <span class=\"kw\">Army Building</span>.",
+          "plain": "The reverse of each Unit Card lists optional Upgrades available during Army Building ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Upgrades:</b> New abilities or weapons added to the profile.",
+          "plain": "Upgrades: New abilities or weapons added to the profile."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Replacements (↑ FOR):</b> An entry showing &quot;<b>↑ FOR [Weapon Name]</b>&quot; means the new weapon replaces the original entirely.",
+          "plain": "Replacements (↑ FOR): An entry showing \" ↑ FOR [Weapon Name] \" means the new weapon replaces the original entirely."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Null Value (-):</b> The Unit lacks this capability. No roll is possible.",
+          "plain": "Null Value (-): The Unit lacks this capability. No roll is possible."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Army Slot</span>:</b> The slot type (Core, Elite, Support, Air, or Hero) required to field this Unit. Each Unit occupies a number of slots of this type equal to its starting <b><span class=\"kw\">Supply Value</span></b> (Part <span class=\"ref\">9. 1. 6</span>).",
+          "plain": "Army Slot : The slot type (Core, Elite, Support, Air, or Hero) required to field this Unit. Each Unit occupies a number of slots of this type equal to its starting Supply Value (Part 9. 1. 6 )."
+        },
+        {
+          "type": "bullet",
+          "html": "Flavour text describing the Unit’s role.<br/>• <b style=\"--tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0. 5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; \"><span class=\"kw\">Army Slot</span>:</b> The slot type (Core, Elite, Support, Air, or Hero) the Unit occupies. The number of occupied slots equals the unit&#x27; s starting <b style=\"--tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0. 5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; \"><span class=\"kw\">Supply Value</span></b>.<br/>• Base diameter on which the model <b>must</b> be mounted on.",
+          "plain": "Flavour text describing the Unit’s role. • Army Slot : The slot type (Core, Elite, Support, Air, or Hero) the Unit occupies. The number of occupied slots equals the unit' s starting Supply Value . • Base diameter on which the model must be mounted on."
+        }
+      ],
       "children": []
     },
     {
+      "id": "5-3-tactical-cards",
       "title": "5.3 Tactical Cards",
-      "id": "53-tactical-cards",
-      "html": "No commander goes into combat alone with guns. A creep tumor in a good position, a sensor sweep in reserve, or a psionic storm held back can change a lost battle into a rout. The <strong>Tactics Cards</strong>are the strategic resources, orders, and doctrines a military leader has available to him, bought before the battle and deployed when they are most needed.<br/><br/><strong><span class=\"kw\">Tactical Cards</span></strong>are purchased with <strong><span class=\"kw\">Vespene Gas</span></strong>during <strong><span class=\"kw\">Army Building</span></strong>(Part <span class=\"ref\">9.1.4</span>).<br><br>• <strong>Name:</strong>The name of the <strong>Tactical Card</strong>.<br/><br/>• <strong>Unique Marking:</strong>If present, only one copy of this card may be included in an army.<br/><br/>• <strong><span class=\"kw\">Faction Tags</span>:</strong>The <strong>Race Tag</strong>and any <strong>Sub-<span class=\"kw\">Faction Tags</span></strong>that determine which armies may include this card (Part <span class=\"ref\">9.1.2</span>).<br/><br/>• <strong>Resource Type and Value:</strong>The faction’s resource (<strong>CP</strong>for <strong><span class=\"kw\">Terran</span></strong>, <strong>BM</strong>for <strong><span class=\"kw\">Zerg</span></strong>, <strong>PE</strong>for <strong><span class=\"kw\">Protoss</span></strong>) and the amount generated when this card is <strong>Exhausted</strong>instead of using its <strong><span class=\"kw\">Special Ability</span></strong>.<br/><br/>• <strong>Army Slots:</strong>The organisation slots unlocked when this card is included in the army (e.g., 2× Core, 1× Support). These slots are in addition to those provided by the <strong>Faction Card</strong>.<br/><br/>• <strong><span class=\"kw\">Special Abilities</span>:</strong>One or more <strong>Active</strong>, <strong>Passive</strong>, or <strong><span class=\"kw\">Reaction Abilities</span></strong>resolved using the standard rules (Parts <span class=\"ref\">10.1</span>–<span class=\"ref\">10.4</span>).",
+      "rows": [
+        {
+          "type": "text",
+          "html": "No commander goes into combat alone with guns. A creep tumor in a good position, a sensor sweep in reserve, or a psionic storm held back can change a lost battle into a rout. The <b>Tactics Cards</b> are the strategic resources, orders, and doctrines a military leader has available to him, bought before the battle and deployed when they are most needed.",
+          "plain": "No commander goes into combat alone with guns. A creep tumor in a good position, a sensor sweep in reserve, or a psionic storm held back can change a lost battle into a rout. The Tactics Cards are the strategic resources, orders, and doctrines a military leader has available to him, bought before the battle and deployed when they are most needed."
+        },
+        {
+          "type": "text",
+          "html": "<b><span class=\"kw\">Tactical Cards</span></b> are purchased with <b><span class=\"kw\">Vespene Gas</span></b> during <b><span class=\"kw\">Army Building</span></b> (Part <span class=\"ref\">9. 1. 4</span>).",
+          "plain": "Tactical Cards are purchased with Vespene Gas during Army Building (Part 9. 1. 4 )."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Name:</b> The name of the <b>Tactical Card</b>.",
+          "plain": "Name: The name of the Tactical Card ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Unique Marking:</b> If present, only one copy of this card may be included in an army.",
+          "plain": "Unique Marking: If present, only one copy of this card may be included in an army."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Faction Tags</span>:</b> The <b>Race Tag</b> and any <b>Sub-<span class=\"kw\">Faction Tags</span></b> that determine which armies may include this card (Part <span class=\"ref\">9. 1. 2</span>).",
+          "plain": "Faction Tags : The Race Tag and any Sub- Faction Tags that determine which armies may include this card (Part 9. 1. 2 )."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Resource Type and Value:</b> The faction’s resource (<b>CP</b> for <b><span class=\"kw\">Terran</span></b>, <b>BM</b> for <b><span class=\"kw\">Zerg</span></b>, <b>PE</b> for <b><span class=\"kw\">Protoss</span></b>) and the amount generated when this card is <b>Exhausted</b> instead of using its <b><span class=\"kw\">Special Ability</span></b>.",
+          "plain": "Resource Type and Value: The faction’s resource ( CP for Terran , BM for Zerg , PE for Protoss ) and the amount generated when this card is Exhausted instead of using its Special Ability ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Army Slots:</b> The organisation slots unlocked when this card is included in the army (e. g. , 2× Core, 1× Support). These slots are in addition to those provided by the <b>Faction Card</b>.",
+          "plain": "Army Slots: The organisation slots unlocked when this card is included in the army (e. g. , 2× Core, 1× Support). These slots are in addition to those provided by the Faction Card ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Special Abilities</span>:</b> One or more <b>Active</b>, <b>Passive</b>, or <b><span class=\"kw\">Reaction Abilities</span></b> resolved using the standard rules (Parts <span class=\"ref\">10. 1</span>–<span class=\"ref\">10. 4</span>).",
+          "plain": "Special Abilities : One or more Active , Passive , or Reaction Abilities resolved using the standard rules (Parts 10. 1 – 10. 4 )."
+        }
+      ],
       "children": []
     },
     {
+      "id": "5-4-faction-cards",
       "title": "5.4 Faction Cards",
-      "id": "54-faction-cards",
-      "html": "The <strong>Faction Card</strong>is the foundation of every army. It defines who you are, what doctrine you follow, and what forces you are permitted to bring to the battlefield.<br/><br/>Every army must include exactly <strong>one Faction Card</strong>, selected during <span class=\"kw\">Army Building</span>.<br><br>• <strong>Faction Name:</strong>The name of the Faction. This may also function as a <strong>Keyword</strong>referenced by other rules and abilities.<br/><br/>• <strong><span class=\"kw\">Faction Tags</span>:</strong>The <strong>Race Tag</strong>and any <strong>Sub-<span class=\"kw\">Faction Tags</span></strong>that specify which <span class=\"kw\">Units</span>and <strong><span class=\"kw\">Tactical Cards</span></strong>can be included in the army (Part <span class=\"ref\">9.1.2</span>).<br/><br/>• <strong>Starting Army Slots:</strong>The organisation slots provided by the <strong>Faction Card</strong>itself (e.g. 3× Core, 1× Hero, 2× Support). Additional slots are unlocked by purchasing <strong><span class=\"kw\">Tactical Cards</span></strong>.<br/><br/>• <strong>Resource Type and Value:</strong>The faction’s resource (<strong>CP</strong>for <strong><span class=\"kw\">Terran</span></strong>, <strong>BM</strong>for <strong><span class=\"kw\">Zerg</span></strong>, <strong>PE</strong>for <strong><span class=\"kw\">Protoss</span></strong>) and the amount generated when this card is <strong>Exhausted</strong>.<br/><br/>• <strong><span class=\"kw\">Special Abilities</span>:</strong>One or more <strong>Active</strong>, <strong>Passive</strong>, or <strong><span class=\"kw\">Reaction Abilities</span></strong>resolved using the standard rules (Parts <span class=\"ref\">10.1</span>–<span class=\"ref\">10.4</span>).",
+      "rows": [
+        {
+          "type": "text",
+          "html": "The <b>Faction Card</b> is the foundation of every army. It defines who you are, what doctrine you follow, and what forces you are permitted to bring to the battlefield.",
+          "plain": "The Faction Card is the foundation of every army. It defines who you are, what doctrine you follow, and what forces you are permitted to bring to the battlefield."
+        },
+        {
+          "type": "text",
+          "html": "Every army must include exactly <b>one Faction Card</b>, selected during <span class=\"kw\">Army Building</span>.",
+          "plain": "Every army must include exactly one Faction Card , selected during Army Building ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Faction Name:</b> The name of the Faction. This may also function as a <b>Keyword</b> referenced by other rules and abilities.<b></b>",
+          "plain": "Faction Name: The name of the Faction. This may also function as a Keyword referenced by other rules and abilities."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Faction Tags</span>:</b> The <b>Race Tag</b> and any <b>Sub-<span class=\"kw\">Faction Tags</span></b> that specify which <span class=\"kw\">Units</span> and <b><span class=\"kw\">Tactical Cards</span></b> can be included in the army (Part <span class=\"ref\">9. 1. 2</span>).",
+          "plain": "Faction Tags : The Race Tag and any Sub- Faction Tags that specify which Units and Tactical Cards can be included in the army (Part 9. 1. 2 )."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Starting Army Slots:</b> The organisation slots provided by the <b>Faction Card</b> itself (e. g. 3× Core, 1× Hero, 2× Support). Additional slots are unlocked by purchasing <b><span class=\"kw\">Tactical Cards</span></b>.",
+          "plain": "Starting Army Slots: The organisation slots provided by the Faction Card itself (e. g. 3× Core, 1× Hero, 2× Support). Additional slots are unlocked by purchasing Tactical Cards ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Resource Type and Value:</b> The faction’s resource (<b>CP</b> for <b><span class=\"kw\">Terran</span></b>, <b>BM</b> for <b><span class=\"kw\">Zerg</span></b>, <b>PE</b> for <b><span class=\"kw\">Protoss</span></b>) and the amount generated when this card is <b>Exhausted</b>.",
+          "plain": "Resource Type and Value: The faction’s resource ( CP for Terran , BM for Zerg , PE for Protoss ) and the amount generated when this card is Exhausted ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Special Abilities</span>:</b> One or more <b>Active</b>, <b>Passive</b>, or <b><span class=\"kw\">Reaction Abilities</span></b> resolved using the standard rules (Parts <span class=\"ref\">10. 1</span>–<span class=\"ref\">10. 4</span>).",
+          "plain": "Special Abilities : One or more Active , Passive , or Reaction Abilities resolved using the standard rules (Parts 10. 1 – 10. 4 )."
+        }
+      ],
       "children": []
     },
     {
+      "id": "5-5-mission-cards",
       "title": "5.5 Mission Cards",
-      "id": "55-mission-cards",
-      "html": "Every conflict has a purpose. A contested line of <span class=\"kw\">minerals</span>, a crashed shuttle with vital information, or a Xel’Naga relic glowing with power buried deep beneath the surface. <strong><span class=\"kw\">Mission Cards</span></strong>decide what the conflict is about, how long the battle will last, and what must be achieved to win. The mission determines the fight, not the other way round.<br/><br/><strong><span class=\"kw\">Mission Cards</span></strong>are chosen during the Draft (Part <span class=\"ref\">9.2</span>).<br><br>• <strong>Name:</strong>The name of the Mission.<br/><br/>• <strong><span class=\"kw\">Engagement Scale</span>:</strong>The game scale this mission is designed for (Skirmish, Standard, or Grand Offensive).<br/><br/>• <strong>Starting Supply:</strong>The <strong>Supply Pool</strong>available to each player in Round 1.<br/><br/>• <strong>Supply Escalation:</strong>The amount by which the <strong>Supply Pool</strong>increases at the start of each subsequent Round.<br/><br/>• <strong>Game Length:</strong>The number of Rounds played before the game ends (usually 5).<br/><br/>• <strong>Mission Parameters:</strong>Setup instructions, <strong>Mission Marker</strong>states, and any special conditions that apply from the start of the game.<br/><br/>• <strong>Scoring Conditions:</strong>How players earn <strong>Victory Points</strong>at the end of each Round.<br/><br/>• <strong>Additional Conditions:</strong>Special rules or winning conditions unique to this mission, including any <span class=\"kw\">instant</span>victory triggers.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "Every conflict has a purpose. A contested line of <span class=\"kw\">minerals</span>, a crashed shuttle with vital information, or a Xel’Naga relic glowing with power buried deep beneath the surface. <b><span class=\"kw\">Mission Cards</span></b> decide what the conflict is about, how long the battle will last, and what must be achieved to win. The mission determines the fight, not the other way round.",
+          "plain": "Every conflict has a purpose. A contested line of minerals , a crashed shuttle with vital information, or a Xel’Naga relic glowing with power buried deep beneath the surface. Mission Cards decide what the conflict is about, how long the battle will last, and what must be achieved to win. The mission determines the fight, not the other way round."
+        },
+        {
+          "type": "text",
+          "html": "<b><span class=\"kw\">Mission Cards</span></b> are chosen during the Draft (Part <span class=\"ref\">9. 2</span>).",
+          "plain": "Mission Cards are chosen during the Draft (Part 9. 2 )."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Name:</b> The name of the Mission.",
+          "plain": "Name: The name of the Mission."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Engagement Scale</span>:</b> The game scale this mission is designed for (Skirmish, Standard, or Grand Offensive).",
+          "plain": "Engagement Scale : The game scale this mission is designed for (Skirmish, Standard, or Grand Offensive)."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Starting Supply:</b> The <b>Supply Pool</b> available to each player in Round 1.",
+          "plain": "Starting Supply: The Supply Pool available to each player in Round 1."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Supply Escalation:</b> The amount by which the <b>Supply Pool</b> increases at the start of each subsequent Round.",
+          "plain": "Supply Escalation: The amount by which the Supply Pool increases at the start of each subsequent Round."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Game Length:</b> The number of Rounds played before the game ends (usually 5).",
+          "plain": "Game Length: The number of Rounds played before the game ends (usually 5)."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Mission Parameters:</b> Setup instructions, <b>Mission Marker</b> states, and any special conditions that apply from the start of the game.",
+          "plain": "Mission Parameters: Setup instructions, Mission Marker states, and any special conditions that apply from the start of the game."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Scoring Conditions:</b> How players earn <b>Victory Points</b> at the end of each Round.",
+          "plain": "Scoring Conditions: How players earn Victory Points at the end of each Round."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Additional Conditions:</b> Special rules or winning conditions unique to this mission, including any <span class=\"kw\">instant</span> victory triggers.",
+          "plain": "Additional Conditions: Special rules or winning conditions unique to this mission, including any instant victory triggers."
+        }
+      ],
       "children": []
     },
     {
+      "id": "5-6-deployment-cards",
       "title": "5.6 Deployment Cards",
-      "id": "56-deployment-cards",
-      "html": "The location from which you engage in the battle is as important as what you bring into it. A narrow canyon channels the entire attack into a kill zone. Parallel zones of <span class=\"kw\">deployment</span>across open ground give the victory to whoever shoots first. The <strong><span class=\"kw\">Deployment Cards</span></strong>determine the war’s geometry, entry points, restricted zones, and the ground that must be taken.<br/><br/><strong><span class=\"kw\">Deployment Cards</span></strong>are selected during the Draft<br><br>• <strong>Name:</strong>The name of the <span class=\"kw\">Deployment</span>layout.<br/><br/>• <strong><span class=\"kw\">Engagement Scale</span>:</strong>The game scale this <span class=\"kw\">deployment</span>is designed for (Skirmish, Standard, or Grand Offensive).<br/><br/>• <strong>Battlefield Dimensions:</strong>The required table size for this <span class=\"kw\">deployment</span>.<br/><br/>• <strong>Entry Edges:</strong>The table edges assigned to each player. <span class=\"kw\">Units</span>enter the battlefield from their assigned <strong><span class=\"kw\">Entry Edge</span></strong>when deploying from <strong><span class=\"kw\">Reserves</span></strong>.<br/><br/>• <strong><span class=\"kw\">Zone of Influence</span>:</strong>A restricted area extending <strong>6\"</strong>inward from each player’s <strong><span class=\"kw\">Entry Edge</span></strong>. <strong><span class=\"kw\">Enemy</span></strong><span class=\"kw\">Units</span>arriving from <strong><span class=\"kw\">Reserves</span></strong>cannot end their <span class=\"kw\">deployment</span><span class=\"kw\">within</span>this area. The <strong><span class=\"kw\">Zone of Influence</span></strong>does not affect <span class=\"kw\">Units</span>already on the battlefield.<br/><br/>• <strong>Marker Coordinates:</strong>The precise measurements for positioning each numbered <strong>Mission Marker</strong>on the battlefield.<br/><br/><strong>Using the <span class=\"kw\">Deployment</span>Card during Setup:</strong>Once the <strong><span class=\"kw\">Deployment</span>Card</strong>is selected, follow its instructions in this order: confirm the table dimensions, assign <strong>Entry Edges</strong>to each player, set <strong><span class=\"kw\">Zone of Influence</span><span class=\"kw\">Markers</span></strong>at the corners of each player’s <strong><span class=\"kw\">Entry Edge</span></strong>, where applicable, then set <strong><span class=\"kw\">Mission Markers</span></strong>at the listed coordinates. See Part <span class=\"ref\">9.3</span>for the full setup sequence.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "The location from which you engage in the battle is as important as what you bring into it. A narrow canyon channels the entire attack into a kill zone. Parallel zones of <span class=\"kw\">deployment</span> across open ground give the victory to whoever shoots first. The <b><span class=\"kw\">Deployment Cards</span></b> determine the war’s geometry, entry points, restricted zones, and the ground that must be taken.",
+          "plain": "The location from which you engage in the battle is as important as what you bring into it. A narrow canyon channels the entire attack into a kill zone. Parallel zones of deployment across open ground give the victory to whoever shoots first. The Deployment Cards determine the war’s geometry, entry points, restricted zones, and the ground that must be taken."
+        },
+        {
+          "type": "text",
+          "html": "<b><span class=\"kw\">Deployment Cards</span></b> are selected during the Draft",
+          "plain": "Deployment Cards are selected during the Draft"
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Name:</b> The name of the <span class=\"kw\">Deployment</span> layout.",
+          "plain": "Name: The name of the Deployment layout."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Engagement Scale</span>:</b> The game scale this <span class=\"kw\">deployment</span> is designed for (Skirmish, Standard, or Grand Offensive).",
+          "plain": "Engagement Scale : The game scale this deployment is designed for (Skirmish, Standard, or Grand Offensive)."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Battlefield Dimensions:</b> The required table size for this <span class=\"kw\">deployment</span>.",
+          "plain": "Battlefield Dimensions: The required table size for this deployment ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Entry Edges:</b> The table edges assigned to each player. <span class=\"kw\">Units</span> enter the battlefield from their assigned <b><span class=\"kw\">Entry Edge</span></b> when deploying from <b><span class=\"kw\">Reserves</span></b>.",
+          "plain": "Entry Edges: The table edges assigned to each player. Units enter the battlefield from their assigned Entry Edge when deploying from Reserves ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Zone of Influence</span>:</b> A restricted area extending <b>6\"</b> inward from each player’s <b><span class=\"kw\">Entry Edge</span></b>. <b><span class=\"kw\">Enemy</span></b> <span class=\"kw\">Units</span> arriving from <b><span class=\"kw\">Reserves</span></b> cannot end their <span class=\"kw\">deployment</span> <span class=\"kw\">within</span> this area. The <b><span class=\"kw\">Zone of Influence</span></b> does not affect <span class=\"kw\">Units</span> already on the battlefield.",
+          "plain": "Zone of Influence : A restricted area extending 6\" inward from each player’s Entry Edge . Enemy Units arriving from Reserves cannot end their deployment within this area. The Zone of Influence does not affect Units already on the battlefield."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Marker Coordinates:</b> The precise measurements for positioning each numbered <b>Mission Marker</b> on the battlefield.",
+          "plain": "Marker Coordinates: The precise measurements for positioning each numbered Mission Marker on the battlefield."
+        },
+        {
+          "type": "text",
+          "html": "<b>Using the <span class=\"kw\">Deployment</span> Card during Setup:</b> Once the <b><span class=\"kw\">Deployment</span> Card</b> is selected, follow its instructions in this order: confirm the table dimensions, assign <b>Entry Edges</b> to each player, set <b><span class=\"kw\">Zone of Influence</span> <span class=\"kw\">Markers</span></b> at the corners of each player’s <b><span class=\"kw\">Entry Edge</span></b>, where applicable, then set <b><span class=\"kw\">Mission Markers</span></b> at the listed coordinates. See Part <span class=\"ref\">9. 3</span> for the full setup sequence.",
+          "plain": "Using the Deployment Card during Setup: Once the Deployment Card is selected, follow its instructions in this order: confirm the table dimensions, assign Entry Edges to each player, set Zone of Influence Markers at the corners of each player’s Entry Edge , where applicable, then set Mission Markers at the listed coordinates. See Part 9. 3 for the full setup sequence."
+        }
+      ],
       "children": []
     }
   ]

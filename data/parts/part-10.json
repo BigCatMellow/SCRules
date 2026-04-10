@@ -3,38 +3,260 @@
   "kicker": "Part X",
   "title": "Advanced Rules",
   "id": "part-10",
-  "color": "#8a69ae",
-  "intro": "The basic systems outline the essentials of movement, firing, and hand-to-hand combat, but the true depth of StarCraft: The Miniatures Game lies in the complex systems built upon these fundamental ones. This section will introduce <strong><span class=\"kw\">Special Abilities</span></strong>(Active, Passive, and Reaction), the <strong>Tactical</strong>and <strong>Faction Card</strong>systems, which give every army a unique personality, and the resources needed to unleash powerful abilities in crucial moments.",
+  "color": "#a791c2",
+  "group": "systems",
+  "introRows": [
+    {
+      "type": "text",
+      "html": "The basic systems outline the essentials of movement, firing, and hand-to-hand combat, but the true depth of StarCraft: The Miniatures Game lies in the complex systems built upon these fundamental ones. This section will introduce <b><span class=\"kw\">Special Abilities</span></b> (Active, Passive, and Reaction), the <b>Tactical</b> and <b>Faction Card</b> systems, which give every army a unique personality, and the resources needed to unleash powerful abilities in crucial moments.",
+      "plain": "The basic systems outline the essentials of movement, firing, and hand-to-hand combat, but the true depth of StarCraft: The Miniatures Game lies in the complex systems built upon these fundamental ones. This section will introduce Special Abilities (Active, Passive, and Reaction), the Tactical and Faction Card systems, which give every army a unique personality, and the resources needed to unleash powerful abilities in crucial moments."
+    }
+  ],
   "rules": [
     {
+      "id": "10-1-special-abilities",
       "title": "10.1 Special Abilities",
-      "id": "101-special-abilities",
-      "html": "All <strong>Special Abilitie</strong>s follow the same structure and universal rules. Each ability on a <strong>Unit Card</strong>or <strong>Tactical Card</strong>is presented using a consistent format:<br/><br/>• A <strong>Name</strong>identifying the ability.<br/><br/>• A <strong>Phase Limitation</strong>restricting when it can be used (if applicable).<br/><br/>• A <strong>Type</strong>declaring whether it is Passive, Active, or Reaction.<br/><br/>• A <strong>Cost</strong>specifying the resource payment required in CP, BM, or PE (if any), and the <strong>Instruction</strong>text describing exactly what occurs when the ability resolves.<br/><br/>An ability may be used only when <strong>all</strong>its requirements are met.<br/><br/>• The timing or trigger condition <strong>must</strong>be correct, and any Phase restrictions <strong>must</strong>be satisfied.<br/><br/>• The target <strong>must</strong>be <strong><span class=\"kw\">Within</span></strong>Range and <strong><span class=\"kw\">Line of Sight</span></strong>(unless the ability explicitly states otherwise).<br/><br/>• All Costs <strong>must</strong>be paid in full before the ability resolves, and the Unit using the ability <strong>must</strong>be on the battlefield.<br/><br/>Unless stated otherwise, all effects granted by Active or <span class=\"kw\">Reaction Abilities</span>that expire \"at the End of the Round\" remain active until all End of the Round effects (Part <span class=\"ref\">8.9.4</span>) are resolved. They are removed during <span class=\"kw\">Cleanup &amp; Refresh</span>(Part <span class=\"ref\">8.9.5</span>).",
+      "rows": [
+        {
+          "type": "text",
+          "html": "All <b>Special Abilitie</b> s follow the same structure and universal rules. Each ability on a <b>Unit Card</b> or <b>Tactical Card</b> is presented using a consistent format:",
+          "plain": "All Special Abilitie s follow the same structure and universal rules. Each ability on a Unit Card or Tactical Card is presented using a consistent format:"
+        },
+        {
+          "type": "bullet",
+          "html": "A <b>Name</b> identifying the ability.",
+          "plain": "A Name identifying the ability."
+        },
+        {
+          "type": "bullet",
+          "html": "A <b>Phase Limitation</b> restricting when it can be used (if applicable).",
+          "plain": "A Phase Limitation restricting when it can be used (if applicable)."
+        },
+        {
+          "type": "bullet",
+          "html": "A <b>Type</b> declaring whether it is Passive, Active, or Reaction.",
+          "plain": "A Type declaring whether it is Passive, Active, or Reaction."
+        },
+        {
+          "type": "bullet",
+          "html": "A <b>Cost</b> specifying the resource payment required in CP, BM, or PE (if any), and the <b>Instruction</b> text describing exactly what occurs when the ability resolves.",
+          "plain": "A Cost specifying the resource payment required in CP, BM, or PE (if any), and the Instruction text describing exactly what occurs when the ability resolves."
+        },
+        {
+          "type": "text",
+          "html": "An ability may be used only when <b>all</b> its requirements are met.",
+          "plain": "An ability may be used only when all its requirements are met."
+        },
+        {
+          "type": "bullet",
+          "html": "The timing or trigger condition <b>must</b> be correct, and any Phase restrictions <b>must</b> be satisfied.",
+          "plain": "The timing or trigger condition must be correct, and any Phase restrictions must be satisfied."
+        },
+        {
+          "type": "bullet",
+          "html": "The target <b>must</b> be <b><span class=\"kw\">Within</span></b> Range and <b><span class=\"kw\">Line of Sight</span></b> (unless the ability explicitly states otherwise).",
+          "plain": "The target must be Within Range and Line of Sight (unless the ability explicitly states otherwise)."
+        },
+        {
+          "type": "bullet",
+          "html": "All Costs <b>must</b> be paid in full before the ability resolves, and the Unit using the ability <b>must</b> be on the battlefield.",
+          "plain": "All Costs must be paid in full before the ability resolves, and the Unit using the ability must be on the battlefield."
+        },
+        {
+          "type": "text",
+          "html": "Unless stated otherwise, all effects granted by Active or <span class=\"kw\">Reaction Abilities</span> that expire &quot; at the End of the Round&quot; remain active until all End of the Round effects (Part <span class=\"ref\">8. 9. 4</span>) are resolved. They are removed during <span class=\"kw\">Cleanup &amp; Refresh</span> (Part <span class=\"ref\">8. 9. 5</span>).",
+          "plain": "Unless stated otherwise, all effects granted by Active or Reaction Abilities that expire \" at the End of the Round\" remain active until all End of the Round effects (Part 8. 9. 4 ) are resolved. They are removed during Cleanup & Refresh (Part 8. 9. 5 )."
+        }
+      ],
       "children": []
     },
     {
+      "id": "10-2-active-abilities-full-rules",
       "title": "10.2 Active Abilities (Full Rules)",
-      "id": "102-active-abilities-full-rules",
-      "html": "<strong><span class=\"kw\">Active Abilities</span></strong>represent deliberate manoeuvres, technologies or enhancements that require a command to execute. A Unit may only use an <strong>Active Ability</strong>when it is currently <strong>Activated</strong>.<br/><br/>• The ability <strong>must</strong>be triggered either immediately before declaring an action or immediately after fully resolving one.<br/><br/>• It <strong>cannot</strong>be used during an action.<br/><br/>• <strong><span class=\"kw\">Active Abilities</span></strong><strong>cannot</strong>be used while the Unit is in <strong><span class=\"kw\">Reserves</span></strong>unless the ability explicitly states otherwise.<br/><br/>• Unless stated otherwise, <span class=\"kw\">modifiers</span>and effects granted by an <strong>Active Ability</strong>expire at the End of the Current Round.<br/><br/><strong>Once Per Round:</strong>A specific Unit may use a named <strong>Active Ability</strong>only once per Game Round, unless the ability has the <strong><span class=\"kw\">REPEATABLE</span></strong>Keyword. This limit applies to each Unit individually. Two different squads of the same Unit type can both use the same-named ability in the same Round, but a single squad <strong>may not</strong>use it twice. If a Unit gains access to an <strong>Active Ability</strong>via a <strong>Tactical Card</strong>, the Once Per Round limit still applies, regardless of how many copies of that card the player controls.<br/><br/>Effects granted by <strong><span class=\"kw\">Active Abilities</span></strong>that expire at the End of the Round remain active through the resolution of all End of the Round effects (Part <span class=\"ref\">8.9.4</span>). They are removed during <span class=\"kw\">Cleanup &amp; Refresh</span>(Part <span class=\"ref\">8.9.5</span>).",
+      "rows": [
+        {
+          "type": "text",
+          "html": "<b><span class=\"kw\">Active Abilities</span></b> represent deliberate manoeuvres, technologies or enhancements that require a command to execute. A Unit may only use an <b>Active Ability</b> when it is currently <b>Activated</b>.",
+          "plain": "Active Abilities represent deliberate manoeuvres, technologies or enhancements that require a command to execute. A Unit may only use an Active Ability when it is currently Activated ."
+        },
+        {
+          "type": "bullet",
+          "html": "The ability <b>must</b> be triggered either immediately before declaring an action or immediately after fully resolving one.",
+          "plain": "The ability must be triggered either immediately before declaring an action or immediately after fully resolving one."
+        },
+        {
+          "type": "bullet",
+          "html": "It <b>cannot</b> be used during an action.",
+          "plain": "It cannot be used during an action."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Active Abilities</span></b><b>cannot</b> be used while the Unit is in <b><span class=\"kw\">Reserves</span></b> unless the ability explicitly states otherwise.",
+          "plain": "Active Abilities cannot be used while the Unit is in Reserves unless the ability explicitly states otherwise."
+        },
+        {
+          "type": "bullet",
+          "html": "Unless stated otherwise, <span class=\"kw\">modifiers</span> and effects granted by an <b>Active Ability</b> expire at the End of the Current Round.",
+          "plain": "Unless stated otherwise, modifiers and effects granted by an Active Ability expire at the End of the Current Round."
+        },
+        {
+          "type": "text",
+          "html": "<b>Once Per Round:</b> A specific Unit may use a named <b>Active Ability</b> only once per Game Round, unless the ability has the <b><span class=\"kw\">REPEATABLE</span></b> Keyword. This limit applies to each Unit individually. Two different squads of the same Unit type can both use the same-named ability in the same Round, but a single squad <b>may not</b> use it twice. If a Unit gains access to an <b>Active Ability</b> via a <b>Tactical Card</b>, the Once Per Round limit still applies, regardless of how many copies of that card the player controls.",
+          "plain": "Once Per Round: A specific Unit may use a named Active Ability only once per Game Round, unless the ability has the REPEATABLE Keyword. This limit applies to each Unit individually. Two different squads of the same Unit type can both use the same-named ability in the same Round, but a single squad may not use it twice. If a Unit gains access to an Active Ability via a Tactical Card , the Once Per Round limit still applies, regardless of how many copies of that card the player controls."
+        },
+        {
+          "type": "text",
+          "html": "Effects granted by <b><span class=\"kw\">Active Abilities</span></b> that expire at the End of the Round remain active through the resolution of all End of the Round effects (Part <span class=\"ref\">8. 9. 4</span>). They are removed during <span class=\"kw\">Cleanup &amp; Refresh</span> (Part <span class=\"ref\">8. 9. 5</span>).",
+          "plain": "Effects granted by Active Abilities that expire at the End of the Round remain active through the resolution of all End of the Round effects (Part 8. 9. 4 ). They are removed during Cleanup & Refresh (Part 8. 9. 5 )."
+        }
+      ],
       "children": []
     },
     {
+      "id": "10-3-passive-abilities-full-rules",
       "title": "10.3 Passive Abilities (Full Rules)",
-      "id": "103-passive-abilities-full-rules",
-      "html": "<strong><span class=\"kw\">Passive Abilities</span></strong>represent innate traits, permanent equipment or constant biological adaptations.<br/><br/>• They are <strong>always active</strong>as long as the Unit is on the battlefield and do not require the Unit to be <strong>Activated</strong>to function.<br/><br/>• Like <strong><span class=\"kw\">Active Abilities</span></strong>, <strong><span class=\"kw\">Passive Abilities</span></strong>on a Unit are not in effect while that Unit is in <strong><span class=\"kw\">Reserves</span></strong>, unless the ability explicitly states otherwise.<br/><br/><strong>Priority:</strong>If multiple <strong><span class=\"kw\">Passive Abilities</span></strong>trigger simultaneously, the <span class=\"kw\">controlling player</span>chooses the order in which they resolve. If both players have <strong><span class=\"kw\">Passive Abilities</span></strong>triggering at the same time, the <span class=\"kw\">Active Player</span>resolves theirs first.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "<b><span class=\"kw\">Passive Abilities</span></b> represent innate traits, permanent equipment or constant biological adaptations.",
+          "plain": "Passive Abilities represent innate traits, permanent equipment or constant biological adaptations."
+        },
+        {
+          "type": "bullet",
+          "html": "They are <b>always active</b> as long as the Unit is on the battlefield and do not require the Unit to be <b>Activated</b> to function.",
+          "plain": "They are always active as long as the Unit is on the battlefield and do not require the Unit to be Activated to function."
+        },
+        {
+          "type": "bullet",
+          "html": "Like <b><span class=\"kw\">Active Abilities</span></b>, <b><span class=\"kw\">Passive Abilities</span></b> on a Unit are not in effect while that Unit is in <b><span class=\"kw\">Reserves</span></b>, unless the ability explicitly states otherwise.",
+          "plain": "Like Active Abilities , Passive Abilities on a Unit are not in effect while that Unit is in Reserves , unless the ability explicitly states otherwise."
+        },
+        {
+          "type": "text",
+          "html": "<b>Priority:</b> If multiple <b><span class=\"kw\">Passive Abilities</span></b> trigger simultaneously, the <span class=\"kw\">controlling player</span> chooses the order in which they resolve. If both players have <b><span class=\"kw\">Passive Abilities</span></b> triggering at the same time, the <span class=\"kw\">Active Player</span> resolves theirs first.",
+          "plain": "Priority: If multiple Passive Abilities trigger simultaneously, the controlling player chooses the order in which they resolve. If both players have Passive Abilities triggering at the same time, the Active Player resolves theirs first."
+        }
+      ],
       "children": []
     },
     {
+      "id": "10-4-reaction-abilities-full-rules",
       "title": "10.4 Reaction Abilities (Full Rules)",
-      "id": "104-reaction-abilities-full-rules",
-      "html": "<strong><span class=\"kw\">Reaction Abilities</span></strong>allow a player to act outside the usual activation sequence, responding to specific events as they occur. A Reaction is used in direct response to a defined trigger (for example, \"When this Unit is targeted by an attack\").<br/><br/>• It <strong>must</strong>be declared at the exact moment the trigger occurs.<br/><br/>• If the window is missed, the ability <strong>cannot</strong>be used retroactively.<br/><br/>• Like <strong><span class=\"kw\">Active Abilities</span></strong>, <strong><span class=\"kw\">Reaction Abilities</span></strong><strong>cannot</strong>be used while the Unit is in <strong><span class=\"kw\">Reserves</span></strong>unless stated otherwise.<br/><br/>• Unless stated otherwise, <span class=\"kw\">modifiers</span>and effects granted by a <strong>Reaction Ability</strong>expire at the End of the Current Round.<br/><br/><strong>Frequency Limit:</strong>A specific Unit may use a named <strong>Reaction Ability</strong>only once per Game Round. This follows the same rules as the <strong>Active Ability</strong>frequency limit described in Part <span class=\"ref\">10.2</span>.<br/><br/><strong>Reaction Limit:</strong>Each player may resolve only one Reaction per each Activation. If both players wish to use a Reaction in response to the same trigger, the <strong><span class=\"kw\">Active Player</span></strong>resolves their Reaction first, and the opponent resolves theirs second.<br/><br/><strong>EXAMPLE:</strong>If a <span class=\"kw\">Zealot</span>Unit is attacked. It may use <em>Zealous Round</em>OR <em>Ground Armour</em>, not both in the same <strong><span class=\"kw\">Enemy</span>Activation</strong>.<br/>If a <span class=\"kw\">Marine</span>Unit is attacked, and it uses <em>Infantry Armor</em>for its Armour Roll, the <span class=\"kw\">Medic</span>Unit behind will not be able to use its <em>Life Support</em>in the same <strong><span class=\"kw\">Enemy</span>Activation</strong>.<span>Summary Table</span><div class=\"stack-table\"><div class=\"stack-table-head\"><span>ACTIVE ABILITY</span><span>PASSIVE ABILITY</span><span>REACTION ABILITY</span></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>When to Use</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>Immediately before declaring an action or immediately after one fully resolves</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>Always on - no trigger needed</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>At the exact moment the specified trigger occurs</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Requires Activation?</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>Yes</span><span>- the Unit must be currently</span><span>Activated</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>No</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>No</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Player Decision?</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>Yes</span><span>- a deliberate choice</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>No</span><span>- automatic</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>Yes</span><span>- must be declared at the trigger</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Frequency</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>Once per Round per Unit per named ability, unless</span><span><span class=\"kw\">REPEATABLE</span></span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>Always active - no limit</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>Once per Round per Unit per named ability, unless</span><span><span class=\"kw\">REPEATABLE</span></span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Reactions per Activation</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>-</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>-</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>One</span><span>Reaction per player per Activation</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Can Interrupt an action?</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>No</span><span>- only before or after</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>Resolves as conditions are met</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>Yes</span><span>- fires at the trigger point mid-sequence</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>In <span class=\"kw\">Reserves</span>?</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>No</span><span>, unless the ability states otherwise</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>No</span><span>, unless the ability states otherwise</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>No</span><span>, unless the ability states otherwise</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Effect Duration</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>Expires at the End of the Round unless stated otherwise</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>Permanent while the Unit remains on the battlefield</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>Expires at the End of the Round unless stated otherwise</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Simultaneous Triggers</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>-</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>The <span class=\"kw\">controlling player</span>chooses order. The</span><span><span class=\"kw\">Active Player</span></span><span>resolves first if both players trigger</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>The</span><span><span class=\"kw\">Active Player</span></span><span>resolves first</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Cost</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">ACTIVE ABILITY</div><div class=\"stack-value\"><p><span>Pay in full before resolving</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">PASSIVE ABILITY</div><div class=\"stack-value\"><p><span>None</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">REACTION ABILITY</div><div class=\"stack-value\"><p><span>Pay in full before resolving</span></p></div></div></div></div></div></div>",
-      "children": []
+      "rows": [
+        {
+          "type": "text",
+          "html": "<b><span class=\"kw\">Reaction Abilities</span></b> allow a player to act outside the usual activation sequence, responding to specific events as they occur. A Reaction is used in direct response to a defined trigger (for example, &quot; When this Unit is targeted by an attack&quot; ).",
+          "plain": "Reaction Abilities allow a player to act outside the usual activation sequence, responding to specific events as they occur. A Reaction is used in direct response to a defined trigger (for example, \" When this Unit is targeted by an attack\" )."
+        },
+        {
+          "type": "bullet",
+          "html": "It <b>must</b> be declared at the exact moment the trigger occurs.",
+          "plain": "It must be declared at the exact moment the trigger occurs."
+        },
+        {
+          "type": "bullet",
+          "html": "If the window is missed, the ability <b>cannot</b> be used retroactively.",
+          "plain": "If the window is missed, the ability cannot be used retroactively."
+        },
+        {
+          "type": "bullet",
+          "html": "Like <b><span class=\"kw\">Active Abilities</span></b>, <b><span class=\"kw\">Reaction Abilities</span></b><b>cannot</b> be used while the Unit is in <b><span class=\"kw\">Reserves</span></b> unless stated otherwise.",
+          "plain": "Like Active Abilities , Reaction Abilities cannot be used while the Unit is in Reserves unless stated otherwise."
+        },
+        {
+          "type": "bullet",
+          "html": "Unless stated otherwise, <span class=\"kw\">modifiers</span> and effects granted by a <b>Reaction Ability</b> expire at the End of the Current Round.",
+          "plain": "Unless stated otherwise, modifiers and effects granted by a Reaction Ability expire at the End of the Current Round."
+        },
+        {
+          "type": "text",
+          "html": "<b>Frequency Limit:</b> A specific Unit may use a named <b>Reaction Ability</b> only once per Game Round. This follows the same rules as the <b>Active Ability</b> frequency limit described in Part <span class=\"ref\">10. 2</span>.",
+          "plain": "Frequency Limit: A specific Unit may use a named Reaction Ability only once per Game Round. This follows the same rules as the Active Ability frequency limit described in Part 10. 2 ."
+        },
+        {
+          "type": "text",
+          "html": "<b>Reaction Limit:</b> Each player may resolve only one Reaction per each Activation. If both players wish to use a Reaction in response to the same trigger, the <b><span class=\"kw\">Active Player</span></b> resolves their Reaction first, and the opponent resolves theirs second.",
+          "plain": "Reaction Limit: Each player may resolve only one Reaction per each Activation. If both players wish to use a Reaction in response to the same trigger, the Active Player resolves their Reaction first, and the opponent resolves theirs second."
+        },
+        {
+          "type": "example",
+          "html": "<b>EXAMPLE:</b> If a <span class=\"kw\">Zealot</span> Unit is attacked. It may use <i>Zealous Round</i> OR <i>Ground Armour</i>, not both in the same <b><span class=\"kw\">Enemy</span> Activation</b>.<br/>If a <span class=\"kw\">Marine</span> Unit is attacked, and it uses <i>Infantry Armor</i> for its Armour Roll, the <span class=\"kw\">Medic</span> Unit behind will not be able to use its <i>Life Support</i> in the same <b><span class=\"kw\">Enemy</span> Activation</b>.",
+          "plain": "EXAMPLE: If a Zealot Unit is attacked. It may use Zealous Round OR Ground Armour , not both in the same Enemy Activation . If a Marine Unit is attacked, and it uses Infantry Armor for its Armour Roll, the Medic Unit behind will not be able to use its Life Support in the same Enemy Activation ."
+        }
+      ],
+      "children": [
+        {
+          "id": "summary-table",
+          "title": "Summary Table",
+          "rows": [
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/><col/><col/></colgroup><thead><tr><th scope=\"col\"><br/></th><th scope=\"col\"><p><span>ACTIVE ABILITY</span></p></th><th scope=\"col\"><p><span>PASSIVE ABILITY</span></p></th><th scope=\"col\"><p><span>REACTION ABILITY</span></p></th></tr></thead><tbody><tr><td><p><span>When to Use</span></p></td><td><p><span>Immediately before declaring an action or immediately after one fully resolves</span></p></td><td><p><span>Always on - no trigger needed</span></p></td><td><p><span>At the exact moment the specified trigger occurs</span></p></td></tr><tr><td><p><span>Requires Activation?</span></p></td><td><p><span>Yes</span><span> - the Unit must be currently</span><span>Activated</span></p></td><td><p><span>No</span></p></td><td><p><span>No</span></p></td></tr><tr><td><p><span>Player Decision?</span></p></td><td><p><span>Yes</span><span> - a deliberate choice</span></p></td><td><p><span>No</span><span> - automatic</span></p></td><td><p><span>Yes</span><span> - must be declared at the trigger</span></p></td></tr><tr><td><p><span>Frequency</span></p></td><td><p><span>Once per Round per Unit per named ability, unless</span><span><span class=\"kw\">REPEATABLE</span></span></p></td><td><p><span>Always active - no limit</span></p></td><td><p><span>Once per Round per Unit per named ability, unless</span><span><span class=\"kw\">REPEATABLE</span></span></p></td></tr><tr><td><p><span>Reactions per Activation</span></p></td><td><p><span>-</span></p></td><td><p><span>-</span></p></td><td><p><span>One</span><span> Reaction per player per Activation</span></p></td></tr><tr><td><p><span>Can Interrupt an action?</span></p></td><td><p><span>No</span><span> - only before or after</span></p></td><td><p><span>Resolves as conditions are met</span></p></td><td><p><span>Yes</span><span> - fires at the trigger point mid-sequence</span></p></td></tr><tr><td><p><span>In <span class=\"kw\">Reserves</span>?</span></p></td><td><p><span>No</span><span>, unless the ability states otherwise</span></p></td><td><p><span>No</span><span>, unless the ability states otherwise</span></p></td><td><p><span>No</span><span>, unless the ability states otherwise</span></p></td></tr><tr><td><p><span>Effect Duration</span></p></td><td><p><span>Expires at the End of the Round unless stated otherwise</span></p></td><td><p><span>Permanent while the Unit remains on the battlefield</span></p></td><td><p><span>Expires at the End of the Round unless stated otherwise</span></p></td></tr><tr><td><p><span>Simultaneous Triggers</span></p></td><td><p><span>-</span></p></td><td><p><span>The <span class=\"kw\">controlling player</span> chooses order. The</span><span><span class=\"kw\">Active Player</span></span><span> resolves first if both players trigger</span></p></td><td><p><span>The</span><span><span class=\"kw\">Active Player</span></span><span> resolves first</span></p></td></tr><tr><td><p><span>Cost</span></p></td><td><p><span>Pay in full before resolving</span></p></td><td><p><span>None</span></p></td><td><p><span>Pay in full before resolving</span></p></td></tr></tbody></table>",
+              "plain": "ACTIVE ABILITY PASSIVE ABILITY REACTION ABILITY When to Use Immediately before declaring an action or immediately after one fully resolves Always on - no trigger needed At the exact moment the specified trigger occurs Requires Activation? Yes - the Unit must be currently Activated No No Player Decision? Yes - a deliberate choice No - automatic Yes - must be declared at the trigger Frequency Once per Round per Unit per named ability, unless REPEATABLE Always active - no limit Once per Round per Unit per named ability, unless REPEATABLE Reactions per Activation - - One Reaction per player per Activation Can Interrupt an action? No - only before or after Resolves as conditions are met Yes - fires at the trigger point mid-sequence In Reserves ? No , unless the ability states otherwise No , unless the ability states otherwise No , unless the ability states otherwise Effect Duration Expires at the End of the Round unless stated otherwise Permanent while the Unit remains on the battlefield Expires at the End of the Round unless stated otherwise Simultaneous Triggers - The controlling player chooses order. The Active Player resolves first if both players trigger The Active Player resolves first Cost Pay in full before resolving None Pay in full before resolving"
+            }
+          ]
+        }
+      ]
     },
     {
+      "id": "10-5-tactical-cards-faction-cards",
       "title": "10.5 Tactical Cards & Faction Cards",
-      "id": "105-tactical-cards-faction-cards",
-      "html": "An army isn’t just men and guns; it’s doctrine, infrastructure, and command structure that keep everything in line. The <strong><span class=\"kw\">Faction Cards</span></strong>outline what you are, what philosophy you adhere to, and what command structure your men follow. The <strong><span class=\"kw\">Tactical Cards</span></strong>represent the facilities, technology, and strategic planning done before the first bullet is ever fired. Together, they define not just what you can bring to the battlefield, but how you can <span class=\"kw\">deploy</span>it.<br/><br/>Each card is presented with a standard layout. It displays a <strong>Card Name</strong>. The card specifies its <strong>Type</strong>(either <strong>Faction Card</strong>or <strong>Tactical Card</strong>), lists the <strong>Resources</strong>it provides in CP, BM, or PE when <strong>Exhausted</strong>, and includes any <strong><span class=\"kw\">Special Abilities</span></strong>that are resolved using the standard rules described in Parts <span class=\"ref\">10.1</span>through <span class=\"ref\">10.4</span>.<br/><br/>If a card is marked as <strong>Unique</strong>, only a single copy is allowed (Part <span class=\"ref\">9.1.5</span>).<span>10.5.1 Resources and Costs</span>Each faction has a separate resource type to spend on the faction’s abilities: <strong><span class=\"kw\">Terran</span></strong>uses <strong>CP</strong>, <strong><span class=\"kw\">Zerg</span></strong>uses <strong>BM</strong>, and <strong><span class=\"kw\">Protoss</span></strong>uses <strong>PE</strong>. These resources are provided by <strong>Exhausting</strong>cards.<br/><br/><strong>Exhausting a Card</strong>: To pay for an ability’s cost, such as \"Cost: 1 CP,\" the player must <strong>Exhaust</strong>a <span class=\"kw\">Ready</span>card that matches the resource type of the cost, such as a CP card. Exhausting a card means flipping it face down, after which it is regarded as <strong>Exhausted</strong>.<br/><br/>If the player cannot <strong>Exhaust</strong>enough cards to pay the entire cost, they cannot activate the ability. If a card generates more resources than are needed to pay for a cost, any excess resources are lost. Resources generated to activate one ability can not be saved or spent on another ability.<span>10.5.2 Managing Card States</span>Every <strong>Tactical Card</strong>and <strong>Faction Card</strong>is in one of two states: <strong><span class=\"kw\">Ready</span></strong>(face-up) or <strong>Exhausted</strong>(face-down). A <span class=\"kw\">Ready</span>card may be <strong>Exhausted</strong>in two ways: the player <strong>Exhausts</strong>it to use a <strong><span class=\"kw\">Special Ability</span></strong>printed directly on the card, or the player <strong>Exhausts</strong>it to generate its Resource in order to pay for an ability located elsewhere (for example, on a <strong>Unit Card</strong>).<br/><br/>Once a card is <strong>Exhausted,</strong>it provides no resources for the rest of the round, and its abilities <strong>cannot</strong>be used until it is <strong>Refreshed</strong>(flipped face-up) during Phase 4 Cleanup.",
-      "children": []
+      "rows": [
+        {
+          "type": "text",
+          "html": "An army isn’t just men and guns; it’s doctrine, infrastructure, and command structure that keep everything in line. The <b><span class=\"kw\">Faction Cards</span></b> outline what you are, what philosophy you adhere to, and what command structure your men follow. The <b><span class=\"kw\">Tactical Cards</span></b> represent the facilities, technology, and strategic planning done before the first bullet is ever fired. Together, they define not just what you can bring to the battlefield, but how you can <span class=\"kw\">deploy</span> it.",
+          "plain": "An army isn’t just men and guns; it’s doctrine, infrastructure, and command structure that keep everything in line. The Faction Cards outline what you are, what philosophy you adhere to, and what command structure your men follow. The Tactical Cards represent the facilities, technology, and strategic planning done before the first bullet is ever fired. Together, they define not just what you can bring to the battlefield, but how you can deploy it."
+        },
+        {
+          "type": "text",
+          "html": "Each card is presented with a standard layout. It displays a <b>Card Name</b>. The card specifies its <b>Type</b> (either <b>Faction Card</b> or <b>Tactical Card</b>), lists the <b>Resources</b> it provides in CP, BM, or PE when <b>Exhausted</b>, and includes any <b><span class=\"kw\">Special Abilities</span></b> that are resolved using the standard rules described in Parts <span class=\"ref\">10. 1</span> through <span class=\"ref\">10. 4</span>.",
+          "plain": "Each card is presented with a standard layout. It displays a Card Name . The card specifies its Type (either Faction Card or Tactical Card ), lists the Resources it provides in CP, BM, or PE when Exhausted , and includes any Special Abilities that are resolved using the standard rules described in Parts 10. 1 through 10. 4 ."
+        },
+        {
+          "type": "text",
+          "html": "If a card is marked as <b>Unique</b>, only a single copy is allowed (Part <span class=\"ref\">9. 1. 5</span>).",
+          "plain": "If a card is marked as Unique , only a single copy is allowed (Part 9. 1. 5 )."
+        }
+      ],
+      "children": [
+        {
+          "id": "10-5-1-resources-and-costs",
+          "title": "10.5.1 Resources and Costs",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Each faction has a separate resource type to spend on the faction’s abilities: <b><span class=\"kw\">Terran</span></b> uses <b>CP</b>, <b><span class=\"kw\">Zerg</span></b> uses <b>BM</b>, and <b><span class=\"kw\">Protoss</span></b> uses <b>PE</b>. These resources are provided by <b>Exhausting</b> cards.",
+              "plain": "Each faction has a separate resource type to spend on the faction’s abilities: Terran uses CP , Zerg uses BM , and Protoss uses PE . These resources are provided by Exhausting cards."
+            },
+            {
+              "type": "text",
+              "html": "<b>Exhausting a Card</b>: To pay for an ability’s cost, such as &quot; Cost: 1 CP, &quot; the player must <b>Exhaust</b> a <span class=\"kw\">Ready</span> card that matches the resource type of the cost, such as a CP card. Exhausting a card means flipping it face down, after which it is regarded as <b>Exhausted</b>.",
+              "plain": "Exhausting a Card : To pay for an ability’s cost, such as \" Cost: 1 CP, \" the player must Exhaust a Ready card that matches the resource type of the cost, such as a CP card. Exhausting a card means flipping it face down, after which it is regarded as Exhausted ."
+            },
+            {
+              "type": "text",
+              "html": "If the player cannot <b>Exhaust</b> enough cards to pay the entire cost, they cannot activate the ability. If a card generates more resources than are needed to pay for a cost, any excess resources are lost. Resources generated to activate one ability can not be saved or spent on another ability.",
+              "plain": "If the player cannot Exhaust enough cards to pay the entire cost, they cannot activate the ability. If a card generates more resources than are needed to pay for a cost, any excess resources are lost. Resources generated to activate one ability can not be saved or spent on another ability."
+            }
+          ]
+        },
+        {
+          "id": "10-5-2-managing-card-states",
+          "title": "10.5.2 Managing Card States",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Every <b>Tactical Card</b> and <b>Faction Card</b> is in one of two states: <b><span class=\"kw\">Ready</span></b> (face-up) or <b>Exhausted</b> (face-down). A <span class=\"kw\">Ready</span> card may be <b>Exhausted</b> in two ways: the player <b>Exhausts</b> it to use a <b><span class=\"kw\">Special Ability</span></b> printed directly on the card, or the player <b>Exhausts</b> it to generate its Resource in order to pay for an ability located elsewhere (for example, on a <b>Unit Card</b>).",
+              "plain": "Every Tactical Card and Faction Card is in one of two states: Ready (face-up) or Exhausted (face-down). A Ready card may be Exhausted in two ways: the player Exhausts it to use a Special Ability printed directly on the card, or the player Exhausts it to generate its Resource in order to pay for an ability located elsewhere (for example, on a Unit Card )."
+            },
+            {
+              "type": "text",
+              "html": "Once a card is <b>Exhausted,</b> it provides no resources for the rest of the round, and its abilities <b>cannot</b> be used until it is <b>Refreshed</b> (flipped face-up) during Phase 4 Cleanup.",
+              "plain": "Once a card is Exhausted, it provides no resources for the rest of the round, and its abilities cannot be used until it is Refreshed (flipped face-up) during Phase 4 Cleanup."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

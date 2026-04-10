@@ -1,371 +1,164 @@
 
-let APP_DATA = null;
-
-async function loadAppData(){
-  const manifest = await fetch('data/manifest.json').then(r => {
-    if(!r.ok) throw new Error('Failed to load manifest.json');
-    return r.json();
-  });
-  const parts = await Promise.all(manifest.parts.map(async meta => {
-    const part = await fetch(meta.file).then(r => {
-      if(!r.ok) throw new Error(`Failed to load ${meta.file}`);
-      return r.json();
-    });
-    return part;
-  }));
-  APP_DATA = {
-    parts,
-    quickPart: manifest.quickPart || 'part-12',
-    searchIndex: buildSearchIndex(parts)
-  };
+let APP = null;
+const state = {
+  view: localStorage.getItem('sc_comp_view') || 'home',
+  bookmarks: JSON.parse(localStorage.getItem('sc_comp_bookmarks') || '[]'),
+  recents: JSON.parse(localStorage.getItem('sc_comp_recents') || '[]'),
+  openParts: JSON.parse(localStorage.getItem('sc_comp_open_parts') || '{}'),
+  openRules: JSON.parse(localStorage.getItem('sc_comp_open_rules') || '{}'),
+  systemFilter: localStorage.getItem('sc_comp_system_filter') || 'all'
+};
+const HOME = document.getElementById('view-home');
+const PLAY = document.getElementById('view-play');
+const SYSTEMS = document.getElementById('view-systems');
+const REFERENCE = document.getElementById('view-reference');
+const SEARCH = document.getElementById('view-search');
+const searchInput = document.getElementById('globalSearch');
+const searchResults = document.getElementById('searchResults');
+const searchCount = document.getElementById('searchResultCount');
+const jumpTop = document.getElementById('jumpTop');
+function esc(str){return (str||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+function save(){localStorage.setItem('sc_comp_view', state.view);localStorage.setItem('sc_comp_bookmarks', JSON.stringify(state.bookmarks));localStorage.setItem('sc_comp_recents', JSON.stringify(state.recents.slice(0,20)));localStorage.setItem('sc_comp_open_parts', JSON.stringify(state.openParts));localStorage.setItem('sc_comp_open_rules', JSON.stringify(state.openRules));localStorage.setItem('sc_comp_system_filter', state.systemFilter||'all');}
+function setView(view){state.view=view;document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active', v.id===`view-${view}`));document.querySelectorAll('.nav-btn').forEach(btn=>btn.classList.toggle('active', btn.dataset.view===view));save();window.scrollTo({top:0,behavior:'smooth'});}
+function byId(id){ return document.getElementById(id); }
+function findPart(id){ return APP.parts.find(p=>p.id===id); }
+function getBookmarkIndex(target){ return state.bookmarks.findIndex(b=>b.target===target); }
+function isBookmarked(target){ return getBookmarkIndex(target)!==-1; }
+function toggleBookmark(target,label,view='rules'){ const i=getBookmarkIndex(target); if(i>-1) state.bookmarks.splice(i,1); else state.bookmarks.unshift({target,label,view}); save(); renderAll(); }
+function pushRecent(target,label,view='rules'){ state.recents=state.recents.filter(r=>r.target!==target); state.recents.unshift({target,label,view}); save(); }
+function viewForPart(part){ if(part.group==='play') return 'play'; if(part.group==='reference') return 'reference'; if(part.group==='prepare') return 'home'; return 'systems'; }
+function labelForTarget(target){
+  const [partId, ruleId, childId] = target.split('::');
+  const part = findPart(partId);
+  if(!part) return target;
+  if(!ruleId) return `${part.kicker} — ${part.title}`;
+  const rule = part.rules.find(r=>r.id===ruleId);
+  if(!rule) return `${part.kicker} — ${part.title}`;
+  if(!childId) return rule.title;
+  const child = (rule.children||[]).find(c=>c.id===childId);
+  return child ? `${rule.title} — ${child.title}` : rule.title;
 }
-
+function openTarget(target, forceView){
+  const [partId, ruleId, childId] = target.split('::');
+  const part = findPart(partId);
+  if(!part) return;
+  const view = forceView || viewForPart(part);
+  setView(view);
+  state.openParts[partId] = true;
+  if(ruleId) state.openRules[`${partId}::${ruleId}`] = true;
+  pushRecent(target, labelForTarget(target), view);
+  save();
+  renderAll();
+  byId('tocSheet').classList.add('hidden');
+  requestAnimationFrame(()=>{
+    const selector = `[data-target="${CSS.escape(target)}"]`;
+    let el = document.querySelector(selector);
+    if(!el && childId) el = document.querySelector(`[data-target="${CSS.escape(partId+'::'+ruleId)}"]`);
+    if(el){
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      el.classList.add('flash');
+      setTimeout(()=>el.classList.remove('flash'), 1200);
+    }
+  });
+}
+function plainRows(rows){ return (rows||[]).map(r=>r.plain||'').join(' '); }
 function buildSearchIndex(parts){
-  const rows = [];
+  const out = [];
   for(const part of parts){
-    rows.push({
-      type: 'part',
-      part: part.num,
-      title: `${part.kicker} ${part.title}`,
-      id: part.id,
-      plain: stripHtml(part.intro || '')
-    });
-    for(const rule of part.rules || []){
-      rows.push({
-        type: 'rule',
-        part: part.num,
-        title: rule.title,
-        id: `${part.id}::${rule.id}`,
-        plain: [stripHtml(rule.html || ''), ...(rule.children || []).map(s => `${s.title} ${stripHtml(s.html || '')}`)].join(' ')
-      });
-      for(const sub of rule.children || []){
-        rows.push({
-          type: 'sub',
-          part: part.num,
-          title: sub.title,
-          id: `${part.id}::${rule.id}::${sub.id}`,
-          plain: stripHtml(sub.html || '')
-        });
+    out.push({target:part.id,title:`${part.kicker} ${part.title}`,meta:part.kicker,text:plainRows(part.introRows),view:viewForPart(part)});
+    for(const rule of part.rules){
+      out.push({target:`${part.id}::${rule.id}`,title:rule.title,meta:`${part.kicker} ${part.title}`,text:plainRows(rule.rows)+' '+(rule.children||[]).map(c=>`${c.title} ${plainRows(c.rows)}`).join(' '),view:viewForPart(part)});
+      for(const child of rule.children||[]){
+        out.push({target:`${part.id}::${rule.id}::${child.id}`,title:`${rule.title} — ${child.title}`,meta:`${part.kicker} ${part.title}`,text:plainRows(child.rows),view:viewForPart(part)});
       }
     }
   }
-  return rows;
-}
-
-const state ={
-  view: 'home',
-  density: localStorage.getItem('sc_rules_density') || 'comfortable',
-  bookmarks: JSON.parse(localStorage.getItem('sc_rules_bookmarks') || '[]'),
-  recents: JSON.parse(localStorage.getItem('sc_rules_recents') || '[]'),
-  openParts: JSON.parse(localStorage.getItem('sc_rules_open_parts') || '{}'),
-  openRules: JSON.parse(localStorage.getItem('sc_rules_open_rules') || '{}'),
-  openSubs: JSON.parse(localStorage.getItem('sc_rules_open_subs') || '{}'),
-  partFilter: 'all',
-};
-const app = document.getElementById('app');
-app.setAttribute('data-density', state.density);
-const views = [...document.querySelectorAll('.view')];
-const navBtns = [...document.querySelectorAll('.nav-btn')];
-const browseSearch = document.getElementById('browseSearch');
-const globalSearch = document.getElementById('globalSearch');
-const savedSet = () => new Set(state.bookmarks);
-
-function saveState(){
-  localStorage.setItem('sc_rules_density', state.density);
-  localStorage.setItem('sc_rules_bookmarks', JSON.stringify(state.bookmarks));
-  localStorage.setItem('sc_rules_recents', JSON.stringify(state.recents.slice(0,20)));
-  localStorage.setItem('sc_rules_open_parts', JSON.stringify(state.openParts));
-  localStorage.setItem('sc_rules_open_rules', JSON.stringify(state.openRules));
-  localStorage.setItem('sc_rules_open_subs', JSON.stringify(state.openSubs));
-}
-function setView(view){
-  state.view = view;
-  views.forEach(v=>v.classList.toggle('active', v.id === 'view-' + view));
-  navBtns.forEach(b=>b.classList.toggle('active', b.dataset.view === view));
-  saveState();
-  window.scrollTo({top:0,behavior:'smooth'});
-  if(view==='search') globalSearch.focus();
-}
-navBtns.forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.view)));
-document.querySelectorAll('[data-go]').forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.go)));
-
-function escapeHtml(str){ return (str||'').replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
-function sanitizeRuleHtml(html){
-  if(!html) return '';
-  let out = html;
-  out = out.replace(/&lt;&lt;[\s\S]*?&gt;&gt;/gi, '');
-  out = out.replace(/<a5[^>]*><\/a5>/gi, '');
-  out = out.replace(/<a5[^>]*>/gi, '');
-  out = out.replace(/<\/?font[^>]*>/gi, '');
-  out = out.replace(/<br\s*\/?>\s*&lt;&gt;\s*(?:<br\s*\/?>)?/gi, '<br/>');
-  out = out.replace(/&lt;&gt;/g, '');
-  out = out.replace(/<span>\s*((?:\d+\.){2,}\d+\s*[^<]*)<\/span>/g, '<div class="inline-subhead">$1</div>');
-  out = out.replace(/<strong>\s*((?:\d+\.){2,}\d+\s*[^<]*)<\/strong>/g, '<div class="inline-subhead">$1</div>');
   return out;
 }
-function normalizeInlineSpacing(html){
-  if(!html) return '';
-  let out = sanitizeRuleHtml(html);
-  out = out.replace(/>([A-Za-z0-9(])/g, '> $1');
-  out = out.replace(/([A-Za-z0-9,.;:!?)])</g, '$1 <');
-  out = out.replace(/\s+(<\/(?:span|strong|em|b|i)>)/g, '$1');
-  out = out.replace(/(<(?:span|strong|em|b|i)[^>]*>)\s+/g, '$1');
-  out = out.replace(/\s{2,}/g, ' ');
-  out = out.replace(/>\s+</g, '><');
-  return out.trim();
+async function loadData(){
+  const manifest = await fetch('data/manifest.json').then(r=>r.json());
+  const parts = await Promise.all(manifest.parts.map(async meta=>({ ...await fetch(meta.file).then(r=>r.json()), meta })));
+  const playGuide = await fetch('data/play-guide.json').then(r=>r.json());
+  APP = { manifest, parts, playGuide, searchIndex: buildSearchIndex(parts) };
 }
-function stripHtml(html){ const div=document.createElement('div'); div.innerHTML=html; return div.textContent || div.innerText || ''; }
-function highlightText(text,q){ if(!q) return escapeHtml(text); const safe = q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); const re = new RegExp('(' + safe + ')','ig'); return escapeHtml(text).replace(re,'<mark>$1</mark>'); }
-function getPartById(id){ return APP_DATA.parts.find(p=>p.id===id); }
-function toggleBookmark(id){
-  const idx = state.bookmarks.indexOf(id);
-  if(idx>=0) state.bookmarks.splice(idx,1); else state.bookmarks.unshift(id);
-  saveState(); renderRules(); renderSaved(); renderHome(); renderSearch();
+function renderRow(row, idx){ const extra=row.type&&row.type!=='text'?` ${row.type}`:''; return `<div class="row-band${extra} band-${(idx%2)+1}"><div class="rule-html">${row.html}</div></div>`; }
+function renderRule(rule, part){
+  const target = `${part.id}::${rule.id}`;
+  const open = !!state.openRules[target];
+  const bm = isBookmarked(target);
+  return `<article class="rule-entry ${open?'open':''}" data-target="${target}"><div class="rule-head" data-rule-toggle="${target}"><div class="rule-title">${esc(rule.title)}</div><div class="head-tags"><button class="star-btn ${bm?'active':''}" data-bookmark="${target}" data-label="${esc(rule.title)}" aria-label="Bookmark">★</button></div></div><div class="rule-body">${(rule.rows||[]).map((r,i)=>renderRow(r,i)).join('')}${(rule.children||[]).length?`<div class="child-stack">${rule.children.map(c=>`<div class="child-entry" data-target="${part.id}::${rule.id}::${c.id}"><div class="child-head">${esc(c.title)}</div>${c.rows.map((r,i)=>renderRow(r,i)).join('')}</div>`).join('')}</div>`:''}</div></article>`;
 }
-function addRecent(item){
-  state.recents = [item, ...state.recents.filter(x=>x.id!==item.id)].slice(0,10);
-  localStorage.setItem('sc_rules_last', JSON.stringify(item));
-  saveState();
-  renderHome(); renderSaved();
+function renderPart(part){
+  const open = !!state.openParts[part.id];
+  const target = part.id;
+  const bm = isBookmarked(target);
+  return `<section class="part-card ${open?'open':''}" style="--accent:${part.color}" data-target="${target}"><div class="part-head" data-part-toggle="${part.id}"><div><div class="part-meta">${esc(part.kicker)}</div><div class="part-title">${esc(part.title)}</div><div class="sheet-sub">${part.rules.length} section${part.rules.length===1?'':'s'}</div></div><div class="part-tools"><button class="star-btn ${bm?'active':''}" data-bookmark="${target}" data-label="${esc(part.kicker+' — '+part.title)}" aria-label="Bookmark Part">★</button><button class="chev-btn" aria-label="Toggle part">${open?'−':'+'}</button></div></div><div class="part-body">${(part.introRows||[]).length?`<div class="part-intro sheet-card flat" style="--accent:${part.color}">${part.introRows.map((r,i)=>renderRow(r,i)).join('')}</div>`:''}${part.rules.map(rule=>renderRule(rule,part)).join('')}</div></section>`;
 }
-function jumpTo(targetId, open=true){
-  const [partId, ruleId, subId] = targetId.split('::');
-  if(partId) state.openParts[partId]=true;
-  if(ruleId) state.openRules[partId+'::'+ruleId]=true;
-  if(subId) state.openSubs[partId+'::'+ruleId+'::'+subId]=true;
-  saveState();
-  setView('rules');
-  renderRules();
-  requestAnimationFrame(()=>{
-    const el = document.querySelector(`[data-target="${CSS.escape(targetId)}"]`);
-    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
-  });
-}
-
-function partChip(part){ return `<span class="ref-pill">Part ${part.num}</span>`; }
-
-function renderHome(){
-  const homeParts = document.getElementById('homeParts');
-  homeParts.innerHTML = APP_DATA.parts.map(p=>`<button class="tile" style="--accent:${p.color}" onclick="jumpTo('${p.id}')"><div class="tile-top"><div><div class="tile-kicker">${p.kicker}</div><div class="tile-title">${p.title}</div><div class="tile-meta">${p.rules.length} rule blocks</div></div><div class="tile-tail">›</div></div></button>`).join('');
-  const last = JSON.parse(localStorage.getItem('sc_rules_last') || 'null');
-  document.getElementById('lastReadNote').textContent = last ? last.title : 'No recent section yet';
-  const continueBtn = document.getElementById('continueBtn');
-  continueBtn.disabled = !last;
-  continueBtn.textContent = last ? 'Continue: ' + (last.title.length>24 ? last.title.slice(0,24)+'…' : last.title) : 'Continue Reading';
-  continueBtn.onclick = ()=> last && jumpTo(last.id);
-
-  const recentWrap = document.getElementById('recentList');
-  recentWrap.innerHTML = state.recents.length ? state.recents.map(r=>`<button class="mini-card" onclick="jumpTo('${r.id}')"><div class="mini-card-title"><span>${escapeHtml(r.title)}</span><span class="ref-pill">${r.partLabel}</span></div><div class="mini-card-sub">${escapeHtml(r.parent || 'Recently opened')}</div></button>`).join('') : `<div class="saved-empty">Your recent sections will appear here as you use the rulebook.</div>`;
-
-  const savedPreview = document.getElementById('savedPreview');
-  const saved = state.bookmarks.slice(0,4).map(id=>resolveItem(id)).filter(Boolean);
-  savedPreview.innerHTML = saved.length ? saved.map(r=>`<button class="mini-card" onclick="jumpTo('${r.id}')"><div class="mini-card-title"><span>${escapeHtml(r.title)}</span><span>★</span></div><div class="mini-card-sub">${r.partLabel}</div></button>`).join('') : `<div class="saved-empty">Bookmark a rule to pin it for fast lookup mid-game.</div>`;
-}
-
-function renderTOC(){
-  document.getElementById('tocList').innerHTML = APP_DATA.parts.map(p=>`<button class="toc-item" style="--accent:${p.color}" onclick="closeSheet();jumpTo('${p.id}')"><span class="toc-strip"></span><span class="toc-text"><div class="toc-kicker">${p.kicker}</div><div class="toc-title">${p.title}</div></span><span class="toc-arrow">›</span></button>`).join('');
-}
-
-
-function formatRuleSegments(sourceHtml){
-  const source = normalizeInlineSpacing(sourceHtml).replace(/<br\s*\/?>\s*<br\s*\/?>/gi,'[[RULE_BREAK]]');
-  const temp = document.createElement('div');
-  temp.innerHTML = source;
-  const parts = temp.innerHTML.split('[[RULE_BREAK]]').map(s=>s.trim()).filter(Boolean);
-  const out = [];
-  let bullets = [];
-  const flushBullets = () => {
-    if(!bullets.length) return;
-    out.push(`<div class="rule-bullets">${bullets.map(item=>`<div class="rule-bullet">${item.replace(/^•\s*/, '')}</div>`).join('')}</div>`);
-    bullets = [];
-  };
-  for(const part of parts){
-    const plain = stripHtml(part).replace(/\s+/g,' ').trim();
-    const isBullet = /^•\s*/.test(plain);
-    const isEmbed = /<(table|img|figure|blockquote|ul|ol|div class=\"stack-table\")\b/i.test(part);
-    if(isBullet){
-      bullets.push(part);
-      continue;
-    }
-    flushBullets();
-    out.push(`<div class="${isEmbed ? 'rule-embed' : 'rule-block'}">${part}</div>`);
-  }
-  flushBullets();
-  return out.join('');
-}
-function formatRuleHtml(raw){
-  const source = normalizeInlineSpacing(raw);
-  const marked = source.replace(/<div class="inline-subhead">([\s\S]*?)<\/div>/gi, '[[SUBHEAD::$1]]');
-  const tokens = marked.split(/(\[\[SUBHEAD::[\s\S]*?\]\])/g).filter(Boolean);
-  const sections = [];
-  let currentTitle = '';
-  let currentHtml = '';
-  for(const token of tokens){
-    const m = token.match(/^\[\[SUBHEAD::([\s\S]*?)\]\]$/);
-    if(m){
-      if(currentTitle || currentHtml.trim()) sections.push({title: currentTitle, html: currentHtml});
-      currentTitle = stripHtml(m[1]).trim();
-      currentHtml = '';
-    } else {
-      currentHtml += token;
-    }
-  }
-  if(currentTitle || currentHtml.trim()) sections.push({title: currentTitle, html: currentHtml});
-  if(sections.some(s => s.title)){
-    return `<div class="rule-structured">${sections.map(sec => sec.title ? `<section class="inline-section"><div class="inline-section-title">${escapeHtml(sec.title)}</div>${formatRuleSegments(sec.html)}</section>` : formatRuleSegments(sec.html)).join('')}</div>`;
-  }
-  return `<div class="rule-structured">${formatRuleSegments(source)}</div>`;
-}
-
-function ruleBodyHtml(rule, part){
-  const key = part.id + '::' + rule.id;
-  const open = !!state.openRules[key];
-  const starred = state.bookmarks.includes(key);
-  return `
-  <div class="rule-card ${open?'open':''}" data-target="${key}">
-    <div class="rule-head" onclick="toggleRule('${part.id}','${rule.id}')">
-      <div class="rule-title">${escapeHtml(rule.title)}</div>
-      <div class="rule-tools">
-        <span class="ref-pill">${part.num}</span>
-        <button class="mini-btn ${starred?'active':''}" onclick="event.stopPropagation();toggleBookmark('${key}')" aria-label="Bookmark">★</button>
-        <span class="chev">›</span>
-      </div>
+function renderProcedureCard(proc, phaseClass){
+  const openBtn = proc.target ? `<button class="link-btn proc-open" data-open-target="${proc.target}">Open ${esc(proc.ref || 'rule')}</button>` : '';
+  return `<article class="proc-card ${phaseClass}">
+    <div class="proc-head"><div><div class="proc-kicker">${esc(proc.ref || 'Procedure')}</div><div class="proc-title">${esc(proc.title)}</div></div>${proc.target?`<span class="tag ${phaseClass}">${esc(proc.ref || '')}</span>`:''}</div>
+    <div class="proc-body">
+      ${proc.what?`<div class="proc-row"><div class="proc-label">What it is</div><div class="proc-copy">${esc(proc.what)}</div></div>`:''}
+      ${proc.when?`<div class="proc-row"><div class="proc-label">When</div><div class="proc-copy">${esc(proc.when)}</div></div>`:''}
+      ${(proc.how||[]).length?`<div class="proc-row"><div class="proc-label">How</div><div class="proc-list">${proc.how.map(x=>`<div class="proc-item">× ${esc(x)}</div>`).join('')}</div></div>`:''}
+      ${(proc.cannot||[]).length?`<div class="proc-row"><div class="proc-label">Cannot</div><div class="proc-list">${proc.cannot.map(x=>`<div class="proc-item">× ${esc(x)}</div>`).join('')}</div></div>`:''}
+      ${proc.ifFails?`<div class="proc-row emphasis"><div class="proc-label">If it fails</div><div class="proc-copy">${esc(proc.ifFails)}</div></div>`:''}
+      ${(proc.see||[]).length?`<div class="proc-row"><div class="proc-label">See also</div><div class="proc-see">${proc.see.map(x=>`<span>${esc(x)}</span>`).join('')}</div></div>`:''}
+      ${openBtn?`<div class="proc-actions">${openBtn}</div>`:''}
     </div>
-    <div class="rule-body">
-      <div class="rule-copyline"><small>${escapeHtml(part.kicker + ' / ' + part.title)}</small><button class="cta" style="min-height:36px;padding:6px 10px" onclick="copyLink('${key}','${escapeHtml(rule.title)}')">Copy ref</button></div>
-      <div class="rule-prose">${formatRuleHtml(rule.html)}</div>
-      ${rule.children.map(sub=>subBodyHtml(sub, part, rule)).join('')}
+  </article>`;
+}
+function renderManualFoundation(card){
+  return `<section class="sheet-card manual-foundation" style="--accent:#9baec0"><div class="sheet-head compact"><div><div class="section-kicker">${esc(card.ref)}</div><div class="sheet-title" style="font-size:16px">${esc(card.title)}</div><div class="sheet-sub">${esc(card.summary)}</div></div><div class="head-tags"><button class="link-btn" data-open-target="${card.target}" style="min-height:34px;padding:6px 8px">Open</button></div></div><div class="manual-bands">${(card.bullets||[]).map((b,i)=>`<div class="manual-band band-${(i%2)+1}">× ${esc(b)}</div>`).join('')}</div></section>`;
+}
+function renderPhaseManual(phase){
+  return `<section class="sheet-card manual-phase ${phase.phaseClass}" style="--accent:var(--${phase.phaseClass==='phase1'?'movement':phase.phaseClass==='phase2'?'assault':phase.phaseClass==='phase3'?'combat':'scoring'})"><div class="sheet-head"><div><div class="section-kicker">${esc(phase.ref)}</div><div class="sheet-title">${esc(phase.title)}</div><div class="sheet-sub">${esc(phase.purpose)}</div></div><div class="head-tags"><button class="link-btn" data-open-target="${phase.target}" style="min-height:34px;padding:6px 8px">Open Phase</button></div></div><div class="phase-summary"><div class="phase-action-row">${(phase.actions||[]).map(a=>`<span class="tag ${phase.phaseClass}">${esc(a)}</span>`).join('')}</div>${(phase.notes||[]).length?`<div class="manual-bands compact">${phase.notes.map((n,i)=>`<div class="manual-band band-${(i%2)+1}">× ${esc(n)}</div>`).join('')}</div>`:''}</div><div class="proc-stack">${(phase.procedures||[]).map(proc=>renderProcedureCard(proc, phase.phaseClass)).join('')}</div></section>`;
+}
+function renderCollection(container, parts, options={}){ const phaseHtml=options.phaseGuide?`<div class="sheet-card" style="--accent:#9d96c5"><div class="sheet-head compact"><div><div class="section-kicker">Play a round</div><div class="sheet-title" style="font-size:16px">Phase Spine</div></div><div class="head-tags"><span class="tag soft">Part VIII</span></div></div><div class="phase-strip"><button class="phase-card phase1" data-jump="part-8::8-1-rounds-and-phases"><strong>Round Structure</strong><span>8.1 • phases and order</span></button><button class="phase-card phase1" data-jump="part-8::8-2-the-activation-system"><strong>Activation</strong><span>8.2 • alternating activations</span></button><button class="phase-card phase1" data-jump="part-8::8-4-phase-1-the-movement-phase"><strong>Phase 1</strong><span>Movement</span></button><button class="phase-card phase2" data-jump="part-8::8-6-phase-2-the-assault-phase"><strong>Phase 2</strong><span>Assault</span></button><button class="phase-card phase3" data-jump="part-8::8-8-phase-3-the-combat-phase"><strong>Phase 3</strong><span>Combat</span></button><button class="phase-card phase4" data-jump="part-8::8-9-phase-4-the-scoring-cleanup-phase"><strong>Phase 4</strong><span>Scoring & Cleanup</span></button></div></div>`:''; const filters=options.filters?`<div class="view-section"><div class="part-filter">${options.filters.map(f=>`<button class="${f.active?'active':''}" data-filter="${f.key}" data-filter-view="${options.filterView}">${f.label}</button>`).join('')}</div></div>`:''; container.innerHTML=`<div class="section-head"><div class="section-kicker">${esc(options.label||'')}</div>${options.subtitle?`<div class="small-note">${esc(options.subtitle)}</div>`:''}</div>${filters}${phaseHtml}<div class="part-stack">${parts.map(renderPart).join('')}</div>`; }
+function renderHome(){ HOME.innerHTML=`<section class="sheet-card" style="--accent:#97aebe"><div class="sheet-head"><div><div class="section-kicker">Field manual</div><div class="sheet-title">Use the rules like a rulebook.</div><div class="sheet-sub">Learn the round first. Resolve actions second. Use systems and reference to answer edge cases fast.</div></div></div><div class="phase-strip"><button class="phase-card phase1" data-jump="part-8::8-1-rounds-and-phases"><strong>Start Here</strong><span>Round structure</span></button><button class="phase-card phase1" data-jump="part-8::8-4-phase-1-the-movement-phase"><strong>Phase 1</strong><span>Movement</span></button><button class="phase-card phase2" data-jump="part-8::8-6-phase-2-the-assault-phase"><strong>Phase 2</strong><span>Assault</span></button><button class="phase-card phase3" data-jump="part-8::8-8-phase-3-the-combat-phase"><strong>Phase 3</strong><span>Combat</span></button><button class="phase-card phase4" data-jump="part-8::8-9-phase-4-the-scoring-cleanup-phase"><strong>Phase 4</strong><span>Cleanup</span></button><button class="phase-card" data-view-go="reference"><strong>Quick Ref</strong><span>Fast lookup</span></button></div></section><div class="home-grid"><section class="sheet-card" style="--accent:#9d96c5"><div class="sheet-head compact"><div><div class="section-kicker">Play a Round</div><div class="sheet-title" style="font-size:16px">Phase-led rules</div></div></div><div class="phase-strip"><button class="phase-card phase1" data-view-go="play"><strong>Open</strong><span>Phase-led rules view</span></button><button class="phase-card phase1" data-jump="part-8::8-2-the-activation-system"><strong>Activation</strong><span>How turns alternate</span></button><button class="phase-card phase1" data-jump="part-8::8-5-movement-phase-actions"><strong>Movement Actions</strong><span>Deploy, Move, Disengage</span></button><button class="phase-card phase2" data-jump="part-8::8-7-assault-phase-actions"><strong>Assault Actions</strong><span>Charge, Ranged Attack</span></button></div></section><section class="sheet-card" style="--accent:#93aac7"><div class="sheet-head compact"><div><div class="section-kicker">Rules Systems</div><div class="sheet-title" style="font-size:16px">Underlying logic</div></div></div><div class="link-grid one"><button class="link-btn" data-view-go="systems">Open systems view</button><button class="link-btn" data-jump="part-4::4-4-unit-coherency">Coherency</button><button class="link-btn" data-jump="part-7::7-1-line-of-sight">Line of Sight</button><button class="link-btn" data-jump="part-6::6-2-how-supply-is-used">Supply</button></div></section><section class="sheet-card" style="--accent:#b38fa5"><div class="sheet-head compact"><div><div class="section-kicker">Prepare for Battle</div><div class="sheet-title" style="font-size:16px">Army, mission, setup</div></div></div><div class="link-grid one"><button class="link-btn" data-jump="part-9::9-1-army-building">Army building</button><button class="link-btn" data-jump="part-9::9-2-mission-selection-and-the-draft">Mission and draft</button><button class="link-btn" data-jump="part-9::9-3-battlefield-setup">Battlefield setup</button></div></section><section class="sheet-card" style="--accent:#96a6b8"><div class="sheet-head compact"><div><div class="section-kicker">Reference Tools</div><div class="sheet-title" style="font-size:16px">Quick answers</div></div></div><div class="link-grid one"><button class="link-btn" data-view-go="reference">Open reference view</button><button class="link-btn" data-jump="part-11">Keyword glossary</button><button class="link-btn" data-jump="part-12">Quick reference</button><button class="link-btn" id="homePrintBtn">Printable version</button></div></section></div><section class="sheet-card" style="--accent:#a6b7c4"><div class="sheet-head compact"><div><div class="section-kicker">Recent and Saved</div><div class="sheet-title" style="font-size:16px">Return to where you left off</div></div></div><div class="saved-list">${(state.bookmarks.length?state.bookmarks.slice(0,6).map(b=>`<div class="mini-row"><div class="mini-main"><div class="mini-title">${esc(b.label)}</div><div class="mini-sub">Saved</div></div><button class="link-btn" data-open-target="${b.target}" style="min-height:34px;padding:6px 8px">Open</button></div>`).join(''):'<div class="mini-row"><div class="mini-main"><div class="mini-title">No saved rules yet</div><div class="mini-sub">Use ★ on any Part or rule.</div></div></div>')}${(state.recents.length?state.recents.slice(0,6).map(r=>`<div class="mini-row"><div class="mini-main"><div class="mini-title">${esc(r.label)}</div><div class="mini-sub">Recent</div></div><button class="link-btn" data-open-target="${r.target}" style="min-height:34px;padding:6px 8px">Open</button></div>`).join(''):'')}</div></section><section class="sheet-card" style="--accent:#9ca7b1"><div class="sheet-head compact"><div><div class="section-kicker">Complete Rulebook</div><div class="sheet-title" style="font-size:16px">All Parts</div></div></div><div class="home-list">${APP.parts.map(p=>`<div class="mini-row"><div class="mini-main"><div class="mini-title">${esc(p.kicker)} — ${esc(p.title)}</div><div class="mini-sub">${p.rules.length} section${p.rules.length===1?'':'s'}</div></div><button class="link-btn" data-open-target="${p.id}" style="min-height:34px;padding:6px 8px">Open</button></div>`).join('')}</div></section>`; }
+function renderPlay(){
+  const part8 = findPart('part-8');
+  const guide = APP.playGuide;
+  PLAY.innerHTML = `
+    <section class="sheet-card" style="--accent:#9d96c5">
+      <div class="sheet-head">
+        <div>
+          <div class="section-kicker">Play a round</div>
+          <div class="sheet-title">Part VIII, rebuilt for table use</div>
+          <div class="sheet-sub">${esc(guide.intro.subtitle)}</div>
+        </div>
+      </div>
+      <div class="phase-strip phase-spine-manual">
+        <button class="phase-card phase1" data-open-target="part-8::8-1-rounds-and-phases"><strong>Round Structure</strong><span>8.1 • learn the loop</span></button>
+        <button class="phase-card phase1" data-open-target="part-8::8-2-the-activation-system"><strong>Activation</strong><span>8.2 • who acts and when</span></button>
+        <button class="phase-card phase1" data-open-target="part-8::8-4-phase-1-the-movement-phase"><strong>Phase 1</strong><span>Movement</span></button>
+        <button class="phase-card phase2" data-open-target="part-8::8-6-phase-2-the-assault-phase"><strong>Phase 2</strong><span>Assault</span></button>
+        <button class="phase-card phase3" data-open-target="part-8::8-8-phase-3-the-combat-phase"><strong>Phase 3</strong><span>Combat</span></button>
+        <button class="phase-card phase4" data-open-target="part-8::8-9-phase-4-the-scoring-cleanup-phase"><strong>Phase 4</strong><span>Scoring & Cleanup</span></button>
+      </div>
+    </section>
+    <div class="manual-stack">
+      ${guide.foundations.map(renderManualFoundation).join('')}
+      ${guide.phases.map(renderPhaseManual).join('')}
     </div>
-  </div>`;
-}
-function subBodyHtml(sub, part, rule){
-  const key = part.id + '::' + rule.id + '::' + sub.id;
-  const open = !!state.openSubs[key];
-  const starred = state.bookmarks.includes(key);
-  return `
-    <div class="sub-card ${open?'open':''}" data-target="${key}">
-      <div class="sub-head" onclick="toggleSub('${part.id}','${rule.id}','${sub.id}')">
-        <div class="sub-title">${escapeHtml(sub.title)}</div>
-        <div class="rule-tools"><button class="mini-btn ${starred?'active':''}" onclick="event.stopPropagation();toggleBookmark('${key}')">★</button><span class="chev">›</span></div>
-      </div>
-      <div class="sub-body">
-        <div class="sub-prose">${formatRuleHtml(sub.html)}</div>
-      </div>
-    </div>`;
-}
-function resolveItem(id){
-  const parts = APP_DATA.parts;
-  const segs = id.split('::');
-  const part = parts.find(p=>p.id===segs[0]);
-  if(!part) return null;
-  if(segs.length===1) return {id, title: part.title, partLabel: part.kicker, parent: 'Part'};
-  const rule = part.rules.find(r=>r.id===segs[1]);
-  if(!rule) return null;
-  if(segs.length===2) return {id, title: rule.title, partLabel: part.kicker, parent: part.title};
-  const sub = rule.children.find(s=>s.id===segs[2]);
-  if(!sub) return null;
-  return {id, title: sub.title, partLabel: part.kicker, parent: rule.title};
-}
-function renderRules(){
-  const q = browseSearch.value.trim().toLowerCase();
-  const partsWrap = document.getElementById('rulesParts');
-  partsWrap.innerHTML = APP_DATA.parts.map(part=>{
-    const pOpen = !!state.openParts[part.id];
-    let rules = part.rules;
-    if(q) rules = rules.filter(r => (r.title + ' ' + stripHtml(r.html) + ' ' + r.children.map(s=>s.title+' '+stripHtml(s.html)).join(' ')).toLowerCase().includes(q));
-    if(q && !rules.length && !(part.title + ' ' + stripHtml(part.intro)).toLowerCase().includes(q)) return '';
-    return `
-      <div class="part-card ${pOpen?'open':''}" style="--accent:${part.color}">
-        <div class="part-head" data-target="${part.id}" onclick="togglePart('${part.id}')">
-          <span class="part-strip"></span>
-          <div class="part-head-main">
-            <div><div class="part-kicker">${part.kicker}</div><div class="part-name">${part.title}</div><div class="part-stats">${part.rules.length} sections</div></div>
-          </div>
-          <span class="chev">›</span>
+    <section class="sheet-card" style="--accent:#96a6b8">
+      <div class="sheet-head compact">
+        <div>
+          <div class="section-kicker">Full compendium text</div>
+          <div class="sheet-title" style="font-size:16px">Exact Part VIII rules</div>
+          <div class="sheet-sub">Use the procedure cards above to operate the phase. Open the full entries below when you need exact wording, timing, or edge-case detail.</div>
         </div>
-        <div class="part-body">
-          <div class="part-intro">${normalizeInlineSpacing(part.intro)}</div>
-          ${rules.map(rule=>ruleBodyHtml(rule,part)).join('')}
-        </div>
-      </div>`;
-  }).join('');
+      </div>
+    </section>
+    <div class="part-stack">${part8 ? renderPart(part8) : ''}</div>`;
 }
-function renderSearch(){
-  const q = globalSearch.value.trim();
-  const activePart = state.partFilter;
-  const filters = ['all', ...APP_DATA.parts.map(p=>p.num)];
-  document.getElementById('searchFilters').innerHTML = filters.map(f=>`<button class="filter ${f===activePart?'active':''}" onclick="setFilter('${f}')">${f==='all'?'All parts':'Part ' + f}</button>`).join('');
-  const wrap = document.getElementById('searchResults');
-  if(!q){
-    wrap.innerHTML = `<div class="saved-empty">Search the full rules by term, phase, keyword, or section reference.</div>`;
-    return;
-  }
-  const needle = q.toLowerCase();
-  const rows = APP_DATA.searchIndex.filter(row => (activePart==='all' || row.part===activePart) && (row.title + ' ' + row.plain).toLowerCase().includes(needle)).slice(0,120);
-  wrap.innerHTML = rows.length ? rows.map(row=>{
-    const item = resolveItem(row.id) || {title:row.title, partLabel:'Part ' + row.part, parent:''};
-    const snippetSource = row.plain || '';
-    const idx = snippetSource.toLowerCase().indexOf(needle);
-    const snippet = idx >=0 ? snippetSource.slice(Math.max(0, idx-60), idx+160) : snippetSource.slice(0,180);
-    return `<button class="result" onclick="jumpTo('${row.id}'); addRecent({id:'${row.id}', title:'${escapeJs(item.title)}', partLabel:'${escapeJs(item.partLabel)}', parent:'${escapeJs(item.parent||'')}'})"><div class="result-top"><div class="result-title">${highlightText(item.title, q)}</div><div class="result-meta">${item.partLabel}</div></div><div class="result-snippet">${highlightText(snippet, q)}</div></button>`;
-  }).join('') : `<div class="saved-empty">No results for “${escapeHtml(q)}”.</div>`;
-}
-function escapeJs(s){ return (s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
-function renderQuick(){
-  const quick = APP_DATA.parts.find(p=>p.num==='12') || APP_DATA.parts[APP_DATA.parts.length-1];
-  document.getElementById('quickCards').innerHTML = quick.rules.map(rule=>`<div class="quick-card"><div class="quick-head">${escapeHtml(rule.title)}</div><div class="quick-body">${formatRuleHtml(rule.html)} ${rule.children.map(sub=>`<div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--line-2)"><strong>${escapeHtml(sub.title)}</strong><div class="sub-prose" style="margin-top:4px">${formatRuleHtml(sub.html)}</div></div>`).join('')}</div></div>`).join('');
-}
-function renderSaved(){
-  const list = document.getElementById('savedList');
-  const items = state.bookmarks.map(resolveItem).filter(Boolean);
-  list.innerHTML = items.length ? items.map(item=>`<button class="mini-card" style="display:block;width:100%;text-align:left;margin-bottom:8px" onclick="jumpTo('${item.id}')"><div class="mini-card-title"><span>${escapeHtml(item.title)}</span><span>★</span></div><div class="mini-card-sub">${item.partLabel} ${item.parent ? '• ' + escapeHtml(item.parent) : ''}</div></button>`).join('') : `<div class="saved-empty">No bookmarks yet. Tap ★ on any rule to save it here.</div>`;
-  const history = document.getElementById('historyList');
-  history.innerHTML = state.recents.length ? state.recents.map(item=>`<button class="mini-card" style="display:block;width:100%;text-align:left;margin-bottom:8px" onclick="jumpTo('${item.id}')"><div class="mini-card-title"><span>${escapeHtml(item.title)}</span><span class="ref-pill">${item.partLabel}</span></div><div class="mini-card-sub">${escapeHtml(item.parent||'Recent')}</div></button>`).join('') : `<div class="saved-empty">Recently opened rules will appear here.</div>`;
-}
-function togglePart(id){ state.openParts[id] = !state.openParts[id]; saveState(); renderRules(); }
-function toggleRule(partId, ruleId){ const key = partId+'::'+ruleId; state.openRules[key] = !state.openRules[key]; if(state.openRules[key]) addRecent({id:key,title:resolveItem(key).title,partLabel:resolveItem(key).partLabel,parent:resolveItem(key).parent}); saveState(); renderRules(); }
-function toggleSub(partId, ruleId, subId){ const key = partId+'::'+ruleId+'::'+subId; state.openSubs[key] = !state.openSubs[key]; if(state.openSubs[key]) addRecent({id:key,title:resolveItem(key).title,partLabel:resolveItem(key).partLabel,parent:resolveItem(key).parent}); saveState(); renderRules(); }
-function setFilter(part){ state.partFilter = part; renderSearch(); }
-function copyLink(id,title){
-  const url = new URL(window.location.href); url.hash = id;
-  navigator.clipboard?.writeText(url.toString());
-  addRecent({id,title,partLabel:(resolveItem(id)||{partLabel:''}).partLabel,parent:(resolveItem(id)||{parent:''}).parent});
-}
-function openSheet(){ document.getElementById('sheetScrim').classList.add('open'); document.getElementById('tocSheet').classList.add('open'); }
-function closeSheet(){ document.getElementById('sheetScrim').classList.remove('open'); document.getElementById('tocSheet').classList.remove('open'); }
-document.getElementById('tocBtn').addEventListener('click', openSheet);
-document.getElementById('closeSheetBtn').addEventListener('click', closeSheet);
-document.getElementById('sheetScrim').addEventListener('click', closeSheet);
-document.getElementById('densityBtn').addEventListener('click', ()=>{ state.density = state.density === 'comfortable' ? 'compact' : 'comfortable'; app.setAttribute('data-density', state.density); saveState(); });
-document.getElementById('printBtn').addEventListener('click', ()=> window.open('print.html','_blank'));
-
-browseSearch.addEventListener('input', renderRules);
-globalSearch.addEventListener('input', renderSearch);
-document.getElementById('clearBrowseSearch').addEventListener('click', ()=>{ browseSearch.value=''; renderRules(); });
-document.getElementById('clearGlobalSearch').addEventListener('click', ()=>{ globalSearch.value=''; renderSearch(); });
-
-window.addEventListener('scroll', ()=>{
-  const y = window.scrollY; const h = document.documentElement.scrollHeight - window.innerHeight; const pct = h>0 ? (y/h)*100 : 0;
-  document.getElementById('scrollProgress').style.width = pct + '%';
-  document.getElementById('jumpTop').style.display = y > 500 ? 'block' : 'none';
-});
-document.querySelector('#jumpTop button').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
-window.addEventListener('hashchange', ()=>{ if(location.hash.slice(1)) jumpTo(location.hash.slice(1)); });
-
-
-function initHash(){ const hash = location.hash.slice(1); if(hash) jumpTo(hash); }
-function init(){ renderTOC(); renderHome(); renderRules(); renderSearch(); renderQuick(); renderSaved(); initHash(); }
-
-async function boot(){
-  try{
-    await loadAppData();
-    init();
-  }catch(err){
-    console.error(err);
-    const main = document.querySelector('.main');
-    if(main){
-      main.innerHTML = `<div class="loading-note"><strong>App failed to load.</strong><br>${escapeHtml(err.message || String(err))}</div>`;
-    }
-  }
-}
+function renderSystems(){ const filters=[{key:'all',label:'All Systems',active:state.systemFilter==='all'},{key:'core',label:'Core',active:state.systemFilter==='core'},{key:'battle',label:'Battlefield',active:state.systemFilter==='battle'},{key:'advanced',label:'Advanced',active:state.systemFilter==='advanced'}]; let parts=APP.parts.filter(p=>p.group==='systems'); if(state.systemFilter==='core') parts=parts.filter(p=>['part-2','part-3','part-4','part-5','part-6'].includes(p.id)); if(state.systemFilter==='battle') parts=parts.filter(p=>['part-7'].includes(p.id)); if(state.systemFilter==='advanced') parts=parts.filter(p=>['part-10'].includes(p.id)); renderCollection(SYSTEMS, parts, {label:'Rules Systems', subtitle:'Definitions, measurements, terrain, abilities, and governing logic', filters, filterView:'systems'}); }
+function renderReference(){ REFERENCE.innerHTML=`<section class="sheet-card" style="--accent:#96a6b8"><div class="sheet-head"><div><div class="section-kicker">Reference</div><div class="sheet-title">Fast answers during play</div><div class="sheet-sub">Use quick reference for operating flow, keywords for exact terms, and bookmarks for repeated table rulings.</div></div></div><div class="link-grid"><button class="link-btn" data-jump="part-12">Quick reference</button><button class="link-btn" data-jump="part-11">Keyword glossary</button><button class="link-btn" data-jump="part-12::12-2-round-sequence">Round sequence</button><button class="link-btn" data-jump="part-12::12-4-phase-2-assault">Assault reference</button></div></section><section class="sheet-card" style="--accent:#b4889b"><div class="sheet-head compact"><div><div class="section-kicker">Bookmarks</div><div class="sheet-title" style="font-size:16px">Saved rulings</div></div></div><div class="saved-list">${state.bookmarks.length?state.bookmarks.map(b=>`<div class="mini-row"><div class="mini-main"><div class="mini-title">${esc(b.label)}</div><div class="mini-sub">Saved for reuse</div></div><div class="head-tags"><button class="link-btn" data-open-target="${b.target}" style="min-height:34px;padding:6px 8px">Open</button><button class="link-btn" data-remove-bookmark="${b.target}" style="min-height:34px;padding:6px 8px">Remove</button></div></div>`).join(''):'<div class="mini-row"><div class="mini-main"><div class="mini-title">No bookmarks yet</div><div class="mini-sub">Save a Part or specific rule with ★.</div></div></div>'}</div></section><section class="sheet-card" style="--accent:#96a6b8"><div class="sheet-head compact"><div><div class="section-kicker">Printable</div><div class="sheet-title" style="font-size:16px">Print field manual</div></div></div><div class="link-grid one"><button class="link-btn" id="referencePrintBtn">Open printable version</button></div></section><div class="part-stack">${APP.parts.filter(p=>p.group==='reference').map(renderPart).join('')}</div>`; }
+function renderSearch(){ const q=(searchInput.value||'').trim().toLowerCase(); const hits=q.length<2?[]:APP.searchIndex.filter(row=>(row.title+' '+row.text+' '+row.meta).toLowerCase().includes(q)).slice(0,120); searchCount.textContent=q.length<2?'Type at least 2 characters.':`${hits.length} result${hits.length===1?'':'s'}`; searchResults.innerHTML=hits.map(h=>`<div class="result-card"><div class="result-meta">${esc(h.meta)}</div><div class="result-title">${esc(h.title)}</div><div class="result-snippet">${esc(h.text.slice(0,180))}${h.text.length>180?'…':''}</div><div class="head-tags" style="margin-top:8px;justify-content:flex-start"><button class="link-btn" data-open-target="${h.target}" style="min-height:34px;padding:6px 8px">Open</button></div></div>`).join(''); }
+function renderToc(){ byId('tocList').innerHTML=APP.parts.map(p=>`<div class="toc-row" data-open-target="${p.id}"><div><div class="toc-row-title">${esc(p.kicker)} — ${esc(p.title)}</div><div class="toc-row-sub">${p.rules.length} section${p.rules.length===1?'':'s'}</div></div><span class="tag soft">${p.group}</span></div>`).join(''); }
+function bindDynamic(){ document.querySelectorAll('[data-part-toggle]').forEach(btn=>btn.onclick=()=>{ const id=btn.dataset.partToggle; state.openParts[id]=!state.openParts[id]; save(); renderAll(); }); document.querySelectorAll('[data-rule-toggle]').forEach(btn=>btn.onclick=()=>{ const id=btn.dataset.ruleToggle; state.openRules[id]=!state.openRules[id]; save(); renderAll(); }); document.querySelectorAll('[data-bookmark]').forEach(btn=>btn.onclick=(e)=>{ e.stopPropagation(); toggleBookmark(btn.dataset.bookmark, btn.dataset.label, state.view); }); document.querySelectorAll('[data-open-target],[data-jump]').forEach(btn=>btn.onclick=()=>openTarget(btn.dataset.openTarget||btn.dataset.jump)); document.querySelectorAll('[data-view-go]').forEach(btn=>btn.onclick=()=>setView(btn.dataset.viewGo)); document.querySelectorAll('[data-remove-bookmark]').forEach(btn=>btn.onclick=()=>{ const t=btn.dataset.removeBookmark; const i=getBookmarkIndex(t); if(i>-1){state.bookmarks.splice(i,1); save(); renderAll();} }); document.querySelectorAll('[data-filter-view="systems"]').forEach(btn=>btn.onclick=()=>{ state.systemFilter=btn.dataset.filter; save(); renderSystems(); bindDynamic(); }); const hp=byId('homePrintBtn'); if(hp) hp.onclick=()=>window.open('print.html','_blank'); const rp=byId('referencePrintBtn'); if(rp) rp.onclick=()=>window.open('print.html','_blank'); }
+function renderAll(){ renderHome(); renderPlay(); renderSystems(); renderReference(); renderSearch(); renderToc(); bindDynamic(); setView(state.view||'home'); }
+function initStatic(){ document.querySelectorAll('.nav-btn').forEach(btn=>btn.onclick=()=>setView(btn.dataset.view)); byId('tocBtn').onclick=()=>byId('tocSheet').classList.remove('hidden'); byId('tocClose').onclick=()=>byId('tocSheet').classList.add('hidden'); byId('tocCloseBtn').onclick=()=>byId('tocSheet').classList.add('hidden'); byId('searchBtn').onclick=()=>{ setView('search'); searchInput.focus(); }; byId('printBtn').onclick=()=>window.open('print.html','_blank'); byId('clearGlobalSearch').onclick=()=>{ searchInput.value=''; renderSearch(); }; searchInput.addEventListener('input', renderSearch); window.addEventListener('scroll', ()=>jumpTop.classList.toggle('hidden', window.scrollY<500)); jumpTop.onclick=()=>window.scrollTo({top:0, behavior:'smooth'}); }
+async function boot(){ await loadData(); initStatic(); renderAll(); }
 boot();

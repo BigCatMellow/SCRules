@@ -1,14 +1,14 @@
 {
-  "title": "StarCraft TMG — Rules",
-  "subtitle": "Full rules • modular content • printable",
-  "quickPart": "part-12",
+  "title": "StarCraft TMG — Rules Compendium",
+  "subtitle": "Full rules • modular • printable",
   "parts": [
     {
       "num": "2",
       "kicker": "Part II",
       "title": "Core Concepts",
       "id": "part-2",
-      "color": "#4f8c99",
+      "color": "#87a9b2",
+      "group": "systems",
       "file": "data/parts/part-2.json"
     },
     {
@@ -16,7 +16,8 @@
       "kicker": "Part III",
       "title": "Dice and Rolling",
       "id": "part-3",
-      "color": "#9a7437",
+      "color": "#b49d79",
+      "group": "systems",
       "file": "data/parts/part-3.json"
     },
     {
@@ -24,7 +25,8 @@
       "kicker": "Part IV",
       "title": "Measuring and Movement",
       "id": "part-4",
-      "color": "#4a72b0",
+      "color": "#93aac7",
+      "group": "systems",
       "file": "data/parts/part-4.json"
     },
     {
@@ -32,7 +34,8 @@
       "kicker": "Part V",
       "title": "Cards and Characteristics",
       "id": "part-5",
-      "color": "#6f7882",
+      "color": "#9ca7b1",
+      "group": "systems",
       "file": "data/parts/part-5.json"
     },
     {
@@ -40,7 +43,8 @@
       "kicker": "Part VI",
       "title": "The Supply System",
       "id": "part-6",
-      "color": "#5f8452",
+      "color": "#99b19c",
+      "group": "systems",
       "file": "data/parts/part-6.json"
     },
     {
@@ -48,7 +52,8 @@
       "kicker": "Part VII",
       "title": "The Battlefield",
       "id": "part-7",
-      "color": "#a56d43",
+      "color": "#b59b90",
+      "group": "systems",
       "file": "data/parts/part-7.json"
     },
     {
@@ -56,7 +61,8 @@
       "kicker": "Part VIII",
       "title": "The Game Sequence",
       "id": "part-8",
-      "color": "#8062a5",
+      "color": "#9d96c5",
+      "group": "play",
       "file": "data/parts/part-8.json"
     },
     {
@@ -64,7 +70,8 @@
       "kicker": "Part IX",
       "title": "Preparing for Battle",
       "id": "part-9",
-      "color": "#96597d",
+      "color": "#b38fa5",
+      "group": "prepare",
       "file": "data/parts/part-9.json"
     },
     {
@@ -72,7 +79,8 @@
       "kicker": "Part X",
       "title": "Advanced Rules",
       "id": "part-10",
-      "color": "#8a69ae",
+      "color": "#a791c2",
+      "group": "systems",
       "file": "data/parts/part-10.json"
     },
     {
@@ -80,7 +88,8 @@
       "kicker": "Part XI",
       "title": "Keyword Glossary and Definitions",
       "id": "part-11",
-      "color": "#a95276",
+      "color": "#b4889b",
+      "group": "reference",
       "file": "data/parts/part-11.json"
     },
     {
@@ -88,7 +97,8 @@
       "kicker": "Part XII",
       "title": "Quick Reference",
       "id": "part-12",
-      "color": "#4b8a86",
+      "color": "#96a6b8",
+      "group": "reference",
       "file": "data/parts/part-12.json"
     }
   ]

@@ -3,50 +3,308 @@
   "kicker": "Part II",
   "title": "Core Concepts",
   "id": "part-2",
-  "color": "#4f8c99",
-  "intro": "Before the first shot is fired, every commander must understand the language of the battlefield. This Part covers the basic building blocks of the game: <span class=\"kw\">models</span>, <span class=\"kw\">Units</span>, measurements, and the terminology used throughout the rest of the rulebook.",
+  "color": "#87a9b2",
+  "group": "systems",
+  "introRows": [
+    {
+      "type": "text",
+      "html": "Before the first shot is fired, every commander must understand the language of the battlefield. This Part covers the basic building blocks of the game: <span class=\"kw\">models</span>, <span class=\"kw\">Units</span>, measurements, and the terminology used throughout the rest of the rulebook.",
+      "plain": "Before the first shot is fired, every commander must understand the language of the battlefield. This Part covers the basic building blocks of the game: models , Units , measurements, and the terminology used throughout the rest of the rulebook."
+    }
+  ],
   "rules": [
     {
+      "id": "2-1-models",
       "title": "2.1 Models",
-      "id": "21-models",
-      "html": "Every Archon Studio miniature in a player’s army is a model - a single entity (<span class=\"kw\">Marine</span>, <span class=\"kw\">Zergling</span>, Ultralisk) mounted on its own independent base. All rules apply to the model through its base. The physical miniature above the base is purely for aesthetic purposes.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "Every Archon Studio miniature in a player’s army is a model - a single entity (<span class=\"kw\">Marine</span>, <span class=\"kw\">Zergling</span>, Ultralisk) mounted on its own independent base. All rules apply to the model through its base. The physical miniature above the base is purely for aesthetic purposes.",
+          "plain": "Every Archon Studio miniature in a player’s army is a model - a single entity ( Marine , Zergling , Ultralisk) mounted on its own independent base. All rules apply to the model through its base. The physical miniature above the base is purely for aesthetic purposes."
+        }
+      ],
       "children": []
     },
     {
+      "id": "2-2-units",
       "title": "2.2 Units",
-      "id": "22-units",
-      "html": "An army is made up of <span class=\"kw\">Units</span>. A Unit is one or more <span class=\"kw\">models</span>acting together as a single formation.<br/><br/>• <strong>Composition:</strong>Each <strong>Unit Card</strong>specifies the number of <span class=\"kw\">models</span>it contains. An infantry squad may have many soldiers; a vehicle may operate alone.<br/><br/>• <strong>Cohesion:</strong><span class=\"kw\">Models</span><span class=\"kw\">within</span>a Unit fight and <span class=\"kw\">move</span>as a single entity. They are bound by the rules of <strong>Coherency</strong>(Part <span class=\"ref\">4.4</span>), representing the discipline and communication required to operate on a battlefield.<br/><br/>• <strong><span class=\"kw\">Friendly</span>&amp; <span class=\"kw\">Enemy</span>:</strong>A player’s own <span class=\"kw\">Units</span>are <strong><span class=\"kw\">Friendly</span></strong>. The opponent’s <span class=\"kw\">Units</span>are <strong>Enemies</strong>.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "An army is made up of <span class=\"kw\">Units</span>. A Unit is one or more <span class=\"kw\">models</span> acting together as a single formation.",
+          "plain": "An army is made up of Units . A Unit is one or more models acting together as a single formation."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Composition:</b> Each <b>Unit Card</b> specifies the number of <span class=\"kw\">models</span> it contains. An infantry squad may have many soldiers; a vehicle may operate alone.",
+          "plain": "Composition: Each Unit Card specifies the number of models it contains. An infantry squad may have many soldiers; a vehicle may operate alone."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Cohesion:</b> <span class=\"kw\">Models</span> <span class=\"kw\">within</span> a Unit fight and <span class=\"kw\">move</span> as a single entity. They are bound by the rules of <b>Coherency</b> (Part <span class=\"ref\">4. 4</span>), representing the discipline and communication required to operate on a battlefield.",
+          "plain": "Cohesion: Models within a Unit fight and move as a single entity. They are bound by the rules of Coherency (Part 4. 4 ), representing the discipline and communication required to operate on a battlefield."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Friendly</span> &amp; <span class=\"kw\">Enemy</span>:</b> A player’s own <span class=\"kw\">Units</span> are <b><span class=\"kw\">Friendly</span></b>. The opponent’s <span class=\"kw\">Units</span> are <b>Enemies</b>.",
+          "plain": "Friendly & Enemy : A player’s own Units are Friendly . The opponent’s Units are Enemies ."
+        }
+      ],
       "children": []
     },
     {
+      "id": "2-3-bases",
       "title": "2.3 Bases",
-      "id": "23-bases",
-      "html": "Every model stands on a base, and that base is the single most important physical object in the game. It does not matter how a miniature is posed, whether a <span class=\"kw\">Zealot</span>is mid-leap or a <span class=\"kw\">Hydralisk</span>is rearing back to strike; the rules see only the base. Every measurement, every <strong><span class=\"kw\">Line of Sight</span></strong>check, and every question about whether two <span class=\"kw\">models</span>are touching or overlapping is resolved by looking at their <span class=\"kw\">bases</span>, nothing else.<br/><br/>Every model must be mounted on the correct base size as specified on its <strong>Unit Card</strong>. Using the wrong base size changes a model’s physical footprint and directly affects gameplay, so consistency matters.<br/><br/>• <strong>No Overlap:</strong><span class=\"kw\">Bases</span>may never overlap. If a model cannot be set without its base overlapping another base or <span class=\"kw\">impassable terrain</span>, it simply cannot go there.<br/><br/>• <strong>Scenic Freedom:</strong>Players are free to add scenic basing, custom conversions, player dramatic poses, and flight stands. The game encourages creativity - just know that, for rules purposes, the base and the Size Characteristic on the <strong>Unit Card</strong>are the only things that count. A <span class=\"kw\">Marine</span>standing on a pile of rubble is no taller than one standing on a bare base. A Mutalisk on a towering flight stand has the same Size as one on a short peg. <strong>Flight Stands:</strong>If a model uses a flight stand, the bottom of the stand counts as the model's base for all measurements and positioning.<br/><br/>• <strong>Wobbly Model Syndrome</strong>: When a model cannot sit flat on the terrain, both players should agree on where the model would stand if the surface allowed it. Set the model as close to that spot as possible, or use a marker to indicate its actual position. The model is treated as occupying the agreed position for all purposes.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "Every model stands on a base, and that base is the single most important physical object in the game. It does not matter how a miniature is posed, whether a <span class=\"kw\">Zealot</span> is mid-leap or a <span class=\"kw\">Hydralisk</span> is rearing back to strike; the rules see only the base. Every measurement, every <b><span class=\"kw\">Line of Sight</span></b> check, and every question about whether two <span class=\"kw\">models</span> are touching or overlapping is resolved by looking at their <span class=\"kw\">bases</span>, nothing else.",
+          "plain": "Every model stands on a base, and that base is the single most important physical object in the game. It does not matter how a miniature is posed, whether a Zealot is mid-leap or a Hydralisk is rearing back to strike; the rules see only the base. Every measurement, every Line of Sight check, and every question about whether two models are touching or overlapping is resolved by looking at their bases , nothing else."
+        },
+        {
+          "type": "text",
+          "html": "Every model must be mounted on the correct base size as specified on its <b>Unit Card</b>. Using the wrong base size changes a model’s physical footprint and directly affects gameplay, so consistency matters.",
+          "plain": "Every model must be mounted on the correct base size as specified on its Unit Card . Using the wrong base size changes a model’s physical footprint and directly affects gameplay, so consistency matters."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>No Overlap:</b> <span class=\"kw\">Bases</span> may never overlap. If a model cannot be set without its base overlapping another base or <span class=\"kw\">impassable terrain</span>, it simply cannot go there.",
+          "plain": "No Overlap: Bases may never overlap. If a model cannot be set without its base overlapping another base or impassable terrain , it simply cannot go there."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Scenic Freedom:</b> Players are free to add scenic basing, custom conversions, player dramatic poses, and flight stands. The game encourages creativity - just know that, for rules purposes, the base and the Size Characteristic on the <b>Unit Card</b> are the only things that count. A <span class=\"kw\">Marine</span> standing on a pile of rubble is no taller than one standing on a bare base. A Mutalisk on a towering flight stand has the same Size as one on a short peg. <b>Flight Stands:</b> If a model uses a flight stand, the bottom of the stand counts as the model&#x27; s base for all measurements and positioning.",
+          "plain": "Scenic Freedom: Players are free to add scenic basing, custom conversions, player dramatic poses, and flight stands. The game encourages creativity - just know that, for rules purposes, the base and the Size Characteristic on the Unit Card are the only things that count. A Marine standing on a pile of rubble is no taller than one standing on a bare base. A Mutalisk on a towering flight stand has the same Size as one on a short peg. Flight Stands: If a model uses a flight stand, the bottom of the stand counts as the model' s base for all measurements and positioning."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Wobbly Model Syndrome</b>: When a model cannot sit flat on the terrain, both players should agree on where the model would stand if the surface allowed it. Set the model as close to that spot as possible, or use a marker to indicate its actual position. The model is treated as occupying the agreed position for all purposes.",
+          "plain": "Wobbly Model Syndrome : When a model cannot sit flat on the terrain, both players should agree on where the model would stand if the surface allowed it. Set the model as close to that spot as possible, or use a marker to indicate its actual position. The model is treated as occupying the agreed position for all purposes."
+        }
+      ],
       "children": []
     },
     {
+      "id": "2-4-tags",
       "title": "2.4 Tags",
-      "id": "24-tags",
-      "html": "<span class=\"kw\">Tags</span>are <span class=\"kw\">Keywords</span>printed at the bottom of each <strong>Unit Card</strong>. They allow rules to target specific types of <span class=\"kw\">Units</span>without repeating lengthy definitions.<span>2.4.1 Faction Tags</span><strong>Faction Tag</strong>s identify a Unit’s allegiance.<br/><br/>• <strong>Race <span class=\"kw\">Tags</span>:</strong><strong><span class=\"kw\">Terran</span></strong>, <strong><span class=\"kw\">Zerg</span></strong>, <strong><span class=\"kw\">Protoss</span></strong>.<br/><br/>• <strong>Sub-<span class=\"kw\">Faction Tags</span>:</strong>Specific broods or organisations, e.g., <strong><span class=\"kw\">Kerrigan</span>’s Swarm</strong>, <strong>Raynor’s Raiders</strong>.<br/><br/>• <strong>Function:</strong>During <span class=\"kw\">Army Building</span>, a player may include only <span class=\"kw\">Units</span>and <strong><span class=\"kw\">Tactical Cards</span></strong>that share <strong><span class=\"kw\">Faction Tags</span></strong>with the chosen <strong>Faction Card</strong>.<span>2.4.2 Combat Tags</span><strong>Combat Tag</strong>s identify a Unit’s physical nature and tactical class.<br/><br/><strong>Type <span class=\"kw\">Tags</span>: Armoured, Biological, Light, Mechanical, Psionic, <span class=\"kw\">Flying</span>, and Ground.</strong><br/><br/>• <strong>Targeting:</strong>Some weapons can fire only at specific <span class=\"kw\">tags</span>(e.g., \"Target: <strong><span class=\"kw\">Flying</span></strong>\").<br/><br/>• <strong>Surge:</strong>A weapon’s Surge efficiency triggers only when the target has the <strong>Combat Tag</strong>listed in the weapon’s <strong>Surge Type</strong>(Part <span class=\"ref\">8.7.4</span>).<br/><br/>• <strong>Bonuses:</strong>Abilities such as <span class=\"kw\">ANTI-EVADE</span>(X) or <span class=\"kw\">PIERCE</span>(X) often apply only against specific <span class=\"kw\">tags</span>.<br/><br/>Note: The <strong>Ground Combat Tag</strong>and the<strong>GROUND LEVEL</strong>elevation (Part <span class=\"ref\">8.5.3</span>) are distinct concepts. A <strong><span class=\"kw\">Flying</span></strong>Unit standing on the playmat is at <strong>GROUND LEVEL</strong>but does not have the <strong>Ground Combat Tag.</strong>Throughout these rules, <strong>Ground</strong>in bold caps always refers to the <strong>Combat Tag</strong>. <strong>GROUND LEVEL</strong>always refers to elevation.",
-      "children": []
+      "rows": [
+        {
+          "type": "text",
+          "html": "<span class=\"kw\">Tags</span> are <span class=\"kw\">Keywords</span> printed at the bottom of each <b>Unit Card</b>. They allow rules to target specific types of <span class=\"kw\">Units</span> without repeating lengthy definitions.",
+          "plain": "Tags are Keywords printed at the bottom of each Unit Card . They allow rules to target specific types of Units without repeating lengthy definitions."
+        }
+      ],
+      "children": [
+        {
+          "id": "2-4-1-faction-tags",
+          "title": "2.4.1 Faction Tags",
+          "rows": [
+            {
+              "type": "text",
+              "html": "<b>Faction Tag</b> s identify a Unit’s allegiance.",
+              "plain": "Faction Tag s identify a Unit’s allegiance."
+            },
+            {
+              "type": "bullet",
+              "html": "<b>Race <span class=\"kw\">Tags</span>:</b><b><span class=\"kw\">Terran</span></b>, <b><span class=\"kw\">Zerg</span></b>, <b><span class=\"kw\">Protoss</span></b>.",
+              "plain": "Race Tags : Terran , Zerg , Protoss ."
+            },
+            {
+              "type": "bullet",
+              "html": "<b>Sub-<span class=\"kw\">Faction Tags</span>:</b> Specific broods or organisations, e. g. , <b><span class=\"kw\">Kerrigan</span>’s Swarm</b>, <b>Raynor’s Raiders</b>.",
+              "plain": "Sub- Faction Tags : Specific broods or organisations, e. g. , Kerrigan ’s Swarm , Raynor’s Raiders ."
+            },
+            {
+              "type": "bullet",
+              "html": "<b>Function:</b> During <span class=\"kw\">Army Building</span>, a player may include only <span class=\"kw\">Units</span> and <b><span class=\"kw\">Tactical Cards</span></b> that share <b><span class=\"kw\">Faction Tags</span></b> with the chosen <b>Faction Card</b>.",
+              "plain": "Function: During Army Building , a player may include only Units and Tactical Cards that share Faction Tags with the chosen Faction Card ."
+            }
+          ]
+        },
+        {
+          "id": "2-4-2-combat-tags",
+          "title": "2.4.2 Combat Tags",
+          "rows": [
+            {
+              "type": "text",
+              "html": "<b>Combat Tag</b> s identify a Unit’s physical nature and tactical class.",
+              "plain": "Combat Tag s identify a Unit’s physical nature and tactical class."
+            },
+            {
+              "type": "text",
+              "html": "<b>Type <span class=\"kw\">Tags</span>: Armoured, Biological, Light, Mechanical, Psionic, <span class=\"kw\">Flying</span>, and Ground.</b>",
+              "plain": "Type Tags : Armoured, Biological, Light, Mechanical, Psionic, Flying , and Ground."
+            },
+            {
+              "type": "bullet",
+              "html": "<b>Targeting:</b> Some weapons can fire only at specific <span class=\"kw\">tags</span> (e. g. , &quot; Target: <b><span class=\"kw\">Flying</span></b>&quot; ).",
+              "plain": "Targeting: Some weapons can fire only at specific tags (e. g. , \" Target: Flying \" )."
+            },
+            {
+              "type": "bullet",
+              "html": "<b>Surge:</b> A weapon’s Surge efficiency triggers only when the target has the <b>Combat Tag</b> listed in the weapon’s <b>Surge Type</b> (Part <span class=\"ref\">8. 7. 4</span>).",
+              "plain": "Surge: A weapon’s Surge efficiency triggers only when the target has the Combat Tag listed in the weapon’s Surge Type (Part 8. 7. 4 )."
+            },
+            {
+              "type": "bullet",
+              "html": "<b>Bonuses:</b> Abilities such as <span class=\"kw\">ANTI-EVADE</span> (X) or <span class=\"kw\">PIERCE</span> (X) often apply only against specific <span class=\"kw\">tags</span>.",
+              "plain": "Bonuses: Abilities such as ANTI-EVADE (X) or PIERCE (X) often apply only against specific tags ."
+            },
+            {
+              "type": "text",
+              "html": "Note: The <b>Ground Combat Tag</b> and the<b> GROUND LEVEL</b> elevation (Part <span class=\"ref\">8. 5. 3</span>) are distinct concepts. A <b><span class=\"kw\">Flying</span></b> Unit standing on the playmat is at <b>GROUND LEVEL</b> but does not have the <b>Ground Combat Tag.</b> Throughout these rules, <b>Ground</b> in bold caps always refers to the <b>Combat Tag</b>. <b>GROUND LEVEL</b> always refers to elevation.",
+              "plain": "Note: The Ground Combat Tag and the GROUND LEVEL elevation (Part 8. 5. 3 ) are distinct concepts. A Flying Unit standing on the playmat is at GROUND LEVEL but does not have the Ground Combat Tag. Throughout these rules, Ground in bold caps always refers to the Combat Tag . GROUND LEVEL always refers to elevation."
+            }
+          ]
+        }
+      ]
     },
     {
+      "id": "2-5-player-roles",
       "title": "2.5 Player Roles",
-      "id": "25-player-roles",
-      "html": "At any given moment, each player occupies one or more of the following roles. These terms appear throughout the rules and determine who makes decisions, who rolls <span class=\"kw\">dice</span>, and who is affected by an ability.<br/><br/>• <strong><span class=\"kw\">Active Player</span>:</strong>The player whose turn it is to act. Some rules, particularly <strong>Reactions</strong>, refer to this to determine priority when both sides respond to the same event.<br/><br/>• <strong><span class=\"kw\">Controlling Player</span>:</strong>The player who commands a specific Unit, model, or Token. They make all decisions and roll all <span class=\"kw\">dice</span>. Certain abilities (e.g., Neural Parasite) can transfer control; the new controller then acts in every respect as though the Unit were their own.<br/><br/>• <strong><span class=\"kw\">Friendly</span>and <span class=\"kw\">Enemy</span>:</strong>Anything belonging to the <span class=\"kw\">controlling player</span>or their teammates is <strong><span class=\"kw\">Friendly</span></strong>. Anything belonging to an opponent is an <span class=\"kw\">enemy</span>. In <span class=\"kw\">team games</span>, all teammates are <strong><span class=\"kw\">Friendly</span></strong>to one another.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "At any given moment, each player occupies one or more of the following roles. These terms appear throughout the rules and determine who makes decisions, who rolls <span class=\"kw\">dice</span>, and who is affected by an ability.",
+          "plain": "At any given moment, each player occupies one or more of the following roles. These terms appear throughout the rules and determine who makes decisions, who rolls dice , and who is affected by an ability."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Active Player</span>:</b> The player whose turn it is to act. Some rules, particularly <b>Reactions</b>, refer to this to determine priority when both sides respond to the same event.",
+          "plain": "Active Player : The player whose turn it is to act. Some rules, particularly Reactions , refer to this to determine priority when both sides respond to the same event."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Controlling Player</span>:</b> The player who commands a specific Unit, model, or Token. They make all decisions and roll all <span class=\"kw\">dice</span>. Certain abilities (e. g. , Neural Parasite) can transfer control; the new controller then acts in every respect as though the Unit were their own.",
+          "plain": "Controlling Player : The player who commands a specific Unit, model, or Token. They make all decisions and roll all dice . Certain abilities (e. g. , Neural Parasite) can transfer control; the new controller then acts in every respect as though the Unit were their own."
+        },
+        {
+          "type": "bullet",
+          "html": "<b><span class=\"kw\">Friendly</span> and <span class=\"kw\">Enemy</span>:</b> Anything belonging to the <span class=\"kw\">controlling player</span> or their teammates is <b><span class=\"kw\">Friendly</span></b>. Anything belonging to an opponent is an <span class=\"kw\">enemy</span>. In <span class=\"kw\">team games</span>, all teammates are <b><span class=\"kw\">Friendly</span></b> to one another.",
+          "plain": "Friendly and Enemy : Anything belonging to the controlling player or their teammates is Friendly . Anything belonging to an opponent is an enemy . In team games , all teammates are Friendly to one another."
+        }
+      ],
       "children": []
     },
     {
+      "id": "2-6-keywords-and-rule-priority",
       "title": "2.6 Keywords and Rule Priority",
-      "id": "26-keywords-and-rule-priority",
-      "html": "<span>2.6.1 Keywords</span><span class=\"kw\">Keywords</span>are written in <strong>BOLD CAPS (e.g. <span class=\"kw\">SIDEARM</span>, <span class=\"kw\">PIERCE</span>, <span class=\"kw\">HIDDEN</span>).</strong>A Keyword always means the same thing, regardless of the Unit in which it appears. Full definitions are in Part 11: Keyword Glossary and Definitions.<br/><br/><strong><span class=\"kw\">Keywords</span>do not stack.</strong>Gaining the same Keyword twice provides no extra benefit. If a Keyword has a numeric value (e.g., <strong><span class=\"kw\">PRECISION</span>(1)</strong>and <strong><span class=\"kw\">PRECISION</span>(2)</strong>), use only the highest value.<span>2.6.2 The Priority</span>Specific Rules take precedence over General Rules. If text on a <strong>Unit Card</strong>, <strong>Mission Card</strong>, or <strong><span class=\"kw\">Special Ability</span></strong>contradicts the Core Rules, the card or ability takes precedence.",
-      "children": []
+      "rows": [],
+      "children": [
+        {
+          "id": "2-6-1-keywords",
+          "title": "2.6.1 Keywords",
+          "rows": [
+            {
+              "type": "text",
+              "html": "<span class=\"kw\">Keywords</span> are written in <b>BOLD CAPS (e. g. <span class=\"kw\">SIDEARM</span>, <span class=\"kw\">PIERCE</span>, <span class=\"kw\">HIDDEN</span>).</b> A Keyword always means the same thing, regardless of the Unit in which it appears. Full definitions are in Part 11: Keyword Glossary and Definitions.",
+              "plain": "Keywords are written in BOLD CAPS (e. g. SIDEARM , PIERCE , HIDDEN ). A Keyword always means the same thing, regardless of the Unit in which it appears. Full definitions are in Part 11: Keyword Glossary and Definitions."
+            },
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Keywords</span> do not stack.</b> Gaining the same Keyword twice provides no extra benefit. If a Keyword has a numeric value (e. g. , <b><span class=\"kw\">PRECISION</span> (1)</b> and <b><span class=\"kw\">PRECISION</span> (2)</b>), use only the highest value.",
+              "plain": "Keywords do not stack. Gaining the same Keyword twice provides no extra benefit. If a Keyword has a numeric value (e. g. , PRECISION (1) and PRECISION (2) ), use only the highest value."
+            }
+          ]
+        },
+        {
+          "id": "2-6-2-the-priority",
+          "title": "2.6.2 The Priority",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Specific Rules take precedence over General Rules. If text on a <b>Unit Card</b>, <b>Mission Card</b>, or <b><span class=\"kw\">Special Ability</span></b> contradicts the Core Rules, the card or ability takes precedence.",
+              "plain": "Specific Rules take precedence over General Rules. If text on a Unit Card , Mission Card , or Special Ability contradicts the Core Rules, the card or ability takes precedence."
+            }
+          ]
+        }
+      ]
     },
     {
+      "id": "2-7-ability-types",
       "title": "2.7 Ability Types",
-      "id": "27-ability-types",
-      "html": "Every <strong><span class=\"kw\">Special Ability</span></strong>falls into one of three categories. Understanding the difference is essential, as it determines when the ability can be used, whether it requires a conscious decision, and what happens if both players want to act at the same time. Part 10 covers these in full detail; what follows is a working summary.<span>2.7.1 Active Abilities</span><strong><span class=\"kw\">Active Abilities</span></strong>are deliberate choices, a stim injection, a mode switch, a called shot. They require the Unit to be<strong>Activated</strong>, and must be triggered immediately before declaring an action or immediately after one fully resolves. A player cannot interrupt an action mid-flow to use one.<br/><br/>A Unit in <strong><span class=\"kw\">Reserves</span></strong>cannot use <strong><span class=\"kw\">Active Abilities</span></strong>unless the ability explicitly states otherwise. Each named <strong>Active Ability</strong>may be used only once per Round by a specific Unit, unless it has the <strong><span class=\"kw\">REPEATABLE</span></strong>keyword. Effects granted by <strong><span class=\"kw\">Active Abilities</span></strong>expire at the End of the Current Round unless otherwise stated.<span>2.7.2 Passive Abilities</span><strong><span class=\"kw\">Passive Abilities</span></strong>are always active. They represent innate traits, permanent equipment, or biological adaptations that require no decision to activate; they simply function as long as the Unit is on the battlefield.<br/><br/>Like <strong><span class=\"kw\">Active Abilities</span></strong>, <strong><span class=\"kw\">Passive Abilities</span></strong>are inactive while the Unit is in <strong><span class=\"kw\">Reserves</span></strong>, unless otherwise stated.<span>2.7.3 Reaction Abilities</span><strong><span class=\"kw\">Reaction Abilities</span></strong>are the battlefield’s reflexes. They fire in response to a specific trigger, such as an incoming attack, an <strong><span class=\"kw\">Enemy</span></strong><span class=\"kw\">Charge</span>, or a model being Destroyed, and allow a player to act outside the normal activation sequence. The catch is timing: a Reaction must be declared at the <strong>exact moment</strong>its trigger occurs. If the moment passes, the opportunity is gone.<br/><br/>Each player may resolve only <strong>one Reaction per Activation</strong>.<br/><br/>Each named <strong>Reaction Ability</strong>may be used only <strong>once per Round</strong>by a specific Unit. This limit applies across the entire Round (all Phases and all <span class=\"kw\">Activations</span>). A single Unit cannot use the same-named Reaction more than once per Round, even on different triggers.<br/><br/>Different <span class=\"kw\">Units</span>may each use the same named Reaction once per Round.<br/><br/>If both players want to react to the same trigger, the <strong><span class=\"kw\">Active Player</span></strong>resolves their <strong>Reaction</strong>first.<br/><br/>Like Active and <span class=\"kw\">Passive Abilities</span>, <span class=\"kw\">Reaction Abilities</span>cannot be used while the Unit is in <span class=\"kw\">Reserves</span>unless stated otherwise.<br/><br/><strong>EXAMPLE:</strong>If a <span class=\"kw\">Zealot</span>Unit is attacked. It may use <em>Zealous Round</em>OR <em>Ground Armour</em>, not both in the same <strong><span class=\"kw\">Enemy</span>Activation</strong>.<br/>If a <span class=\"kw\">Marine</span>Unit is attacked, and it uses <em>Infantry Armor</em>for its Armour Roll, the <span class=\"kw\">Medic</span>Unit behind will not be able to use its <em>Life Support</em>in the same <strong><span class=\"kw\">Enemy</span>Activation</strong>.",
-      "children": []
+      "rows": [
+        {
+          "type": "text",
+          "html": "Every <b><span class=\"kw\">Special Ability</span></b> falls into one of three categories. Understanding the difference is essential, as it determines when the ability can be used, whether it requires a conscious decision, and what happens if both players want to act at the same time. Part 10 covers these in full detail; what follows is a working summary.",
+          "plain": "Every Special Ability falls into one of three categories. Understanding the difference is essential, as it determines when the ability can be used, whether it requires a conscious decision, and what happens if both players want to act at the same time. Part 10 covers these in full detail; what follows is a working summary."
+        }
+      ],
+      "children": [
+        {
+          "id": "2-7-1-active-abilities",
+          "title": "2.7.1 Active Abilities",
+          "rows": [
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Active Abilities</span></b> are deliberate choices, a stim injection, a mode switch, a called shot. They require the Unit to be<b> Activated</b>, and must be triggered immediately before declaring an action or immediately after one fully resolves. A player cannot interrupt an action mid-flow to use one.",
+              "plain": "Active Abilities are deliberate choices, a stim injection, a mode switch, a called shot. They require the Unit to be Activated , and must be triggered immediately before declaring an action or immediately after one fully resolves. A player cannot interrupt an action mid-flow to use one."
+            },
+            {
+              "type": "text",
+              "html": "A Unit in <b><span class=\"kw\">Reserves</span></b> cannot use <b><span class=\"kw\">Active Abilities</span></b> unless the ability explicitly states otherwise. Each named <b>Active Ability</b> may be used only once per Round by a specific Unit, unless it has the <b><span class=\"kw\">REPEATABLE</span></b> keyword. Effects granted by <b><span class=\"kw\">Active Abilities</span></b> expire at the End of the Current Round unless otherwise stated.",
+              "plain": "A Unit in Reserves cannot use Active Abilities unless the ability explicitly states otherwise. Each named Active Ability may be used only once per Round by a specific Unit, unless it has the REPEATABLE keyword. Effects granted by Active Abilities expire at the End of the Current Round unless otherwise stated."
+            }
+          ]
+        },
+        {
+          "id": "2-7-2-passive-abilities",
+          "title": "2.7.2 Passive Abilities",
+          "rows": [
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Passive Abilities</span></b> are always active. They represent innate traits, permanent equipment, or biological adaptations that require no decision to activate; they simply function as long as the Unit is on the battlefield.",
+              "plain": "Passive Abilities are always active. They represent innate traits, permanent equipment, or biological adaptations that require no decision to activate; they simply function as long as the Unit is on the battlefield."
+            },
+            {
+              "type": "text",
+              "html": "Like <b><span class=\"kw\">Active Abilities</span></b>, <b><span class=\"kw\">Passive Abilities</span></b> are inactive while the Unit is in <b><span class=\"kw\">Reserves</span></b>, unless otherwise stated.",
+              "plain": "Like Active Abilities , Passive Abilities are inactive while the Unit is in Reserves , unless otherwise stated."
+            }
+          ]
+        },
+        {
+          "id": "2-7-3-reaction-abilities",
+          "title": "2.7.3 Reaction Abilities",
+          "rows": [
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Reaction Abilities</span></b> are the battlefield’s reflexes. They fire in response to a specific trigger, such as an incoming attack, an <b><span class=\"kw\">Enemy</span></b> <span class=\"kw\">Charge</span>, or a model being Destroyed, and allow a player to act outside the normal activation sequence. The catch is timing: a Reaction must be declared at the <b>exact moment</b> its trigger occurs. If the moment passes, the opportunity is gone.",
+              "plain": "Reaction Abilities are the battlefield’s reflexes. They fire in response to a specific trigger, such as an incoming attack, an Enemy Charge , or a model being Destroyed, and allow a player to act outside the normal activation sequence. The catch is timing: a Reaction must be declared at the exact moment its trigger occurs. If the moment passes, the opportunity is gone."
+            },
+            {
+              "type": "text",
+              "html": "Each player may resolve only <b>one Reaction per Activation</b>.",
+              "plain": "Each player may resolve only one Reaction per Activation ."
+            },
+            {
+              "type": "text",
+              "html": "Each named <b>Reaction Ability</b> may be used only <b>once per Round</b> by a specific Unit. This limit applies across the entire Round (all Phases and all <span class=\"kw\">Activations</span>). A single Unit cannot use the same-named Reaction more than once per Round, even on different triggers.",
+              "plain": "Each named Reaction Ability may be used only once per Round by a specific Unit. This limit applies across the entire Round (all Phases and all Activations ). A single Unit cannot use the same-named Reaction more than once per Round, even on different triggers."
+            },
+            {
+              "type": "text",
+              "html": "Different <span class=\"kw\">Units</span> may each use the same named Reaction once per Round.",
+              "plain": "Different Units may each use the same named Reaction once per Round."
+            },
+            {
+              "type": "text",
+              "html": "If both players want to react to the same trigger, the <b><span class=\"kw\">Active Player</span></b> resolves their <b>Reaction</b> first.",
+              "plain": "If both players want to react to the same trigger, the Active Player resolves their Reaction first."
+            },
+            {
+              "type": "text",
+              "html": "Like Active and <span class=\"kw\">Passive Abilities</span>, <span class=\"kw\">Reaction Abilities</span> cannot be used while the Unit is in <span class=\"kw\">Reserves</span> unless stated otherwise.",
+              "plain": "Like Active and Passive Abilities , Reaction Abilities cannot be used while the Unit is in Reserves unless stated otherwise."
+            },
+            {
+              "type": "example",
+              "html": "<b>EXAMPLE:</b> If a <span class=\"kw\">Zealot</span> Unit is attacked. It may use <i>Zealous Round</i> OR <i>Ground Armour</i>, not both in the same <b><span class=\"kw\">Enemy</span> Activation</b>.<br/>If a <span class=\"kw\">Marine</span> Unit is attacked, and it uses <i>Infantry Armor</i> for its Armour Roll, the <span class=\"kw\">Medic</span> Unit behind will not be able to use its <i>Life Support</i> in the same <b><span class=\"kw\">Enemy</span> Activation</b>.",
+              "plain": "EXAMPLE: If a Zealot Unit is attacked. It may use Zealous Round OR Ground Armour , not both in the same Enemy Activation . If a Marine Unit is attacked, and it uses Infantry Armor for its Armour Roll, the Medic Unit behind will not be able to use its Life Support in the same Enemy Activation ."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

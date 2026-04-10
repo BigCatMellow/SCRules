@@ -1,0 +1,352 @@
+{
+  "intro": {
+    "title": "Part VIII as a field manual",
+    "subtitle": "Read the round structure first. Then use the phase sections and action procedures. The full Part VIII text stays below for exact wording and edge cases."
+  },
+  "foundations": [
+    {
+      "title": "Round Structure",
+      "ref": "8.1",
+      "target": "part-8::8-1-rounds-and-phases",
+      "summary": "A game lasts up to 5 rounds. Each round resolves in strict order: Movement, Assault, Combat, then Scoring & Cleanup.",
+      "bullets": [
+        "Learn the phase order before learning the exceptions.",
+        "Use the phase spine below when you need to answer: what can I do right now?"
+      ]
+    },
+    {
+      "title": "Activation System",
+      "ref": "8.2",
+      "target": "part-8::8-2-the-activation-system",
+      "summary": "During Phases 1\u20133, players alternate activating one eligible unit at a time. The first player marker decides who starts each phase.",
+      "bullets": [
+        "Each activated unit performs exactly one action from that phase.",
+        "Passing matters because the first player to pass claims the first player marker for the next phase."
+      ]
+    },
+    {
+      "title": "Deployment & Reserves",
+      "ref": "8.3",
+      "target": "part-8::8-3-deployment-and-reserves",
+      "summary": "Units begin in reserves, then enter the battlefield during the Movement Phase as supply allows.",
+      "bullets": [
+        "Check the supply pool and available supply before deploying.",
+        "Deployment restrictions and zone-of-influence limits still apply when entering the battlefield."
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "title": "Phase 1 \u2014 Movement",
+      "ref": "8.4\u20138.5",
+      "target": "part-8::8-4-phase-1-the-movement-phase",
+      "phaseClass": "phase1",
+      "purpose": "Deploy, reposition, disengage, and set up the next phase.",
+      "actions": [
+        "Hold",
+        "Move",
+        "Disengage",
+        "Deploy"
+      ],
+      "notes": [
+        "Resolve start-of-round effects before activations.",
+        "The first player to pass takes the first player marker for the Assault Phase."
+      ],
+      "procedures": [
+        {
+          "title": "Hold",
+          "ref": "8.5.1",
+          "target": "part-8::8-5-movement-phase-actions::8-5-1-hold",
+          "what": "Take no action and still count as activated for the phase.",
+          "when": "Movement Phase, when the unit is eligible to activate.",
+          "how": [
+            "Do nothing.",
+            "Set the unit's activation marker."
+          ]
+        },
+        {
+          "title": "Move",
+          "ref": "8.5.2\u20138.5.3",
+          "target": "part-8::8-5-movement-phase-actions::8-5-3-resolving-a-move",
+          "what": "An unengaged unit changes position on the battlefield.",
+          "when": "Movement Phase, when the unit is unengaged and activated.",
+          "how": [
+            "Choose a leading model and move it up to Speed, measuring the actual path travelled.",
+            "Apply standard movement restrictions: other units' bases, terrain size, gap clearance, and elevation changes.",
+            "Set the rest of the unit back into coherency."
+          ],
+          "cannot": [
+            "Pass through enemy models or friendly models from other units.",
+            "End overlapping another base or impassable terrain.",
+            "Change elevation without an ACCESS POINT."
+          ],
+          "see": [
+            "4.4 Coherency",
+            "4.6 Gap Clearance",
+            "8.5.3 Resolving a Move"
+          ]
+        },
+        {
+          "title": "Disengage",
+          "ref": "8.5.4",
+          "target": "part-8::8-5-movement-phase-actions::8-5-4-disengage",
+          "what": "An engaged unit withdraws from melee.",
+          "when": "Movement Phase, when the unit begins engaged.",
+          "how": [
+            "Move using the standard movement procedure.",
+            "Each model must finish strictly outside the engagement range of all enemy units.",
+            "Models that fail to clear are removed."
+          ],
+          "cannot": [
+            "Leave the leading model inside enemy engagement range.",
+            "Charge or make a ranged attack next Assault Phase unless the supply exception applies."
+          ],
+          "ifFails": "If the leading model cannot finish outside engagement range, the disengage fails, the unit does not move, the leading model is removed, and the unit's activation ends.",
+          "see": [
+            "8.5.3 Resolving a Move",
+            "Supply and disengage restrictions"
+          ]
+        },
+        {
+          "title": "Deploy",
+          "ref": "8.5.5",
+          "target": "part-8::8-5-movement-phase-actions::8-5-5-deploy",
+          "what": "A unit from reserves enters the battlefield.",
+          "when": "Movement Phase, if the unit fits within available supply.",
+          "how": [
+            "Confirm the unit's current supply value fits within available supply.",
+            "Set the leading model in contact with the entry edge outside the battlefield, then move it up to Speed using standard movement rules.",
+            "Set the rest of the unit in coherency."
+          ],
+          "cannot": [
+            "Finish in the enemy zone of influence.",
+            "Ignore normal movement restrictions after entering."
+          ],
+          "see": [
+            "8.3 Deployment and Reserves",
+            "8.3.2 Available Supply",
+            "8.3.3 Deployment Restrictions"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Phase 2 \u2014 Assault",
+      "ref": "8.6\u20138.7",
+      "target": "part-8::8-6-phase-2-the-assault-phase",
+      "phaseClass": "phase2",
+      "purpose": "Deal damage with ranged attacks, run for position, or charge into engagement.",
+      "actions": [
+        "Run",
+        "Hold",
+        "Ranged Attack",
+        "Charge"
+      ],
+      "notes": [
+        "The first player to pass takes the first player marker for the Combat Phase.",
+        "This is the phase where target legality, batching, and charge legality matter most."
+      ],
+      "procedures": [
+        {
+          "title": "Run",
+          "ref": "8.7.1",
+          "target": "part-8::8-7-assault-phase-actions::8-7-1-run",
+          "what": "An unengaged unit repositions instead of attacking.",
+          "when": "Assault Phase, when the unit is unengaged and activated.",
+          "how": [
+            "Use the same standard movement procedure as a Move.",
+            "Nominate a leading model, move it up to Speed, then rebuild the rest in coherency."
+          ],
+          "cannot": [
+            "End within engagement range of enemy units.",
+            "Ignore normal movement restrictions or gap clearance."
+          ],
+          "see": [
+            "8.5.3 Resolving a Move"
+          ]
+        },
+        {
+          "title": "Hold",
+          "ref": "8.7.2",
+          "target": "part-8::8-7-assault-phase-actions::8-7-2-hold",
+          "what": "Take no action in the Assault Phase.",
+          "when": "Assault Phase, when the unit is eligible to activate.",
+          "how": [
+            "Do nothing.",
+            "Set the activation marker to show the unit has acted in Assault."
+          ]
+        },
+        {
+          "title": "Ranged Attack",
+          "ref": "8.7.3\u20138.7.6",
+          "target": "part-8::8-7-assault-phase-actions::8-7-3-ranged-attack",
+          "what": "An activated unit attacks a legal target with eligible assault weapons.",
+          "when": "Assault Phase, when the unit has a valid target and weapon profile.",
+          "how": [
+            "Check target eligibility: visibility, range, target tag, and engagement status.",
+            "Assign weapons into batches. A batch is the same weapon profile, from eligible models, into the same target.",
+            "Resolve each batch through Attack Pool \u2192 Armour Pool \u2192 Damage Pool.",
+            "Apply evade only if the target qualifies for an evade roll."
+          ],
+          "cannot": [
+            "Split the same weapon profile across multiple targets.",
+            "Let an unengaged attacking unit target an engaged unit except through template spillover.",
+            "Ignore batch order or template rules when they apply."
+          ],
+          "see": [
+            "8.7.4 Ranged Attack Resolution",
+            "8.7.6 Template Weapons",
+            "8.7.5 Removing Models from Engaged Units"
+          ]
+        },
+        {
+          "title": "Charge",
+          "ref": "8.7.7",
+          "target": "part-8::8-7-assault-phase-actions::8-7-7-charge",
+          "what": "An unengaged ground unit moves into engagement range of one or more declared ground targets.",
+          "when": "Assault Phase, after declaring targets and rolling charge distance.",
+          "how": [
+            "Declare all intended target units first and nominate one target model in each.",
+            "Roll 1D6 and add the result to the unit's Speed.",
+            "Move the leading model to a legal final position within engagement range of every declared target, then rebuild coherency."
+          ],
+          "cannot": [
+            "Charge flying units or charge with a flying unit.",
+            "Touch undeclared enemies, overlap bases, or end on impassable terrain.",
+            "Ignore the requirement to legally engage every declared target."
+          ],
+          "ifFails": "If no legal final position exists, the charge fails and the unit does not move.",
+          "see": [
+            "Engagement",
+            "8.5.3 Resolving a Move",
+            "8.7.7 Charge"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Phase 3 \u2014 Combat",
+      "ref": "8.8",
+      "target": "part-8::8-8-phase-3-the-combat-phase",
+      "phaseClass": "phase3",
+      "purpose": "Resolve obligatory melee between engaged ground units.",
+      "actions": [
+        "Close Combat Attack"
+      ],
+      "notes": [
+        "Only engaged ground units participate.",
+        "Flying units are never engaged and never act in this phase."
+      ],
+      "procedures": [
+        {
+          "title": "Close Combat Attack",
+          "ref": "8.8.1",
+          "target": "part-8::8-8-phase-3-the-combat-phase::8-8-1-the-close-combat-attack",
+          "what": "An engaged ground unit attacks enemy units it is already engaged with.",
+          "when": "Combat Phase, when the engaged unit is activated.",
+          "how": [
+            "Optionally Close Ranks up to 3 inches while staying focused on currently engaged enemies.",
+            "Set models base-to-base where possible.",
+            "Resolve the melee attacks against enemy units the unit is engaged with."
+          ],
+          "cannot": [
+            "Bring the unit into engagement with new enemy units during Close Ranks.",
+            "Activate unengaged or flying units in this phase."
+          ],
+          "see": [
+            "8.8 PHASE 3",
+            "8.8.1 The Close Combat Attack",
+            "4.4 Coherency"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Phase 4 \u2014 Scoring & Cleanup",
+      "ref": "8.9",
+      "target": "part-8::8-9-phase-4-the-scoring-cleanup-phase",
+      "phaseClass": "phase4",
+      "purpose": "Determine marker control, score the round, clean the battlefield, and set initiative for the next round.",
+      "actions": [
+        "Marker Control",
+        "Score VP",
+        "End Check",
+        "Cleanup",
+        "Initiative"
+      ],
+      "notes": [
+        "This phase resolves in a fixed order.",
+        "Marker control depends on contesting eligibility and current supply, not just model count."
+      ],
+      "procedures": [
+        {
+          "title": "Determine Mission Marker Control",
+          "ref": "8.9.1",
+          "target": "part-8::8-9-phase-4-the-scoring-cleanup-phase::8-9-1-determine-mission-marker-control",
+          "what": "Work out which units are allowed to contest each mission marker, then compare supply totals.",
+          "when": "Start of the Scoring & Cleanup Phase.",
+          "how": [
+            "A unit contests only if it is on the battlefield, within 3 inches, has line of sight to the marker, is on the same elevation, and is in coherency.",
+            "Sum the current supply of all contesting units for each player.",
+            "Higher total controls the marker."
+          ],
+          "cannot": [
+            "Flying units cannot contest or control mission markers.",
+            "Out-of-coherency units cannot contest or control mission markers."
+          ],
+          "see": [
+            "6.2 How Supply Is Used",
+            "8.9.1 Determine Mission Marker Control"
+          ]
+        },
+        {
+          "title": "Score Victory Points",
+          "ref": "8.9.2",
+          "target": "part-8::8-9-phase-4-the-scoring-cleanup-phase::8-9-2-score-victory-points",
+          "what": "Both players tally points from the mission card.",
+          "when": "After marker control is determined.",
+          "how": [
+            "Apply the mission card's scoring conditions simultaneously."
+          ]
+        },
+        {
+          "title": "End of Game Check",
+          "ref": "8.9.3",
+          "target": "part-8::8-9-phase-4-the-scoring-cleanup-phase::8-9-3-end-of-game-check",
+          "what": "Check whether the mission ends the game at this point.",
+          "when": "Immediately after victory points are scored.",
+          "how": [
+            "Follow the mission card's end-of-game condition before resolving later cleanup steps."
+          ]
+        },
+        {
+          "title": "Cleanup & Refresh",
+          "ref": "8.9.4\u20138.9.5",
+          "target": "part-8::8-9-phase-4-the-scoring-cleanup-phase::8-9-5-cleanup-refresh",
+          "what": "Resolve end-of-round effects, then clear temporary elements and refresh the battlefield state.",
+          "when": "After the end-of-game check, before initiative for the next round.",
+          "how": [
+            "Resolve all end-of-round effects in the required order.",
+            "Remove tokens and markers except the listed stay-in-play exceptions.",
+            "Refresh exhausted cards and clear activation state for the next round."
+          ],
+          "see": [
+            "8.9.4 Resolve End of the Round Effects",
+            "8.9.5 Cleanup & Refresh"
+          ]
+        },
+        {
+          "title": "Determine Initiative",
+          "ref": "8.9.6",
+          "target": "part-8::8-9-phase-4-the-scoring-cleanup-phase::8-9-6-determine-initiative",
+          "what": "Assign the first player marker for the next round.",
+          "when": "End of the Scoring & Cleanup Phase.",
+          "how": [
+            "The player with fewer victory points takes the first player marker.",
+            "If tied, conduct a roll-off."
+          ]
+        }
+      ]
+    }
+  ]
+}

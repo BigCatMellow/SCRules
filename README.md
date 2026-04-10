@@ -1,29 +1,27 @@
-# StarCraft TMG Mobile Rules App (Modular)
+# StarCraft TMG — Mobile Rules Compendium
 
-This package is split so content updates do not require editing one giant `index.html`.
+This package is organized for GitHub Pages and easy editing.
 
 ## Structure
-
 - `index.html` — mobile app shell
-- `print.html` — printable rules view
-- `assets/app.css` — mobile app styles
-- `assets/app.js` — mobile app behavior
-- `assets/print.css` — print styles
-- `assets/print.js` — printable view renderer
-- `data/manifest.json` — ordered list of Parts to load
-- `data/parts/part-*.json` — one JSON file per Part
+- `print.html` — printable rules compendium
+- `assets/app.css` — mobile styling
+- `assets/app.js` — mobile behavior
+- `assets/print.css` — print styling
+- `assets/print.js` — print rendering
+- `data/manifest.json` — ordered part list and metadata
+- `data/parts/*.json` — one JSON file per rules Part
 
-## Updating content
+## Editing content
+Edit the JSON file for the Part you want to change.
+Examples:
+- `data/parts/part-8.json` for The Game Sequence
+- `data/parts/part-11.json` for the Keyword Glossary
 
-Edit the relevant file in `data/parts/`.
+## Publishing on GitHub Pages
+Upload the contents of this folder to the root of a GitHub Pages repo.
+Do **not** upload the zip itself.
 
-Example:
-- Core Concepts → `data/parts/part-2.json`
-- Measuring and Movement → `data/parts/part-4.json`
-- Quick Reference → `data/parts/part-12.json`
-
-## GitHub Pages
-
-Upload the **contents** of this folder to the repo root (not the zip file itself).
-
-Because the app uses relative `fetch()` calls to load local JSON files, it should be served from GitHub Pages or another web server. Opening `index.html` directly from the filesystem may block JSON loading in some browsers.
+## Local testing
+Because the app loads JSON with `fetch()`, test it through GitHub Pages or a local web server.
+Opening `index.html` directly with `file://` may not work in some browsers.

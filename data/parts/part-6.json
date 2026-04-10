@@ -3,20 +3,127 @@
   "kicker": "Part VI",
   "title": "The Supply System",
   "id": "part-6",
-  "color": "#5f8452",
-  "intro": "The armies in StarCraft: The Miniatures Game do not <span class=\"kw\">deploy</span>at full strength. Reinforcements arrive in waves, and as <span class=\"kw\">Units</span>take casualties, their ability to <span class=\"kw\">deploy</span>effectively shrinks. The Supply system governs when and how many <span class=\"kw\">Units</span>a player can field, creating a constant tension between committing forces now and holding them in reserve.<br/><br/>Supply represents a Unit's battlefield presence, its manpower, momentum, and command resources necessary to keep it fighting. Unlike fixed characteristics, Supply is dynamic: as a Unit takes casualties, its Supply declines.",
+  "color": "#99b19c",
+  "group": "systems",
+  "introRows": [
+    {
+      "type": "text",
+      "html": "The armies in StarCraft: The Miniatures Game do not <span class=\"kw\">deploy</span> at full strength. Reinforcements arrive in waves, and as <span class=\"kw\">Units</span> take casualties, their ability to <span class=\"kw\">deploy</span> effectively shrinks. The Supply system governs when and how many <span class=\"kw\">Units</span> a player can field, creating a constant tension between committing forces now and holding them in reserve.",
+      "plain": "The armies in StarCraft: The Miniatures Game do not deploy at full strength. Reinforcements arrive in waves, and as Units take casualties, their ability to deploy effectively shrinks. The Supply system governs when and how many Units a player can field, creating a constant tension between committing forces now and holding them in reserve."
+    },
+    {
+      "type": "text",
+      "html": "Supply represents a Unit&#x27; s battlefield presence, its manpower, momentum, and command resources necessary to keep it fighting. Unlike fixed characteristics, Supply is dynamic: as a Unit takes casualties, its Supply declines.",
+      "plain": "Supply represents a Unit' s battlefield presence, its manpower, momentum, and command resources necessary to keep it fighting. Unlike fixed characteristics, Supply is dynamic: as a Unit takes casualties, its Supply declines."
+    }
+  ],
   "rules": [
     {
+      "id": "6-1-the-supply-profile",
       "title": "6.1 The Supply Profile",
-      "id": "61-the-supply-profile",
-      "html": "Every <strong>Unit Card</strong>includes a Supply Profile in the top-right corner, linking the number of remaining <span class=\"kw\">models</span>to a <strong><span class=\"kw\">Current Supply Value</span></strong>. As casualties reduce the model count into a lower bracket, update the <strong>Current Supply</strong><strong>Value</strong>immediately.<br/><br/><strong>EXAMPLE:</strong>A squad of 9 Marines has a Supply of 2. A squad of 6 Marines has a Supply of 1. When reduced to 3 <span class=\"kw\">models</span>, their Supply drops to 0.<br/><br/><strong>DESIGNER’S NOTE:</strong>Supply is the heart of the game’s Strategic layer. The direct link between a Unit’s combat presence and the number of <span class=\"kw\">models</span>it has left means every model lost carries a consequence beyond mere <strong>Damage</strong>. A Unit with fewer <span class=\"kw\">models</span>consumes less Supply (enabling the <span class=\"kw\">deployment</span>of a new Unit from <strong><span class=\"kw\">Reserves</span></strong>), contests objectives less effectively, and possesses less <span class=\"kw\">Tactical Mass</span>to safely <strong><span class=\"kw\">Disengage</span></strong>. This is a tactical decision: do you keep a Unit for its firepower, or sacrifice it to free Supply for a new Unit from <strong><span class=\"kw\">Reserves</span></strong>?",
+      "rows": [
+        {
+          "type": "text",
+          "html": "Every <b>Unit Card</b> includes a Supply Profile in the top-right corner, linking the number of remaining <span class=\"kw\">models</span> to a <b><span class=\"kw\">Current Supply Value</span></b>. As casualties reduce the model count into a lower bracket, update the <b>Current Supply</b><b>Value</b> immediately.<b></b>",
+          "plain": "Every Unit Card includes a Supply Profile in the top-right corner, linking the number of remaining models to a Current Supply Value . As casualties reduce the model count into a lower bracket, update the Current Supply Value immediately."
+        },
+        {
+          "type": "example",
+          "html": "<b>EXAMPLE:</b> A squad of 9 Marines has a Supply of 2. A squad of 6 Marines has a Supply of 1. When reduced to 3 <span class=\"kw\">models</span>, their Supply drops to 0.",
+          "plain": "EXAMPLE: A squad of 9 Marines has a Supply of 2. A squad of 6 Marines has a Supply of 1. When reduced to 3 models , their Supply drops to 0."
+        },
+        {
+          "type": "note",
+          "html": "<b>DESIGNER’S NOTE:</b> Supply is the heart of the game’s Strategic layer. The direct link between a Unit’s combat presence and the number of <span class=\"kw\">models</span> it has left means every model lost carries a consequence beyond mere <b>Damage</b>. A Unit with fewer <span class=\"kw\">models</span> consumes less Supply (enabling the <span class=\"kw\">deployment</span> of a new Unit from <b><span class=\"kw\">Reserves</span></b>), contests objectives less effectively, and possesses less <span class=\"kw\">Tactical Mass</span> to safely <b><span class=\"kw\">Disengage</span></b>. This is a tactical decision: do you keep a Unit for its firepower, or sacrifice it to free Supply for a new Unit from <b><span class=\"kw\">Reserves</span></b>?",
+          "plain": "DESIGNER’S NOTE: Supply is the heart of the game’s Strategic layer. The direct link between a Unit’s combat presence and the number of models it has left means every model lost carries a consequence beyond mere Damage . A Unit with fewer models consumes less Supply (enabling the deployment of a new Unit from Reserves ), contests objectives less effectively, and possesses less Tactical Mass to safely Disengage . This is a tactical decision: do you keep a Unit for its firepower, or sacrifice it to free Supply for a new Unit from Reserves ?"
+        }
+      ],
       "children": []
     },
     {
+      "id": "6-2-how-supply-is-used",
       "title": "6.2 How Supply Is Used",
-      "id": "62-how-supply-is-used",
-      "html": "<span>DEPLOYMENT</span>Each mission establishes a <strong>Supply Pool</strong>, which is the maximum amount of Supply that can be on the battlefield at any one time. <span class=\"kw\">The Supply Pool</span>starts at the value listed on the <strong>Mission Card</strong>and increases by the <strong>Supply Escalation</strong>value each <strong>Round</strong>.<br/><br/>A player can only set a Unit in play from <strong><span class=\"kw\">Reserves</span></strong>if the Unit's <strong><span class=\"kw\">Current Supply Value</span></strong>is less than or equal to the <strong><span class=\"kw\">Available Supply</span></strong>, which is the current <strong>Supply Pool</strong>value minus the total Supply of all <strong><span class=\"kw\">Friendly</span></strong><span class=\"kw\">Units</span>already in play on the battlefield.<br/><br/>At no point can the <strong>Total Current Supply</strong>of a player’s <span class=\"kw\">Units</span>on the battlefield exceed the <strong>Supply Pool</strong>.<br/><br/>In the final Round of play (as determined by the <strong>Mission Card</strong>), the <strong>Supply Pool</strong>is unlimited. All <span class=\"kw\">Units</span>remaining in <strong><span class=\"kw\">Reserves</span></strong>may be set into play without Supply restrictions, following the normal alternating activation sequence.<br/><br/><strong>MISSION MARKER CONTROL</strong><br/><br/><strong>Supply</strong>determines who controls the ground. To determine control of a <strong>Mission Marker</strong>, each player calculates the <strong><span class=\"kw\">Current Supply Value</span></strong>of all their eligible <span class=\"kw\">Units</span>contesting that Marker (see Part <span class=\"ref\">8.9.1</span>for full eligibility requirements), not the number of <span class=\"kw\">models</span>, but their total <strong>Supply</strong>. The player with the highest total controls the Marker.<br/><br/>A Unit with Supply 0 can control a Marker if no <strong><span class=\"kw\">Enemy</span></strong><span class=\"kw\">Units</span>are contesting it. However, a Unit that is <strong><span class=\"kw\">Out of Coherency</span></strong>can never control or contest a <strong>Mission Marker</strong>.<br/><br/><strong><span class=\"kw\">Flying</span></strong><span class=\"kw\">Units</span>cannot Contest or Control <strong><span class=\"kw\">Mission Markers</span></strong>, as they are airborne and do not <span class=\"kw\">hold</span>ground.<span>TACTICAL MASS</span>Breaking away from a melee is a desperate act. A Unit that <strong>Disengages</strong>suffers a severe penalty: it cannot perform <strong><span class=\"kw\">Ranged Attack</span></strong>or <strong><span class=\"kw\">Charge</span></strong>actions in the following Assault Phase. The squad is too busy pulling back to mount an effective attack.<br/><br/>However, if at the moment the <strong><span class=\"kw\">Disengage</span></strong>is declared, the Disengaging Unit's <strong><span class=\"kw\">Current Supply Value</span></strong>exceeds the Combined Supply of all <strong><span class=\"kw\">Enemy</span></strong><span class=\"kw\">Units</span>it is <strong><span class=\"kw\">Engaged</span></strong>with, this penalty is <strong>ignored.</strong><br/><br/>A superior force has the mass to pull away cleanly. A lone screening squad should slow the <span class=\"kw\">enemy</span>, not shut them down entirely.<span>UNIT STARTING SUPPLY</span>Some<strong><span class=\"kw\">Mission Cards</span></strong>award <strong>Victory Points</strong>equal to the <strong><span class=\"kw\">Enemy</span></strong>Supply destroyed in a Round. In such cases, the <span class=\"kw\">Supply Value</span>destroyed in that Round is added to the score during the Scoring Phase.",
-      "children": []
+      "rows": [],
+      "children": [
+        {
+          "id": "deployment",
+          "title": "DEPLOYMENT",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Each mission establishes a <b>Supply Pool</b>, which is the maximum amount of Supply that can be on the battlefield at any one time. <span class=\"kw\">The Supply Pool</span> starts at the value listed on the <b>Mission Card</b> and increases by the <b>Supply Escalation</b> value each <b>Round</b>.",
+              "plain": "Each mission establishes a Supply Pool , which is the maximum amount of Supply that can be on the battlefield at any one time. The Supply Pool starts at the value listed on the Mission Card and increases by the Supply Escalation value each Round ."
+            },
+            {
+              "type": "text",
+              "html": "A player can only set a Unit in play from <b><span class=\"kw\">Reserves</span></b> if the Unit&#x27; s <b><span class=\"kw\">Current Supply Value</span></b> is less than or equal to the <b><span class=\"kw\">Available Supply</span></b>, which is the current <b>Supply Pool</b> value minus the total Supply of all <b><span class=\"kw\">Friendly</span></b> <span class=\"kw\">Units</span> already in play on the battlefield.",
+              "plain": "A player can only set a Unit in play from Reserves if the Unit' s Current Supply Value is less than or equal to the Available Supply , which is the current Supply Pool value minus the total Supply of all Friendly Units already in play on the battlefield."
+            },
+            {
+              "type": "text",
+              "html": "At no point can the <b>Total Current Supply</b> of a player’s <span class=\"kw\">Units</span> on the battlefield exceed the <b>Supply Pool</b>.",
+              "plain": "At no point can the Total Current Supply of a player’s Units on the battlefield exceed the Supply Pool ."
+            },
+            {
+              "type": "text",
+              "html": "In the final Round of play (as determined by the <b>Mission Card</b>), the <b>Supply Pool</b> is unlimited. All <span class=\"kw\">Units</span> remaining in <b><span class=\"kw\">Reserves</span></b> may be set into play without Supply restrictions, following the normal alternating activation sequence.",
+              "plain": "In the final Round of play (as determined by the Mission Card ), the Supply Pool is unlimited. All Units remaining in Reserves may be set into play without Supply restrictions, following the normal alternating activation sequence."
+            },
+            {
+              "type": "microhead",
+              "html": "<b>MISSION MARKER CONTROL</b>",
+              "plain": "MISSION MARKER CONTROL"
+            },
+            {
+              "type": "text",
+              "html": "<b>Supply</b> determines who controls the ground. To determine control of a <b>Mission Marker</b>, each player calculates the <b><span class=\"kw\">Current Supply Value</span></b> of all their eligible <span class=\"kw\">Units</span> contesting that Marker (see Part <span class=\"ref\">8. 9. 1</span> for full eligibility requirements), not the number of <span class=\"kw\">models</span>, but their total <b>Supply</b>. The player with the highest total controls the Marker.",
+              "plain": "Supply determines who controls the ground. To determine control of a Mission Marker , each player calculates the Current Supply Value of all their eligible Units contesting that Marker (see Part 8. 9. 1 for full eligibility requirements), not the number of models , but their total Supply . The player with the highest total controls the Marker."
+            },
+            {
+              "type": "text",
+              "html": "A Unit with Supply 0 can control a Marker if no <b><span class=\"kw\">Enemy</span></b> <span class=\"kw\">Units</span> are contesting it. However, a Unit that is <b><span class=\"kw\">Out of Coherency</span></b> can never control or contest a <b>Mission Marker</b>.",
+              "plain": "A Unit with Supply 0 can control a Marker if no Enemy Units are contesting it. However, a Unit that is Out of Coherency can never control or contest a Mission Marker ."
+            },
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Flying</span></b> <span class=\"kw\">Units</span> cannot Contest or Control <b><span class=\"kw\">Mission Markers</span></b>, as they are airborne and do not <span class=\"kw\">hold</span> ground.",
+              "plain": "Flying Units cannot Contest or Control Mission Markers , as they are airborne and do not hold ground."
+            }
+          ]
+        },
+        {
+          "id": "tactical-mass",
+          "title": "TACTICAL MASS",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Breaking away from a melee is a desperate act. A Unit that <b>Disengages</b> suffers a severe penalty: it cannot perform <b><span class=\"kw\">Ranged Attack</span></b> or <b><span class=\"kw\">Charge</span></b> actions in the following Assault Phase. The squad is too busy pulling back to mount an effective attack.",
+              "plain": "Breaking away from a melee is a desperate act. A Unit that Disengages suffers a severe penalty: it cannot perform Ranged Attack or Charge actions in the following Assault Phase. The squad is too busy pulling back to mount an effective attack."
+            },
+            {
+              "type": "text",
+              "html": "However, if at the moment the <b><span class=\"kw\">Disengage</span></b> is declared, the Disengaging Unit&#x27; s <b><span class=\"kw\">Current Supply Value</span></b> exceeds the Combined Supply of all <b><span class=\"kw\">Enemy</span></b> <span class=\"kw\">Units</span> it is <b><span class=\"kw\">Engaged</span></b> with, this penalty is <b>ignored.</b>",
+              "plain": "However, if at the moment the Disengage is declared, the Disengaging Unit' s Current Supply Value exceeds the Combined Supply of all Enemy Units it is Engaged with, this penalty is ignored."
+            },
+            {
+              "type": "text",
+              "html": "A superior force has the mass to pull away cleanly. A lone screening squad should slow the <span class=\"kw\">enemy</span>, not shut them down entirely.",
+              "plain": "A superior force has the mass to pull away cleanly. A lone screening squad should slow the enemy , not shut them down entirely."
+            }
+          ]
+        },
+        {
+          "id": "unit-starting-supply",
+          "title": "UNIT STARTING SUPPLY",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Some<b> <span class=\"kw\">Mission Cards</span></b> award <b>Victory Points</b> equal to the <b><span class=\"kw\">Enemy</span></b> Supply destroyed in a Round. In such cases, the <span class=\"kw\">Supply Value</span> destroyed in that Round is added to the score during the Scoring Phase.",
+              "plain": "Some Mission Cards award Victory Points equal to the Enemy Supply destroyed in a Round. In such cases, the Supply Value destroyed in that Round is added to the score during the Scoring Phase."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -3,25 +3,579 @@
   "kicker": "Part IX",
   "title": "Preparing for Battle",
   "id": "part-9",
-  "color": "#96597d",
-  "intro": "Before any game begins, each player must prepare their forces, choose the mission and <span class=\"kw\">deployment</span>type, and set up the board. This section covers the entire pre-game procedure: building your army with <span class=\"kw\">Minerals</span>and <span class=\"kw\">Vespene Gas</span>, drafting the Mission and <span class=\"kw\">Deployment</span>, and setting up the battlefield.",
+  "color": "#b38fa5",
+  "group": "prepare",
+  "introRows": [
+    {
+      "type": "text",
+      "html": "Before any game begins, each player must prepare their forces, choose the mission and <span class=\"kw\">deployment</span> type, and set up the board. This section covers the entire pre-game procedure: building your army with <span class=\"kw\">Minerals</span> and <span class=\"kw\">Vespene Gas</span>, drafting the Mission and <span class=\"kw\">Deployment</span>, and setting up the battlefield.",
+      "plain": "Before any game begins, each player must prepare their forces, choose the mission and deployment type, and set up the board. This section covers the entire pre-game procedure: building your army with Minerals and Vespene Gas , drafting the Mission and Deployment , and setting up the battlefield."
+    }
+  ],
   "rules": [
     {
+      "id": "9-1-army-building",
       "title": "9.1 Army Building",
-      "id": "91-army-building",
-      "html": "Every battle begins long before the first shot is fired. Players will build an army using two resources: <span class=\"kw\">Minerals</span>, which are used for <span class=\"kw\">Units</span>and Upgrades, and <span class=\"kw\">Vespene Gas</span>, which is used for<strong><span class=\"kw\">Tactical Cards</span></strong>.<span>9.1.1 Engagement Scale</span>To ensure that forces are equal, players agree on the <span class=\"kw\">Engagement Scale</span>before building an army:<div class=\"stack-table\"><div class=\"stack-table-head\"><span>Scale</span><span>Mineral Limit</span><span>Vespene Limit</span><span>Battlefield</span></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Skirmish</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Mineral Limit</div><div class=\"stack-value\"><p><span>Up to 1,000</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Vespene Limit</div><div class=\"stack-value\"><p><span>10% of <span class=\"kw\">Minerals</span></span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Battlefield</div><div class=\"stack-value\"><p><span>36\" × 36\"</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Standard</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Mineral Limit</div><div class=\"stack-value\"><p><span>Up to 2,000</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Vespene Limit</div><div class=\"stack-value\"><p><span>10% of <span class=\"kw\">Minerals</span></span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Battlefield</div><div class=\"stack-value\"><p><span>36\" × 54\"</span></p></div></div></div></div></div><div class=\"stack-row\"><div class=\"stack-main\"><div class=\"stack-key\"><p><span>Grand Offensive</span></p></div><div class=\"stack-grid\"><div class=\"stack-item\"><div class=\"stack-label\">Mineral Limit</div><div class=\"stack-value\"><p><span>2,001+</span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Vespene Limit</div><div class=\"stack-value\"><p><span>10% of <span class=\"kw\">Minerals</span></span></p></div></div><div class=\"stack-item\"><div class=\"stack-label\">Battlefield</div><div class=\"stack-value\"><p><span>36\" × 72\"</span></p></div></div></div></div></div></div><span>9.1.2 Selecting Race and Faction</span>The player chooses one of the three races - <strong><span class=\"kw\">Terran</span></strong>, <strong><span class=\"kw\">Zerg</span></strong>, or <strong><span class=\"kw\">Protoss</span></strong>, and then selects a single <strong>Faction Card</strong>. This card forms the basis of the army, providing the initial organisation slots (e.g., <strong><span class=\"kw\">Kerrigan</span>’s Swarm</strong>3× Core, 1× Hero, 2× Support) and determining which <span class=\"kw\">Units</span>and <strong><span class=\"kw\">Tactical Cards</span></strong>may be included.<br/><br/><strong>Faction Tag Eligibility</strong><br/><br/>Every card in the game features <strong><span class=\"kw\">Faction Tags</span></strong>, which indicate the faction it belongs to. A <strong>Faction Card</strong>always displays a Race Tag (e.g., <strong><span class=\"kw\">Zerg</span></strong>) and usually includes a <strong>Sub-Faction Tag</strong>as well (e.g., <strong><span class=\"kw\">KERRIGAN</span>’S BROOD</strong>). <strong><span class=\"kw\">Unit Cards</span></strong>and <strong><span class=\"kw\">Tactical Cards</span></strong>also carry their own <strong><span class=\"kw\">Faction Tags</span></strong>in the same manner.<br/><br/>When building an army, the player checks whether a Unit or <strong>Tactical Card</strong>is allowed by comparing its <span class=\"kw\">tags</span>to the <strong>Faction Card</strong>. The rule is simple: every tag on the Unit or <strong>Tactical Card</strong>must also appear on the <strong>Faction Card</strong>. If even one tag does not match, that card cannot be included in the army. It does not matter how many other <span class=\"kw\">tags</span>match; a single incorrect tag is enough to disqualify it.<br/><br/>Cards with fewer <span class=\"kw\">tags</span>than the <strong>Faction Card</strong>are perfectly fine. A Unit only requires its own <span class=\"kw\">tags</span>to be present; it does not need to match every tag the <strong>Faction Card</strong>has.<br/><br/><strong>EXAMPLE:</strong><br/><br/>A player selects the <strong><span class=\"kw\">Zerg</span>Swarm</strong><strong>Faction Card</strong>, which has one <strong>Faction Tag</strong>: <strong><span class=\"kw\">Zerg</span></strong>.<br/><br/><strong>Zerglings</strong>(<strong><span class=\"kw\">Faction Tags</span></strong>: <strong><span class=\"kw\">Zerg</span></strong>) - <strong>Eligible</strong>. The only tag on the card is <strong><span class=\"kw\">Zerg</span></strong>, and <strong><span class=\"kw\">Zerg</span></strong>appears on the <strong>Faction Card</strong>.<br/><br/><strong><span class=\"kw\">Kerrigan Swarm Raptor</span></strong>(<strong><span class=\"kw\">Faction Tags</span></strong>: <strong><span class=\"kw\">Zerg</span></strong>, <strong><span class=\"kw\">Kerrigan</span>’s Swarm)</strong>- <strong>Not eligible.</strong><strong><span class=\"kw\">Kerrigan</span>’s Swarm</strong>does not appear on the <strong>Faction Card</strong>. Even in <strong><span class=\"kw\">Zerg</span></strong>matches, a single missing or incorrect tag disqualifies the card.<span>9.1.3 Minerals</span>Spend <span class=\"kw\">Minerals</span>to recruit <span class=\"kw\">Units</span>and purchase Upgrades. The total Mineral cost must not exceed the <span class=\"kw\">Engagement Scale</span>limit. Unspent <span class=\"kw\">Minerals</span>are lost.<span>9.1.4 Vespene Gas</span>Spend <span class=\"kw\">Vespene Gas</span>exclusively on <strong><span class=\"kw\">Tactical Cards</span></strong>. It <strong>cannot</strong>be converted into <span class=\"kw\">Minerals</span>. Unspent <span class=\"kw\">Vespene Gas</span>is lost.<br/><br/><strong>EXAMPLE:</strong>At Standard scale (2,000 <span class=\"kw\">Minerals</span>), players have 200 <span class=\"kw\">Vespene Gas</span>(10%) to spend on <strong><span class=\"kw\">Tactical Cards</span></strong>.<span>9.1.5 Tactical Cards and Army Slots</span><strong><span class=\"kw\">Tactical Cards</span></strong>unlock additional <strong>Army Slots</strong>(Core, Elite, Support, Air, Hero) beyond those provided by the<strong>Faction Card</strong>. <strong><span class=\"kw\">Tactical Cards</span></strong>may be purchased with <span class=\"kw\">Vespene Gas</span>to increase the number of available slots. All <strong><span class=\"kw\">Tactical Cards</span></strong>and the <strong>Faction Card</strong>are set face-up on the table before the game begins.<br/><br/>Consult the Army Reference section (Part <span class=\"ref\">12.11</span>) for each<strong>Tactical Card’s</strong><span class=\"kw\">Vespene Gas</span>Costs.<br/><br/>If a Tactical Card is marked as <strong>Unique</strong>, only one copy may be included in the army.<br/><br/><strong>EXAMPLE:</strong>A <strong>Barracks</strong>card opens additional Core slots for <span class=\"kw\">Marine</span><span class=\"kw\">Units</span>. An <strong>Academy</strong>card opens Support slots for Medics.<br/><br/><strong>DESIGNER’S NOTE:</strong>Spending <span class=\"kw\">Vespene Gas</span>on cheap <strong><span class=\"kw\">Tactical Cards</span></strong>to open multiple Core slots - ignoring expensive upgrades - lets you flood the table with low-cost <span class=\"kw\">Units</span>early. The tabletop equivalent of a <em><span class=\"kw\">Zergling</span>Rush</em>.<span>9.1.6 Mustering Units</span>Fill available <strong>Army Slots</strong>with eligible <span class=\"kw\">Units</span>. Consult the Army Reference section (Part 12.12) for each Unit’s available <strong>Composition Options</strong>. Each Composition Option lists a model count and its corresponding <strong>Mineral Cost</strong>. The player must select one Composition Option per Unit, which determines the number of <span class=\"kw\">models</span>in the Unit and its starting <strong><span class=\"kw\">Supply Value</span></strong>, as shown on the <strong>Unit Card’s</strong><strong>Supply Profile</strong>. A player cannot field a Unit at a model count that does not appear as a Composition Option. Each Unit occupies a number of <strong>Army Slots</strong>equal to its starting <strong><span class=\"kw\">Supply Value</span></strong>. Pay the Mineral Cost for every Unit recruited. Unused <strong>Army Slots</strong>are lost.<br/><br/>Consult the Army Reference section (Part <span class=\"ref\">12.10</span>) for each Unit's available Composition Options and Mineral Costs.<br/><br/><strong>EXAMPLE</strong>: A <strong><span class=\"kw\">Zerg</span></strong>player chooses <strong><span class=\"kw\">Kerrigan</span>’s Swarm</strong>as their <strong>Faction Card</strong>, which provides them with 2 Elite <strong>Army Slots</strong>. The player can recruit one small <span class=\"kw\">Hydralisk</span>Unit, as its <strong><span class=\"kw\">Supply Value</span></strong>indicates that it occupies exactly 2 Elite <strong>Army Slots</strong>. If the player wishes to include a full-strength <span class=\"kw\">Hydralisk</span>Unit instead, it will occupy 3 Elite <strong>Army Slots</strong>. Therefore, the player must add any <strong>Tactical Card</strong>to their army that provides an additional Elite <strong><span class=\"kw\">Army Slot</span></strong>as needed.<span>9.1.7 Purchasing Upgrades</span>Each <strong>Unit Card</strong>displays available upgrades on its reverse side. During <span class=\"kw\">Army Building</span>, a player may purchase any number of upgrades listed for that Unit, paying the listed cost for each. There is no limit to how many upgrades a Unit may have, provided each is a different entry on the card.<br/><br/>A purchased upgrade applies to <strong>every</strong>model in the Unit unless it has the <strong><span class=\"kw\">SPECIALIST</span></strong>keyword. If the upgrade adds a new weapon or ability, all <span class=\"kw\">models</span>gain it. If the entry shows <strong>↑ FOR [Weapon Name]</strong>, it is a replacement; every model carrying the named weapon loses it entirely and gains the upgrade weapon instead.<br/><br/><strong><span class=\"kw\">SPECIALIST</span></strong>upgrades work differently. Only <strong>one</strong>model in the Unit may carry each <span class=\"kw\">SPECIALIST</span>upgrade. The player nominates which model receives it during <span class=\"kw\">Army Building</span>; all other <span class=\"kw\">models</span>keep their original equipment. A Unit may not purchase the same <span class=\"kw\">SPECIALIST</span>upgrade more than once, but it can buy two or more <strong>different</strong><span class=\"kw\">SPECIALIST</span>upgrades, each assigned to a <strong>different</strong>nominated model.<br/><br/>Since a nominated model now carries a different weapon from the rest of the Unit, it resolves its attacks as a separate Batch during the Attack Sequence (Part <span class=\"ref\">8.7.3</span>).<br/><br/><strong>EXAMPLE:</strong>A player purchases a Rocket Launcher (<span class=\"kw\">SPECIALIST</span>) and an AGG-12 (<span class=\"kw\">SPECIALIST</span>, ↑ FOR C-14 Rifle) for a Unit of 6 Marines. One <span class=\"kw\">Marine</span>is nominated to carry the Rocket Launcher alongside the C-14 Rifle. A second <span class=\"kw\">Marine</span>is nominated to carry the AGG-12, losing their C-14 Rifle. The remaining 4 Marines keep their C-14 Rifles.<span>9.1.8 Team Games</span>In multiplayer games (2v2, 3v3, Free-For-All), agree on a Total Mineral Value per team. Teams divide the budget among players as they wish, provided the team's total remains <span class=\"kw\">within</span>the allowed limits. Each player builds their own army independently, selecting their own Faction Card and <span class=\"kw\">Tactical Cards</span>. Teammates may choose the same or different Races.<span>9.1.9 Summoned Units</span>Some <span class=\"kw\">Units</span>, such as the Roachling, Point Defence Drone, and Pylon, have no Mineral Cost. These are <strong>Summoned</strong><span class=\"kw\">Units</span>:<br/><br/>• They are not included in the <strong>Army List</strong>during <span class=\"kw\">army building</span>and do not occupy any <strong>Army Slots</strong>.<br/><br/>• They are not in <strong><span class=\"kw\">Reserves</span></strong>at the start of the game.<br/><br/>• <strong>Summoned</strong><span class=\"kw\">Units</span>cannot be deployed using the regular <span class=\"kw\">deployment</span>rules. They are deployed only when a <strong><span class=\"kw\">Special Ability</span></strong>, such as <span class=\"kw\">SUMMON</span>, specifically puts them on the battlefield.<br/><br/>• Once on the battlefield, treat them as <strong><span class=\"kw\">Friendly</span></strong><span class=\"kw\">Units</span>for all rule purposes unless stated otherwise.<br/><br/>• <span class=\"kw\">Summoned Units</span>are not used for <span class=\"kw\">The Final Score</span>.<br/><br/>• Once on the battlefield, a Summoned Unit's <strong><span class=\"kw\">Current Supply Value</span></strong>counts towards the player's <strong>Total Current Supply</strong>on the battlefield.<span>9.1.10 Army Roster Visibility</span><strong>Tournament Override:</strong>Organised tournaments may use their own roster visibility rules, which override the default rules below. Always check the Tournament Organiser’s rules pack before attending.<br/><br/><strong>Default: Open Lists</strong><br/><br/>By default, both players share their entire army rosters - including all Unit selections, upgrades, and weapon swaps with each other before the game starts. Since <strong><span class=\"kw\">Tactical Cards</span></strong>and the <strong>Faction Card</strong>are already set face-up on the table, Open Lists go one step further by revealing exactly which <span class=\"kw\">Units</span>and upgrades the opponent has selected. This enables both players to plan their strategy with full information and is the recommended way to play.<br/><br/><strong>Optional: Closed Lists</strong>Before the game begins, both players may agree to play with Closed Lists instead. If either player does not agree, default to Open Lists.<br/><br/>Under Closed Lists, army rosters are <span class=\"kw\">hidden</span>. Neither player is required to reveal their <strong>Army List</strong>or Unit upgrades before the game starts. The specific <span class=\"kw\">Units</span>in a player’s roster are discovered during play as they are deployed. However, all <strong><span class=\"kw\">Tactical Cards</span></strong>and the <strong>Faction Card</strong>must still be set face-up on the table before the game begins. Both players may inspect each other’s <strong><span class=\"kw\">Tactical Cards</span></strong>and <strong><span class=\"kw\">Faction Cards</span></strong>at any time.<br/><br/>Once a Unit is set on the battlefield, the <span class=\"kw\">controlling player</span>must immediately inform the opponent of any upgrades or weapon swaps that the Unit carries. This includes replacement weapons purchased through the Upgrade system (Part <span class=\"ref\">9.1.7</span>) or any other modifications that affect how the Unit behaves. The opponent is entitled to inspect the <strong>Unit Card</strong>and any associated <strong><span class=\"kw\">Tactical Cards</span></strong>at any time while that Unit is on the table.<br/><br/><strong>Abathur’s TIP:</strong>While Open Lists are the default, we strongly recommend trying Closed Lists for the best StarCraft experience. The way <span class=\"kw\">Units</span>are introduced to the battlefield one at a time mirrors the fog of war that defines StarCraft: you scout, you react, you adapt. Not knowing exactly what your opponent is fielding until it <span class=\"kw\">hits</span>the table creates genuine tension and rewards sharp play. Before the first Unit ever <span class=\"kw\">hits</span>the table, take a look at your opponent’s <strong><span class=\"kw\">Tactical Cards</span></strong>and <strong>Faction Card</strong>. Each <strong>Tactical Card</strong>has its own set of <strong>Army Slots</strong>: Core, Elite, Support, Air, and Hero. These slots determine which <span class=\"kw\">Units</span>can occupy them. By studying what’s on the table, an experienced player can make an educated guess about which <span class=\"kw\">Units</span>are still viable in their opponent’s roster. The Barracks <strong>Tactical Card</strong>suggests Marines and Marauders. The Spawning Pool <strong>Tactical Card</strong>suggests Zerglings. The Robotics Facility <strong>Tactical Card</strong>suggests Colossi and Immortals. Reading your opponent’s <strong><span class=\"kw\">Tactical Cards</span></strong>is your first act of scouting - just like in the video game.<span>9.1.11 Representation and Disclosure</span>All <span class=\"kw\">models</span>should, where possible, accurately depict the weapons and equipment listed on their <strong>Unit Card</strong>. A <span class=\"kw\">Marine</span>equipped with an AGG-12 should carry that weapon on the model, not a standard C-14 Rifle. Accurate modelling allows both players to identify each model’s loadout at a glance.<br/><br/>Where a model does not accurately represent its equipment - such as a model awaiting conversion, or a Unit carrying weapon swaps that are not visually distinct - the <span class=\"kw\">controlling player</span>is obliged to declare all non-represented upgrades and equipment the moment that Unit is deployed to the battlefield. Furthermore, the <span class=\"kw\">controlling player</span>must remind their opponent of any such differences before any action where this information could be relevant - including, but not limited to, declaring <strong><span class=\"kw\">Charge</span></strong>targets, selecting Shooting targets, or committing to a critical activation.<br/><br/>Both players have the right to full and accurate knowledge of all equipment on the battlefield at all times. Failing to disclose non-represented upgrades or equipment is considered unsportsmanlike conduct.",
-      "children": []
+      "rows": [
+        {
+          "type": "text",
+          "html": "Every battle begins long before the first shot is fired. Players will build an army using two resources: <span class=\"kw\">Minerals</span>, which are used for <span class=\"kw\">Units</span> and Upgrades, and <span class=\"kw\">Vespene Gas</span>, which is used for<b> <span class=\"kw\">Tactical Cards</span></b>.",
+          "plain": "Every battle begins long before the first shot is fired. Players will build an army using two resources: Minerals , which are used for Units and Upgrades, and Vespene Gas , which is used for Tactical Cards ."
+        }
+      ],
+      "children": [
+        {
+          "id": "9-1-1-engagement-scale",
+          "title": "9.1.1 Engagement Scale",
+          "rows": [
+            {
+              "type": "text",
+              "html": "To ensure that forces are equal, players agree on the <span class=\"kw\">Engagement Scale</span> before building an army:",
+              "plain": "To ensure that forces are equal, players agree on the Engagement Scale before building an army:"
+            },
+            {
+              "type": "block",
+              "html": "<table style=\"width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; \"><colgroup><col/><col/><col/><col/></colgroup><tbody><tr><td><p><span>Scale</span></p></td><td><p><span>Mineral Limit</span></p></td><td><p><span>Vespene Limit</span></p></td><td><p><span>Battlefield</span></p></td></tr><tr><td><p><span>Skirmish</span></p></td><td><p><span>Up to 1, 000</span></p></td><td><p><span>10% of <span class=\"kw\">Minerals</span></span></p></td><td><p><span>36\" × 36\"</span></p></td></tr><tr><td><p><span>Standard</span></p></td><td><p><span>Up to 2, 000</span></p></td><td><p><span>10% of <span class=\"kw\">Minerals</span></span></p></td><td><p><span>36\" × 54\"</span></p></td></tr><tr><td><p><span>Grand Offensive</span></p></td><td><p><span>2, 001+</span></p></td><td><p><span>10% of <span class=\"kw\">Minerals</span></span></p></td><td><p><span>36\" × 72\"</span></p></td></tr></tbody></table>",
+              "plain": "Scale Mineral Limit Vespene Limit Battlefield Skirmish Up to 1, 000 10% of Minerals 36\" × 36\" Standard Up to 2, 000 10% of Minerals 36\" × 54\" Grand Offensive 2, 001+ 10% of Minerals 36\" × 72\""
+            }
+          ]
+        },
+        {
+          "id": "9-1-2-selecting-race-and-faction",
+          "title": "9.1.2 Selecting Race and Faction",
+          "rows": [
+            {
+              "type": "text",
+              "html": "The player chooses one of the three races - <b><span class=\"kw\">Terran</span></b>, <b><span class=\"kw\">Zerg</span></b>, or <b><span class=\"kw\">Protoss</span></b>, and then selects a single <b>Faction Card</b>. This card forms the basis of the army, providing the initial organisation slots (e. g. , <b><span class=\"kw\">Kerrigan</span>’s Swarm</b> 3× Core, 1× Hero, 2× Support) and determining which <span class=\"kw\">Units</span> and <b><span class=\"kw\">Tactical Cards</span></b> may be included.",
+              "plain": "The player chooses one of the three races - Terran , Zerg , or Protoss , and then selects a single Faction Card . This card forms the basis of the army, providing the initial organisation slots (e. g. , Kerrigan ’s Swarm 3× Core, 1× Hero, 2× Support) and determining which Units and Tactical Cards may be included."
+            },
+            {
+              "type": "text",
+              "html": "<b>Faction Tag Eligibility</b>",
+              "plain": "Faction Tag Eligibility"
+            },
+            {
+              "type": "text",
+              "html": "Every card in the game features <b><span class=\"kw\">Faction Tags</span></b>, which indicate the faction it belongs to. A <b>Faction Card</b> always displays a Race Tag (e. g. , <b><span class=\"kw\">Zerg</span></b>) and usually includes a <b>Sub-Faction Tag</b> as well (e. g. , <b><span class=\"kw\">KERRIGAN</span>’S BROOD</b>). <b><span class=\"kw\">Unit Cards</span></b> and <b><span class=\"kw\">Tactical Cards</span></b> also carry their own <b><span class=\"kw\">Faction Tags</span></b> in the same manner.",
+              "plain": "Every card in the game features Faction Tags , which indicate the faction it belongs to. A Faction Card always displays a Race Tag (e. g. , Zerg ) and usually includes a Sub-Faction Tag as well (e. g. , KERRIGAN ’S BROOD ). Unit Cards and Tactical Cards also carry their own Faction Tags in the same manner."
+            },
+            {
+              "type": "text",
+              "html": "When building an army, the player checks whether a Unit or <b>Tactical Card</b> is allowed by comparing its <span class=\"kw\">tags</span> to the <b>Faction Card</b>. The rule is simple: every tag on the Unit or <b>Tactical Card</b> must also appear on the <b>Faction Card</b>. If even one tag does not match, that card cannot be included in the army. It does not matter how many other <span class=\"kw\">tags</span> match; a single incorrect tag is enough to disqualify it.",
+              "plain": "When building an army, the player checks whether a Unit or Tactical Card is allowed by comparing its tags to the Faction Card . The rule is simple: every tag on the Unit or Tactical Card must also appear on the Faction Card . If even one tag does not match, that card cannot be included in the army. It does not matter how many other tags match; a single incorrect tag is enough to disqualify it."
+            },
+            {
+              "type": "text",
+              "html": "Cards with fewer <span class=\"kw\">tags</span> than the <b>Faction Card</b> are perfectly fine. A Unit only requires its own <span class=\"kw\">tags</span> to be present; it does not need to match every tag the <b>Faction Card</b> has.",
+              "plain": "Cards with fewer tags than the Faction Card are perfectly fine. A Unit only requires its own tags to be present; it does not need to match every tag the Faction Card has."
+            },
+            {
+              "type": "example",
+              "html": "<b>EXAMPLE:</b>",
+              "plain": "EXAMPLE:"
+            },
+            {
+              "type": "text",
+              "html": "A player selects the <b><span class=\"kw\">Zerg</span> Swarm</b><b>Faction Card</b>, which has one <b>Faction Tag</b>: <b><span class=\"kw\">Zerg</span></b>.",
+              "plain": "A player selects the Zerg Swarm Faction Card , which has one Faction Tag : Zerg ."
+            },
+            {
+              "type": "text",
+              "html": "<b>Zerglings</b> (<b><span class=\"kw\">Faction Tags</span></b>: <b><span class=\"kw\">Zerg</span></b>) - <b>Eligible</b>. The only tag on the card is <b><span class=\"kw\">Zerg</span></b>, and <b><span class=\"kw\">Zerg</span></b> appears on the <b>Faction Card</b>.",
+              "plain": "Zerglings ( Faction Tags : Zerg ) - Eligible . The only tag on the card is Zerg , and Zerg appears on the Faction Card ."
+            },
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Kerrigan Swarm Raptor</span></b> (<b><span class=\"kw\">Faction Tags</span></b>: <b><span class=\"kw\">Zerg</span></b>, <b><span class=\"kw\">Kerrigan</span>’s Swarm)</b> - <b>Not eligible.</b><b><span class=\"kw\">Kerrigan</span>’s Swarm</b> does not appear on the <b>Faction Card</b>. Even in <b><span class=\"kw\">Zerg</span></b> matches, a single missing or incorrect tag disqualifies the card.",
+              "plain": "Kerrigan Swarm Raptor ( Faction Tags : Zerg , Kerrigan ’s Swarm) - Not eligible. Kerrigan ’s Swarm does not appear on the Faction Card . Even in Zerg matches, a single missing or incorrect tag disqualifies the card."
+            }
+          ]
+        },
+        {
+          "id": "9-1-3-minerals",
+          "title": "9.1.3 Minerals",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Spend <span class=\"kw\">Minerals</span> to recruit <span class=\"kw\">Units</span> and purchase Upgrades. The total Mineral cost must not exceed the <span class=\"kw\">Engagement Scale</span> limit. Unspent <span class=\"kw\">Minerals</span> are lost.",
+              "plain": "Spend Minerals to recruit Units and purchase Upgrades. The total Mineral cost must not exceed the Engagement Scale limit. Unspent Minerals are lost."
+            }
+          ]
+        },
+        {
+          "id": "9-1-4-vespene-gas",
+          "title": "9.1.4 Vespene Gas",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Spend <span class=\"kw\">Vespene Gas</span> exclusively on <b><span class=\"kw\">Tactical Cards</span></b>. It <b>cannot</b> be converted into <span class=\"kw\">Minerals</span>. Unspent <span class=\"kw\">Vespene Gas</span> is lost.",
+              "plain": "Spend Vespene Gas exclusively on Tactical Cards . It cannot be converted into Minerals . Unspent Vespene Gas is lost."
+            },
+            {
+              "type": "example",
+              "html": "<b>EXAMPLE:</b> At Standard scale (2, 000 <span class=\"kw\">Minerals</span>), players have 200 <span class=\"kw\">Vespene Gas</span> (10%) to spend on <b><span class=\"kw\">Tactical Cards</span></b>.",
+              "plain": "EXAMPLE: At Standard scale (2, 000 Minerals ), players have 200 Vespene Gas (10%) to spend on Tactical Cards ."
+            }
+          ]
+        },
+        {
+          "id": "9-1-5-tactical-cards-and-army-slots",
+          "title": "9.1.5 Tactical Cards and Army Slots",
+          "rows": [
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Tactical Cards</span></b> unlock additional <b>Army Slots</b> (Core, Elite, Support, Air, Hero) beyond those provided by the<b> Faction Card</b>. <b><span class=\"kw\">Tactical Cards</span></b> may be purchased with <span class=\"kw\">Vespene Gas</span> to increase the number of available slots. All <b><span class=\"kw\">Tactical Cards</span></b> and the <b>Faction Card</b> are set face-up on the table before the game begins.",
+              "plain": "Tactical Cards unlock additional Army Slots (Core, Elite, Support, Air, Hero) beyond those provided by the Faction Card . Tactical Cards may be purchased with Vespene Gas to increase the number of available slots. All Tactical Cards and the Faction Card are set face-up on the table before the game begins."
+            },
+            {
+              "type": "text",
+              "html": "Consult the Army Reference section (Part <span class=\"ref\">12. 11</span>) for each<b> Tactical Card’s</b> <span class=\"kw\">Vespene Gas</span> Costs.",
+              "plain": "Consult the Army Reference section (Part 12. 11 ) for each Tactical Card’s Vespene Gas Costs."
+            },
+            {
+              "type": "text",
+              "html": "If a Tactical Card is marked as <b>Unique</b>, only one copy may be included in the army.",
+              "plain": "If a Tactical Card is marked as Unique , only one copy may be included in the army."
+            },
+            {
+              "type": "example",
+              "html": "<b>EXAMPLE:</b> A <b>Barracks</b> card opens additional Core slots for <span class=\"kw\">Marine</span> <span class=\"kw\">Units</span>. An <b>Academy</b> card opens Support slots for Medics.",
+              "plain": "EXAMPLE: A Barracks card opens additional Core slots for Marine Units . An Academy card opens Support slots for Medics."
+            },
+            {
+              "type": "note",
+              "html": "<b>DESIGNER’S NOTE:</b> Spending <span class=\"kw\">Vespene Gas</span> on cheap <b><span class=\"kw\">Tactical Cards</span></b> to open multiple Core slots - ignoring expensive upgrades - lets you flood the table with low-cost <span class=\"kw\">Units</span> early. The tabletop equivalent of a <i><span class=\"kw\">Zergling</span> Rush</i>.",
+              "plain": "DESIGNER’S NOTE: Spending Vespene Gas on cheap Tactical Cards to open multiple Core slots - ignoring expensive upgrades - lets you flood the table with low-cost Units early. The tabletop equivalent of a Zergling Rush ."
+            }
+          ]
+        },
+        {
+          "id": "9-1-6-mustering-units",
+          "title": "9.1.6 Mustering Units",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Fill available <b>Army Slots</b> with eligible <span class=\"kw\">Units</span>. Consult the Army Reference section (Part 12. 12) for each Unit’s available <b>Composition Options</b>. Each Composition Option lists a model count and its corresponding <b>Mineral Cost</b>. The player must select one Composition Option per Unit, which determines the number of <span class=\"kw\">models</span> in the Unit and its starting <b><span class=\"kw\">Supply Value</span></b>, as shown on the <b>Unit Card’s</b><b>Supply Profile</b>. A player cannot field a Unit at a model count that does not appear as a Composition Option. Each Unit occupies a number of <b>Army Slots</b> equal to its starting <b><span class=\"kw\">Supply Value</span></b>. Pay the Mineral Cost for every Unit recruited. Unused <b>Army Slots</b> are lost.",
+              "plain": "Fill available Army Slots with eligible Units . Consult the Army Reference section (Part 12. 12) for each Unit’s available Composition Options . Each Composition Option lists a model count and its corresponding Mineral Cost . The player must select one Composition Option per Unit, which determines the number of models in the Unit and its starting Supply Value , as shown on the Unit Card’s Supply Profile . A player cannot field a Unit at a model count that does not appear as a Composition Option. Each Unit occupies a number of Army Slots equal to its starting Supply Value . Pay the Mineral Cost for every Unit recruited. Unused Army Slots are lost."
+            },
+            {
+              "type": "text",
+              "html": "Consult the Army Reference section (Part <span class=\"ref\">12. 10</span>) for each Unit&#x27; s available Composition Options and Mineral Costs.",
+              "plain": "Consult the Army Reference section (Part 12. 10 ) for each Unit' s available Composition Options and Mineral Costs."
+            },
+            {
+              "type": "example",
+              "html": "<b>EXAMPLE</b>: A <b><span class=\"kw\">Zerg</span></b> player chooses <b><span class=\"kw\">Kerrigan</span>’s Swarm</b> as their <b>Faction Card</b>, which provides them with 2 Elite <b>Army Slots</b>. The player can recruit one small <span class=\"kw\">Hydralisk</span> Unit, as its <b><span class=\"kw\">Supply Value</span></b> indicates that it occupies exactly 2 Elite <b>Army Slots</b>. If the player wishes to include a full-strength <span class=\"kw\">Hydralisk</span> Unit instead, it will occupy 3 Elite <b>Army Slots</b>. Therefore, the player must add any <b>Tactical Card</b> to their army that provides an additional Elite <b><span class=\"kw\">Army Slot</span></b> as needed.",
+              "plain": "EXAMPLE : A Zerg player chooses Kerrigan ’s Swarm as their Faction Card , which provides them with 2 Elite Army Slots . The player can recruit one small Hydralisk Unit, as its Supply Value indicates that it occupies exactly 2 Elite Army Slots . If the player wishes to include a full-strength Hydralisk Unit instead, it will occupy 3 Elite Army Slots . Therefore, the player must add any Tactical Card to their army that provides an additional Elite Army Slot as needed."
+            }
+          ]
+        },
+        {
+          "id": "9-1-7-purchasing-upgrades",
+          "title": "9.1.7 Purchasing Upgrades",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Each <b>Unit Card</b> displays available upgrades on its reverse side. During <span class=\"kw\">Army Building</span>, a player may purchase any number of upgrades listed for that Unit, paying the listed cost for each. There is no limit to how many upgrades a Unit may have, provided each is a different entry on the card.",
+              "plain": "Each Unit Card displays available upgrades on its reverse side. During Army Building , a player may purchase any number of upgrades listed for that Unit, paying the listed cost for each. There is no limit to how many upgrades a Unit may have, provided each is a different entry on the card."
+            },
+            {
+              "type": "text",
+              "html": "A purchased upgrade applies to <b>every</b> model in the Unit unless it has the <b><span class=\"kw\">SPECIALIST</span></b> keyword. If the upgrade adds a new weapon or ability, all <span class=\"kw\">models</span> gain it. If the entry shows <b>↑ FOR [Weapon Name]</b>, it is a replacement; every model carrying the named weapon loses it entirely and gains the upgrade weapon instead.",
+              "plain": "A purchased upgrade applies to every model in the Unit unless it has the SPECIALIST keyword. If the upgrade adds a new weapon or ability, all models gain it. If the entry shows ↑ FOR [Weapon Name] , it is a replacement; every model carrying the named weapon loses it entirely and gains the upgrade weapon instead."
+            },
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">SPECIALIST</span></b> upgrades work differently. Only <b>one</b> model in the Unit may carry each <span class=\"kw\">SPECIALIST</span> upgrade. The player nominates which model receives it during <span class=\"kw\">Army Building</span>; all other <span class=\"kw\">models</span> keep their original equipment. A Unit may not purchase the same <span class=\"kw\">SPECIALIST</span> upgrade more than once, but it can buy two or more <b>different</b> <span class=\"kw\">SPECIALIST</span> upgrades, each assigned to a <b>different</b> nominated model.",
+              "plain": "SPECIALIST upgrades work differently. Only one model in the Unit may carry each SPECIALIST upgrade. The player nominates which model receives it during Army Building ; all other models keep their original equipment. A Unit may not purchase the same SPECIALIST upgrade more than once, but it can buy two or more different SPECIALIST upgrades, each assigned to a different nominated model."
+            },
+            {
+              "type": "text",
+              "html": "Since a nominated model now carries a different weapon from the rest of the Unit, it resolves its attacks as a separate Batch during the Attack Sequence (Part <span class=\"ref\">8. 7. 3</span>).",
+              "plain": "Since a nominated model now carries a different weapon from the rest of the Unit, it resolves its attacks as a separate Batch during the Attack Sequence (Part 8. 7. 3 )."
+            },
+            {
+              "type": "example",
+              "html": "<b>EXAMPLE:</b> A player purchases a Rocket Launcher (<span class=\"kw\">SPECIALIST</span>) and an AGG-12 (<span class=\"kw\">SPECIALIST</span>, ↑ FOR C-14 Rifle) for a Unit of 6 Marines. One <span class=\"kw\">Marine</span> is nominated to carry the Rocket Launcher alongside the C-14 Rifle. A second <span class=\"kw\">Marine</span> is nominated to carry the AGG-12, losing their C-14 Rifle. The remaining 4 Marines keep their C-14 Rifles.",
+              "plain": "EXAMPLE: A player purchases a Rocket Launcher ( SPECIALIST ) and an AGG-12 ( SPECIALIST , ↑ FOR C-14 Rifle) for a Unit of 6 Marines. One Marine is nominated to carry the Rocket Launcher alongside the C-14 Rifle. A second Marine is nominated to carry the AGG-12, losing their C-14 Rifle. The remaining 4 Marines keep their C-14 Rifles."
+            }
+          ]
+        },
+        {
+          "id": "9-1-8-team-games",
+          "title": "9.1.8 Team Games",
+          "rows": [
+            {
+              "type": "text",
+              "html": "In multiplayer games (2v2, 3v3, Free-For-All), agree on a Total Mineral Value per team. Teams divide the budget among players as they wish, provided the team&#x27; s total remains <span class=\"kw\">within</span> the allowed limits. Each player builds their own army independently, selecting their own Faction Card and <span class=\"kw\">Tactical Cards</span>. Teammates may choose the same or different Races.",
+              "plain": "In multiplayer games (2v2, 3v3, Free-For-All), agree on a Total Mineral Value per team. Teams divide the budget among players as they wish, provided the team' s total remains within the allowed limits. Each player builds their own army independently, selecting their own Faction Card and Tactical Cards . Teammates may choose the same or different Races."
+            }
+          ]
+        },
+        {
+          "id": "9-1-9-summoned-units",
+          "title": "9.1.9 Summoned Units",
+          "rows": [
+            {
+              "type": "text",
+              "html": "Some <span class=\"kw\">Units</span>, such as the Roachling, Point Defence Drone, and Pylon, have no Mineral Cost. These are <b>Summoned</b> <span class=\"kw\">Units</span>:",
+              "plain": "Some Units , such as the Roachling, Point Defence Drone, and Pylon, have no Mineral Cost. These are Summoned Units :"
+            },
+            {
+              "type": "bullet",
+              "html": "They are not included in the <b>Army List</b> during <span class=\"kw\">army building</span> and do not occupy any <b>Army Slots</b>.",
+              "plain": "They are not included in the Army List during army building and do not occupy any Army Slots ."
+            },
+            {
+              "type": "bullet",
+              "html": "They are not in <b><span class=\"kw\">Reserves</span></b> at the start of the game.",
+              "plain": "They are not in Reserves at the start of the game."
+            },
+            {
+              "type": "bullet",
+              "html": "<b>Summoned</b> <span class=\"kw\">Units</span> cannot be deployed using the regular <span class=\"kw\">deployment</span> rules. They are deployed only when a <b><span class=\"kw\">Special Ability</span></b>, such as <span class=\"kw\">SUMMON</span>, specifically puts them on the battlefield.",
+              "plain": "Summoned Units cannot be deployed using the regular deployment rules. They are deployed only when a Special Ability , such as SUMMON , specifically puts them on the battlefield."
+            },
+            {
+              "type": "bullet",
+              "html": "Once on the battlefield, treat them as <b><span class=\"kw\">Friendly</span></b> <span class=\"kw\">Units</span> for all rule purposes unless stated otherwise.",
+              "plain": "Once on the battlefield, treat them as Friendly Units for all rule purposes unless stated otherwise."
+            },
+            {
+              "type": "bullet",
+              "html": "<span class=\"kw\">Summoned Units</span> are not used for <span class=\"kw\">The Final Score</span>.",
+              "plain": "Summoned Units are not used for The Final Score ."
+            },
+            {
+              "type": "bullet",
+              "html": "Once on the battlefield, a Summoned Unit&#x27; s <b><span class=\"kw\">Current Supply Value</span></b> counts towards the player&#x27; s <b>Total Current Supply</b> on the battlefield.",
+              "plain": "Once on the battlefield, a Summoned Unit' s Current Supply Value counts towards the player' s Total Current Supply on the battlefield."
+            }
+          ]
+        },
+        {
+          "id": "9-1-10-army-roster-visibility",
+          "title": "9.1.10 Army Roster Visibility",
+          "rows": [
+            {
+              "type": "text",
+              "html": "<b>Tournament Override:</b> Organised tournaments may use their own roster visibility rules, which override the default rules below. Always check the Tournament Organiser’s rules pack before attending.",
+              "plain": "Tournament Override: Organised tournaments may use their own roster visibility rules, which override the default rules below. Always check the Tournament Organiser’s rules pack before attending."
+            },
+            {
+              "type": "text",
+              "html": "<b>Default: Open Lists</b>",
+              "plain": "Default: Open Lists"
+            },
+            {
+              "type": "text",
+              "html": "By default, both players share their entire army rosters - including all Unit selections, upgrades, and weapon swaps with each other before the game starts. Since <b><span class=\"kw\">Tactical Cards</span></b> and the <b>Faction Card</b> are already set face-up on the table, Open Lists go one step further by revealing exactly which <span class=\"kw\">Units</span> and upgrades the opponent has selected. This enables both players to plan their strategy with full information and is the recommended way to play.",
+              "plain": "By default, both players share their entire army rosters - including all Unit selections, upgrades, and weapon swaps with each other before the game starts. Since Tactical Cards and the Faction Card are already set face-up on the table, Open Lists go one step further by revealing exactly which Units and upgrades the opponent has selected. This enables both players to plan their strategy with full information and is the recommended way to play."
+            },
+            {
+              "type": "text",
+              "html": "<b>Optional: Closed Lists</b> Before the game begins, both players may agree to play with Closed Lists instead. If either player does not agree, default to Open Lists.",
+              "plain": "Optional: Closed Lists Before the game begins, both players may agree to play with Closed Lists instead. If either player does not agree, default to Open Lists."
+            },
+            {
+              "type": "text",
+              "html": "Under Closed Lists, army rosters are <span class=\"kw\">hidden</span>. Neither player is required to reveal their <b>Army List</b> or Unit upgrades before the game starts. The specific <span class=\"kw\">Units</span> in a player’s roster are discovered during play as they are deployed. However, all <b><span class=\"kw\">Tactical Cards</span></b> and the <b>Faction Card</b> must still be set face-up on the table before the game begins. Both players may inspect each other’s <b><span class=\"kw\">Tactical Cards</span></b> and <b><span class=\"kw\">Faction Cards</span></b> at any time.",
+              "plain": "Under Closed Lists, army rosters are hidden . Neither player is required to reveal their Army List or Unit upgrades before the game starts. The specific Units in a player’s roster are discovered during play as they are deployed. However, all Tactical Cards and the Faction Card must still be set face-up on the table before the game begins. Both players may inspect each other’s Tactical Cards and Faction Cards at any time."
+            },
+            {
+              "type": "text",
+              "html": "Once a Unit is set on the battlefield, the <span class=\"kw\">controlling player</span> must immediately inform the opponent of any upgrades or weapon swaps that the Unit carries. This includes replacement weapons purchased through the Upgrade system (Part <span class=\"ref\">9. 1. 7</span>) or any other modifications that affect how the Unit behaves. The opponent is entitled to inspect the <b>Unit Card</b> and any associated <b><span class=\"kw\">Tactical Cards</span></b> at any time while that Unit is on the table.",
+              "plain": "Once a Unit is set on the battlefield, the controlling player must immediately inform the opponent of any upgrades or weapon swaps that the Unit carries. This includes replacement weapons purchased through the Upgrade system (Part 9. 1. 7 ) or any other modifications that affect how the Unit behaves. The opponent is entitled to inspect the Unit Card and any associated Tactical Cards at any time while that Unit is on the table."
+            },
+            {
+              "type": "text",
+              "html": "<b>Abathur’s TIP:</b> While Open Lists are the default, we strongly recommend trying Closed Lists for the best StarCraft experience. The way <span class=\"kw\">Units</span> are introduced to the battlefield one at a time mirrors the fog of war that defines StarCraft: you scout, you react, you adapt. Not knowing exactly what your opponent is fielding until it <span class=\"kw\">hits</span> the table creates genuine tension and rewards sharp play. Before the first Unit ever <span class=\"kw\">hits</span> the table, take a look at your opponent’s <b><span class=\"kw\">Tactical Cards</span></b> and <b>Faction Card</b>. Each <b>Tactical Card</b> has its own set of <b>Army Slots</b>: Core, Elite, Support, Air, and Hero. These slots determine which <span class=\"kw\">Units</span> can occupy them. By studying what’s on the table, an experienced player can make an educated guess about which <span class=\"kw\">Units</span> are still viable in their opponent’s roster. The Barracks <b>Tactical Card</b> suggests Marines and Marauders. The Spawning Pool <b>Tactical Card</b> suggests Zerglings. The Robotics Facility <b>Tactical Card</b> suggests Colossi and Immortals. Reading your opponent’s <b><span class=\"kw\">Tactical Cards</span></b> is your first act of scouting - just like in the video game.",
+              "plain": "Abathur’s TIP: While Open Lists are the default, we strongly recommend trying Closed Lists for the best StarCraft experience. The way Units are introduced to the battlefield one at a time mirrors the fog of war that defines StarCraft: you scout, you react, you adapt. Not knowing exactly what your opponent is fielding until it hits the table creates genuine tension and rewards sharp play. Before the first Unit ever hits the table, take a look at your opponent’s Tactical Cards and Faction Card . Each Tactical Card has its own set of Army Slots : Core, Elite, Support, Air, and Hero. These slots determine which Units can occupy them. By studying what’s on the table, an experienced player can make an educated guess about which Units are still viable in their opponent’s roster. The Barracks Tactical Card suggests Marines and Marauders. The Spawning Pool Tactical Card suggests Zerglings. The Robotics Facility Tactical Card suggests Colossi and Immortals. Reading your opponent’s Tactical Cards is your first act of scouting - just like in the video game."
+            }
+          ]
+        },
+        {
+          "id": "9-1-11-representation-and-disclosure",
+          "title": "9.1.11 Representation and Disclosure",
+          "rows": [
+            {
+              "type": "text",
+              "html": "All <span class=\"kw\">models</span> should, where possible, accurately depict the weapons and equipment listed on their <b>Unit Card</b>. A <span class=\"kw\">Marine</span> equipped with an AGG-12 should carry that weapon on the model, not a standard C-14 Rifle. Accurate modelling allows both players to identify each model’s loadout at a glance.",
+              "plain": "All models should, where possible, accurately depict the weapons and equipment listed on their Unit Card . A Marine equipped with an AGG-12 should carry that weapon on the model, not a standard C-14 Rifle. Accurate modelling allows both players to identify each model’s loadout at a glance."
+            },
+            {
+              "type": "text",
+              "html": "Where a model does not accurately represent its equipment - such as a model awaiting conversion, or a Unit carrying weapon swaps that are not visually distinct - the <span class=\"kw\">controlling player</span> is obliged to declare all non-represented upgrades and equipment the moment that Unit is deployed to the battlefield. Furthermore, the <span class=\"kw\">controlling player</span> must remind their opponent of any such differences before any action where this information could be relevant - including, but not limited to, declaring <b><span class=\"kw\">Charge</span></b> targets, selecting Shooting targets, or committing to a critical activation.",
+              "plain": "Where a model does not accurately represent its equipment - such as a model awaiting conversion, or a Unit carrying weapon swaps that are not visually distinct - the controlling player is obliged to declare all non-represented upgrades and equipment the moment that Unit is deployed to the battlefield. Furthermore, the controlling player must remind their opponent of any such differences before any action where this information could be relevant - including, but not limited to, declaring Charge targets, selecting Shooting targets, or committing to a critical activation."
+            },
+            {
+              "type": "text",
+              "html": "Both players have the right to full and accurate knowledge of all equipment on the battlefield at all times. Failing to disclose non-represented upgrades or equipment is considered unsportsmanlike conduct.",
+              "plain": "Both players have the right to full and accurate knowledge of all equipment on the battlefield at all times. Failing to disclose non-represented upgrades or equipment is considered unsportsmanlike conduct."
+            }
+          ]
+        }
+      ]
     },
     {
+      "id": "9-2-mission-selection-and-the-draft",
       "title": "9.2 Mission Selection and the Draft",
-      "id": "92-mission-selection-and-the-draft",
-      "html": "Before the game starts, players use a short draft to determine the Mission and <span class=\"kw\">Deployment</span>for the battle. The draft ensures neither player enters with a pre-arranged advantage - both sides have equal say in what is played and where.<br/><br/><strong>WHAT YOU NEED</strong><br/><br/>Each player brings 2 <strong><span class=\"kw\">Mission Cards</span></strong>and 2 <strong><span class=\"kw\">Deployment Cards</span></strong>to the table. A player may not bring duplicate cards in their own set, although both players may independently bring the same cards as each other.<br/><br/>Arrange all cards face-up in two rows:<br/><br/>• <strong>Row 1:</strong><strong><span class=\"kw\">Mission Cards</span></strong><br/><br/>• <strong>Row 2: <span class=\"kw\">Deployment Cards</span></strong><br/><br/><strong>STEP 1 - ROLL-OFF</strong><br/><br/>Both players Roll-Off (Part <span class=\"ref\">3.2</span>). The winner makes two choices, in order:<br/><br/>• <strong>Choice 1 - Colour:</strong>Declare yourself the Red Player or the Blue Player. This determines your <strong><span class=\"kw\">Entry Edge</span></strong>, <strong><span class=\"kw\">Zone of Influence</span></strong>, and <strong>Mission Marker</strong>affinity for the entire game.<br/><br/>• <strong>Choice 2 - Draft Control:</strong>Choose to control either the <strong>Mission Draft</strong>or the <strong><span class=\"kw\">Deployment</span>Draft</strong>. Your opponent automatically controls the other.<br/><br/><strong>Abathur’s TIP:</strong>Controlling the <strong>Mission Draft</strong>secures the victory conditions that suit your army. Controlling the <strong><span class=\"kw\">Deployment</span>Draft</strong>shapes the geometry of the battlefield - tight <span class=\"kw\">deployment</span>zones favour melee armies; spread-out zones favour ranged ones.<br/><br/><strong>STEP 2 - RESOLVE THE MISSION DRAFT</strong><br/><br/>• The player without <strong>Mission Draft</strong>control removes any 2 <strong><span class=\"kw\">Mission Cards</span></strong>from the table.<br/><br/>• The player with <strong>Mission Draft</strong>control selects 1 of the 2 remaining cards. This becomes the Mission for the game. Discard the last card.<br/><br/><strong>STEP 3 - RESOLVE THE <span class=\"kw\">DEPLOYMENT</span>DRAFT</strong><br/><br/>Repeat the same process for the <strong><span class=\"kw\">Deployment Cards</span></strong>:<br/><br/>• The player without <strong><span class=\"kw\">Deployment</span>Draft</strong>control removes any 2 <strong><span class=\"kw\">Deployment Cards</span></strong>from the table.<br/><br/>• The player with <strong><span class=\"kw\">Deployment</span>Draft</strong>control selects 1 of the 2 remaining cards. This becomes the <span class=\"kw\">Deployment</span>for the game. Discard the last card.<br/><br/><strong>STEP 4 - MARKER AFFINITY</strong><br/><br/>Once both cards are chosen, assign <strong><span class=\"kw\">Mission Markers</span>’</strong>affinity according to the Marker number:<br/><br/>Marker Affinity:<br/><br/>• <span class=\"kw\">Markers</span>1 and 3 begin under the Red Player's control.<br/><br/>• <span class=\"kw\">Markers</span>2 and 4 begin under the Blue Player's control.<br/><br/>• Marker 5 begins Neutral.<br/><br/>Marker affinity indicates which player's colour is printed on each Marker. It does not grant starting control.<br/><br/>Proceed to <span class=\"kw\">Battlefield Setup</span>(Part <span class=\"ref\">9.3</span>).<span>9.2.1 Mission and Deployment Card Details</span><strong><span class=\"kw\">Mission Cards</span></strong>define the game’s victory conditions and pacing. Each <strong>Mission Card</strong>details Timing Windows for triggered rules, the <strong>Starting Supply</strong>and <strong>Escalation</strong>values that control the rate at which armies grow, the Game Length (usually 5 rounds), and any Additional Conditions such as <span class=\"kw\">instant</span>win scenarios.<br/><br/><strong><span class=\"kw\">Deployment Cards</span></strong>define the battlefield’s physical layout. Each <strong><span class=\"kw\">Deployment</span>Card</strong>details the battlefield dimensions, the coordinates for <strong><span class=\"kw\">Mission Markers</span></strong>1 through 5, the <strong>Entry</strong><strong>Edge</strong>definitions for each player, and the <strong><span class=\"kw\">Zone of Influence</span>,</strong>which extends 6\" inward from each player’s <strong><span class=\"kw\">Entry Edge</span></strong>.<br/><br/><strong>Marker Affinity:</strong>Once the draft is complete, each <strong>Mission Marker</strong>gains an affinity based on its number. Odd-numbered <span class=\"kw\">Markers</span>(1 and 3) belong to the Red Player, even-numbered <span class=\"kw\">Markers</span>(2 and 4) belong to the Blue Player, and Marker 5 is always Neutral.",
-      "children": []
+      "rows": [
+        {
+          "type": "text",
+          "html": "Before the game starts, players use a short draft to determine the Mission and <span class=\"kw\">Deployment</span> for the battle. The draft ensures neither player enters with a pre-arranged advantage - both sides have equal say in what is played and where.",
+          "plain": "Before the game starts, players use a short draft to determine the Mission and Deployment for the battle. The draft ensures neither player enters with a pre-arranged advantage - both sides have equal say in what is played and where."
+        },
+        {
+          "type": "microhead",
+          "html": "<b>WHAT YOU NEED</b>",
+          "plain": "WHAT YOU NEED"
+        },
+        {
+          "type": "text",
+          "html": "Each player brings 2 <b><span class=\"kw\">Mission Cards</span></b> and 2 <b><span class=\"kw\">Deployment Cards</span></b> to the table. A player may not bring duplicate cards in their own set, although both players may independently bring the same cards as each other.",
+          "plain": "Each player brings 2 Mission Cards and 2 Deployment Cards to the table. A player may not bring duplicate cards in their own set, although both players may independently bring the same cards as each other."
+        },
+        {
+          "type": "text",
+          "html": "Arrange all cards face-up in two rows:",
+          "plain": "Arrange all cards face-up in two rows:"
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Row 1:</b><b><span class=\"kw\">Mission Cards</span></b>",
+          "plain": "Row 1: Mission Cards"
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Row 2: <span class=\"kw\">Deployment Cards</span></b>",
+          "plain": "Row 2: Deployment Cards"
+        },
+        {
+          "type": "microhead",
+          "html": "<b>STEP 1 - ROLL-OFF</b>",
+          "plain": "STEP 1 - ROLL-OFF"
+        },
+        {
+          "type": "text",
+          "html": "Both players Roll-Off (Part <span class=\"ref\">3. 2</span>). The winner makes two choices, in order:",
+          "plain": "Both players Roll-Off (Part 3. 2 ). The winner makes two choices, in order:"
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Choice 1 - Colour:</b> Declare yourself the Red Player or the Blue Player. This determines your <b><span class=\"kw\">Entry Edge</span></b>, <b><span class=\"kw\">Zone of Influence</span></b>, and <b>Mission Marker</b> affinity for the entire game.",
+          "plain": "Choice 1 - Colour: Declare yourself the Red Player or the Blue Player. This determines your Entry Edge , Zone of Influence , and Mission Marker affinity for the entire game."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>Choice 2 - Draft Control:</b> Choose to control either the <b>Mission Draft</b> or the <b><span class=\"kw\">Deployment</span> Draft</b>. Your opponent automatically controls the other.",
+          "plain": "Choice 2 - Draft Control: Choose to control either the Mission Draft or the Deployment Draft . Your opponent automatically controls the other."
+        },
+        {
+          "type": "text",
+          "html": "<b>Abathur’s TIP:</b> Controlling the <b>Mission Draft</b> secures the victory conditions that suit your army. Controlling the <b><span class=\"kw\">Deployment</span> Draft</b> shapes the geometry of the battlefield - tight <span class=\"kw\">deployment</span> zones favour melee armies; spread-out zones favour ranged ones.",
+          "plain": "Abathur’s TIP: Controlling the Mission Draft secures the victory conditions that suit your army. Controlling the Deployment Draft shapes the geometry of the battlefield - tight deployment zones favour melee armies; spread-out zones favour ranged ones."
+        },
+        {
+          "type": "microhead",
+          "html": "<b>STEP 2 - RESOLVE THE MISSION DRAFT</b>",
+          "plain": "STEP 2 - RESOLVE THE MISSION DRAFT"
+        },
+        {
+          "type": "bullet",
+          "html": "The player without <b>Mission Draft</b> control removes any 2 <b><span class=\"kw\">Mission Cards</span></b> from the table.",
+          "plain": "The player without Mission Draft control removes any 2 Mission Cards from the table."
+        },
+        {
+          "type": "bullet",
+          "html": "The player with <b>Mission Draft</b> control selects 1 of the 2 remaining cards. This becomes the Mission for the game. Discard the last card.",
+          "plain": "The player with Mission Draft control selects 1 of the 2 remaining cards. This becomes the Mission for the game. Discard the last card."
+        },
+        {
+          "type": "microhead",
+          "html": "<b>STEP 3 - RESOLVE THE <span class=\"kw\">DEPLOYMENT</span> DRAFT</b>",
+          "plain": "STEP 3 - RESOLVE THE DEPLOYMENT DRAFT"
+        },
+        {
+          "type": "text",
+          "html": "Repeat the same process for the <b><span class=\"kw\">Deployment Cards</span></b>:",
+          "plain": "Repeat the same process for the Deployment Cards :"
+        },
+        {
+          "type": "bullet",
+          "html": "The player without <b><span class=\"kw\">Deployment</span> Draft</b> control removes any 2 <b><span class=\"kw\">Deployment Cards</span></b> from the table.",
+          "plain": "The player without Deployment Draft control removes any 2 Deployment Cards from the table."
+        },
+        {
+          "type": "bullet",
+          "html": "The player with <b><span class=\"kw\">Deployment</span> Draft</b> control selects 1 of the 2 remaining cards. This becomes the <span class=\"kw\">Deployment</span> for the game. Discard the last card.",
+          "plain": "The player with Deployment Draft control selects 1 of the 2 remaining cards. This becomes the Deployment for the game. Discard the last card."
+        },
+        {
+          "type": "microhead",
+          "html": "<b>STEP 4 - MARKER AFFINITY</b>",
+          "plain": "STEP 4 - MARKER AFFINITY"
+        },
+        {
+          "type": "text",
+          "html": "Once both cards are chosen, assign <b><span class=\"kw\">Mission Markers</span>’</b> affinity according to the Marker number:",
+          "plain": "Once both cards are chosen, assign Mission Markers ’ affinity according to the Marker number:"
+        },
+        {
+          "type": "text",
+          "html": "Marker Affinity:",
+          "plain": "Marker Affinity:"
+        },
+        {
+          "type": "bullet",
+          "html": "<span class=\"kw\">Markers</span> 1 and 3 begin under the Red Player&#x27; s control.",
+          "plain": "Markers 1 and 3 begin under the Red Player' s control."
+        },
+        {
+          "type": "bullet",
+          "html": "<span class=\"kw\">Markers</span> 2 and 4 begin under the Blue Player&#x27; s control.",
+          "plain": "Markers 2 and 4 begin under the Blue Player' s control."
+        },
+        {
+          "type": "bullet",
+          "html": "Marker 5 begins Neutral.",
+          "plain": "Marker 5 begins Neutral."
+        },
+        {
+          "type": "text",
+          "html": "Marker affinity indicates which player&#x27; s colour is printed on each Marker. It does not grant starting control.",
+          "plain": "Marker affinity indicates which player' s colour is printed on each Marker. It does not grant starting control."
+        },
+        {
+          "type": "text",
+          "html": "Proceed to <span class=\"kw\">Battlefield Setup</span> (Part <span class=\"ref\">9. 3</span>).",
+          "plain": "Proceed to Battlefield Setup (Part 9. 3 )."
+        }
+      ],
+      "children": [
+        {
+          "id": "9-2-1-mission-and-deployment-card-details",
+          "title": "9.2.1 Mission and Deployment Card Details",
+          "rows": [
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Mission Cards</span></b> define the game’s victory conditions and pacing. Each <b>Mission Card</b> details Timing Windows for triggered rules, the <b>Starting Supply</b> and <b>Escalation</b> values that control the rate at which armies grow, the Game Length (usually 5 rounds), and any Additional Conditions such as <span class=\"kw\">instant</span> win scenarios.",
+              "plain": "Mission Cards define the game’s victory conditions and pacing. Each Mission Card details Timing Windows for triggered rules, the Starting Supply and Escalation values that control the rate at which armies grow, the Game Length (usually 5 rounds), and any Additional Conditions such as instant win scenarios."
+            },
+            {
+              "type": "text",
+              "html": "<b><span class=\"kw\">Deployment Cards</span></b> define the battlefield’s physical layout. Each <b><span class=\"kw\">Deployment</span> Card</b> details the battlefield dimensions, the coordinates for <b><span class=\"kw\">Mission Markers</span></b> 1 through 5, the <b>Entry</b><b>Edge</b> definitions for each player, and the <b><span class=\"kw\">Zone of Influence</span>,</b> which extends 6&quot; inward from each player’s <b><span class=\"kw\">Entry Edge</span></b>.",
+              "plain": "Deployment Cards define the battlefield’s physical layout. Each Deployment Card details the battlefield dimensions, the coordinates for Mission Markers 1 through 5, the Entry Edge definitions for each player, and the Zone of Influence , which extends 6\" inward from each player’s Entry Edge ."
+            },
+            {
+              "type": "text",
+              "html": "<b>Marker Affinity:</b> Once the draft is complete, each <b>Mission Marker</b> gains an affinity based on its number. Odd-numbered <span class=\"kw\">Markers</span> (1 and 3) belong to the Red Player, even-numbered <span class=\"kw\">Markers</span> (2 and 4) belong to the Blue Player, and Marker 5 is always Neutral.",
+              "plain": "Marker Affinity: Once the draft is complete, each Mission Marker gains an affinity based on its number. Odd-numbered Markers (1 and 3) belong to the Red Player, even-numbered Markers (2 and 4) belong to the Blue Player, and Marker 5 is always Neutral."
+            }
+          ]
+        }
+      ]
     },
     {
+      "id": "9-3-battlefield-setup",
       "title": "9.3 Battlefield Setup",
-      "id": "93-battlefield-setup",
-      "html": "Once the draft is complete and both cards have been chosen, the battlefield is set up in the following order.<br/><br/>• First, confirm the table dimensions as specified on the selected <strong><span class=\"kw\">Deployment</span>Card</strong>.<br/><br/>• Second, assign <strong>Entry Edges</strong>to each player as indicated on the <strong><span class=\"kw\">Deployment</span>Card</strong>.<br/><br/>• Third, set <strong><span class=\"kw\">Zone of Influence</span><span class=\"kw\">Markers</span></strong>at the corners of each player’s <strong><span class=\"kw\">Entry Edge</span></strong>where the <strong><span class=\"kw\">Entry Edge</span></strong>does not run the full length of a table edge, exactly as instructed by the <strong><span class=\"kw\">Deployment</span>Card</strong>.<br/><br/>• Fourth, set <strong><span class=\"kw\">Mission Markers</span></strong>at the coordinates listed on the selected <strong><span class=\"kw\">Deployment</span>Card</strong>.<br/><br/>• Finally, set terrain by either selecting or rolling for one of the pre-made maps on the last pages of the rulebook, or starting with the Red Player, players alternate placing one terrain piece at a time based on the terrain density guide below.<br/><br/><strong>Terrain Density Guidelines</strong><br/><br/>A balanced battlefield requires enough terrain for tactical choices without restricting movement or blocking sight lines. The following guidelines apply to a <strong>Standard (36\" x</strong><strong>54\")</strong>table and should be scaled proportionally for other sizes.<br/><br/><strong>Recommended Terrain Count:</strong>8 to 12 pieces total, distributed as follows:<br/><br/>• <strong>0 to 2 pieces of Size 0</strong>(scatter terrain).<br/><br/>• <strong>2 to 4 pieces of Size 1</strong>(barricades, low walls, scatter crates). These provide <span class=\"kw\">Cover</span>for infantry but do not block <strong><span class=\"kw\">Line of Sight</span></strong>for anything larger than Size 1 <span class=\"kw\">models</span>.<br/><br/>• <strong>4 to 6 pieces of Size 2</strong>(ruins, bunkers, wrecked vehicles). These form the backbone of the table, blocking LoS for most standard <span class=\"kw\">Units</span>and creating the fire lanes and chokepoints that define the game.<br/><br/>• <strong>(If available) 1 to 2 pieces of Size 3+.</strong>These create <strong>HIGH GROUND</strong>positions and block LoS for almost everything. Too many of these make ranged combat nearly impossible; too few leave the table feeling flat.<br/><br/>• <strong>4 to 6 pieces of <span class=\"kw\">Grass</span>(Size 2 special)</strong>. These do not block movement but provide a natural LoS <span class=\"kw\">cover</span>for <span class=\"kw\">Units</span>advancing across open ground.<br/><br/><strong>Distribution:</strong>Divide the table visually into four quarters. Each quarter should contain at least 2 significant pieces (Size 2 or larger). No quarter should be completely empty, and none should be so dense that <span class=\"kw\">Units</span>cannot manoeuvre through it.<br/><br/><strong>The Centre:</strong>The area <strong><span class=\"kw\">Within</span>6\"</strong>of the table centre should contain at least one significant terrain piece. An empty centre creates a kill zone that punishes whoever moves first and can stall the game. Conversely, a completely blocked centre forces all engagements to the flanks.<br/><br/><strong>Fire Lanes:</strong>Ensure that at least 2 clear fire lanes of 6\" or wider exist, running roughly from one <strong><span class=\"kw\">Entry Edge</span></strong>towards the other. Without fire lanes, ranged <span class=\"kw\">Units</span>have no role, and melee armies dominate unchecked.<br/><br/><strong>Access Points:</strong>Every piece of Size 3+ terrain that <span class=\"kw\">models</span>can stand on should have at least one <span class=\"kw\">ACCESS POINT</span>reachable from <strong>GROUND LEVEL</strong>without <span class=\"kw\">passing</span>through another Size 2+ terrain piece. Elevated positions that are unreachable waste table space.<br/><br/><strong>Abathur’s TIP:</strong>The placement of terrain is the very first strategic <span class=\"kw\">move</span>of the game, made before any miniature is set on the board. If you have a force that excels at ranged combat, position your tall <span class=\"kw\">blocking terrain</span>pieces towards the centre to block fire lanes along the edges and direct melee armies into confined spaces. If your force is better at close-range combat, manipulate the terrain to create opportunities for sneaky movements unseen by ranged fire. Always consider the <strong><span class=\"kw\">Mission Markers</span></strong>; placing terrain near a Marker makes it easier to <span class=\"kw\">hold</span>with <span class=\"kw\">Cover</span>, while leaving a Marker exposed likely benefits those with the most aggressive ranged fire.",
+      "rows": [
+        {
+          "type": "text",
+          "html": "Once the draft is complete and both cards have been chosen, the battlefield is set up in the following order.",
+          "plain": "Once the draft is complete and both cards have been chosen, the battlefield is set up in the following order."
+        },
+        {
+          "type": "bullet",
+          "html": "First, confirm the table dimensions as specified on the selected <b><span class=\"kw\">Deployment</span> Card</b>.",
+          "plain": "First, confirm the table dimensions as specified on the selected Deployment Card ."
+        },
+        {
+          "type": "bullet",
+          "html": "Second, assign <b>Entry Edges</b> to each player as indicated on the <b><span class=\"kw\">Deployment</span> Card</b>.",
+          "plain": "Second, assign Entry Edges to each player as indicated on the Deployment Card ."
+        },
+        {
+          "type": "bullet",
+          "html": "Third, set <b><span class=\"kw\">Zone of Influence</span> <span class=\"kw\">Markers</span></b> at the corners of each player’s <b><span class=\"kw\">Entry Edge</span></b> where the <b><span class=\"kw\">Entry Edge</span></b> does not run the full length of a table edge, exactly as instructed by the <b><span class=\"kw\">Deployment</span> Card</b>.",
+          "plain": "Third, set Zone of Influence Markers at the corners of each player’s Entry Edge where the Entry Edge does not run the full length of a table edge, exactly as instructed by the Deployment Card ."
+        },
+        {
+          "type": "bullet",
+          "html": "Fourth, set <b><span class=\"kw\">Mission Markers</span></b> at the coordinates listed on the selected <b><span class=\"kw\">Deployment</span> Card</b>.",
+          "plain": "Fourth, set Mission Markers at the coordinates listed on the selected Deployment Card ."
+        },
+        {
+          "type": "bullet",
+          "html": "Finally, set terrain by either selecting or rolling for one of the pre-made maps on the last pages of the rulebook, or starting with the Red Player, players alternate placing one terrain piece at a time based on the terrain density guide below.",
+          "plain": "Finally, set terrain by either selecting or rolling for one of the pre-made maps on the last pages of the rulebook, or starting with the Red Player, players alternate placing one terrain piece at a time based on the terrain density guide below."
+        },
+        {
+          "type": "text",
+          "html": "<b>Terrain Density Guidelines</b>",
+          "plain": "Terrain Density Guidelines"
+        },
+        {
+          "type": "text",
+          "html": "A balanced battlefield requires enough terrain for tactical choices without restricting movement or blocking sight lines. The following guidelines apply to a <b>Standard (36\" x</b><b>54\")</b> table and should be scaled proportionally for other sizes.",
+          "plain": "A balanced battlefield requires enough terrain for tactical choices without restricting movement or blocking sight lines. The following guidelines apply to a Standard (36\" x 54\") table and should be scaled proportionally for other sizes."
+        },
+        {
+          "type": "text",
+          "html": "<b>Recommended Terrain Count:</b> 8 to 12 pieces total, distributed as follows:",
+          "plain": "Recommended Terrain Count: 8 to 12 pieces total, distributed as follows:"
+        },
+        {
+          "type": "bullet",
+          "html": "<b>0 to 2 pieces of Size 0</b> (scatter terrain).",
+          "plain": "0 to 2 pieces of Size 0 (scatter terrain)."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>2 to 4 pieces of Size 1</b> (barricades, low walls, scatter crates). These provide <span class=\"kw\">Cover</span> for infantry but do not block <b><span class=\"kw\">Line of Sight</span></b> for anything larger than Size 1 <span class=\"kw\">models</span>.",
+          "plain": "2 to 4 pieces of Size 1 (barricades, low walls, scatter crates). These provide Cover for infantry but do not block Line of Sight for anything larger than Size 1 models ."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>4 to 6 pieces of Size 2</b> (ruins, bunkers, wrecked vehicles). These form the backbone of the table, blocking LoS for most standard <span class=\"kw\">Units</span> and creating the fire lanes and chokepoints that define the game.",
+          "plain": "4 to 6 pieces of Size 2 (ruins, bunkers, wrecked vehicles). These form the backbone of the table, blocking LoS for most standard Units and creating the fire lanes and chokepoints that define the game."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>(If available) 1 to 2 pieces of Size 3+.</b> These create <b>HIGH GROUND</b> positions and block LoS for almost everything. Too many of these make ranged combat nearly impossible; too few leave the table feeling flat.",
+          "plain": "(If available) 1 to 2 pieces of Size 3+. These create HIGH GROUND positions and block LoS for almost everything. Too many of these make ranged combat nearly impossible; too few leave the table feeling flat."
+        },
+        {
+          "type": "bullet",
+          "html": "<b>4 to 6 pieces of <span class=\"kw\">Grass</span> (Size 2 special)</b>. These do not block movement but provide a natural LoS <span class=\"kw\">cover</span> for <span class=\"kw\">Units</span> advancing across open ground.",
+          "plain": "4 to 6 pieces of Grass (Size 2 special) . These do not block movement but provide a natural LoS cover for Units advancing across open ground."
+        },
+        {
+          "type": "text",
+          "html": "<b>Distribution:</b> Divide the table visually into four quarters. Each quarter should contain at least 2 significant pieces (Size 2 or larger). No quarter should be completely empty, and none should be so dense that <span class=\"kw\">Units</span> cannot manoeuvre through it.",
+          "plain": "Distribution: Divide the table visually into four quarters. Each quarter should contain at least 2 significant pieces (Size 2 or larger). No quarter should be completely empty, and none should be so dense that Units cannot manoeuvre through it."
+        },
+        {
+          "type": "text",
+          "html": "<b>The Centre:</b> The area <b><span class=\"kw\">Within</span> 6\"</b> of the table centre should contain at least one significant terrain piece. An empty centre creates a kill zone that punishes whoever moves first and can stall the game. Conversely, a completely blocked centre forces all engagements to the flanks.",
+          "plain": "The Centre: The area Within 6\" of the table centre should contain at least one significant terrain piece. An empty centre creates a kill zone that punishes whoever moves first and can stall the game. Conversely, a completely blocked centre forces all engagements to the flanks."
+        },
+        {
+          "type": "text",
+          "html": "<b>Fire Lanes:</b> Ensure that at least 2 clear fire lanes of 6&quot; or wider exist, running roughly from one <b><span class=\"kw\">Entry Edge</span></b> towards the other. Without fire lanes, ranged <span class=\"kw\">Units</span> have no role, and melee armies dominate unchecked.",
+          "plain": "Fire Lanes: Ensure that at least 2 clear fire lanes of 6\" or wider exist, running roughly from one Entry Edge towards the other. Without fire lanes, ranged Units have no role, and melee armies dominate unchecked."
+        },
+        {
+          "type": "text",
+          "html": "<b>Access Points:</b> Every piece of Size 3+ terrain that <span class=\"kw\">models</span> can stand on should have at least one <span class=\"kw\">ACCESS POINT</span> reachable from <b>GROUND LEVEL</b> without <span class=\"kw\">passing</span> through another Size 2+ terrain piece. Elevated positions that are unreachable waste table space.",
+          "plain": "Access Points: Every piece of Size 3+ terrain that models can stand on should have at least one ACCESS POINT reachable from GROUND LEVEL without passing through another Size 2+ terrain piece. Elevated positions that are unreachable waste table space."
+        },
+        {
+          "type": "text",
+          "html": "<b>Abathur’s TIP:</b> The placement of terrain is the very first strategic <span class=\"kw\">move</span> of the game, made before any miniature is set on the board. If you have a force that excels at ranged combat, position your tall <span class=\"kw\">blocking terrain</span> pieces towards the centre to block fire lanes along the edges and direct melee armies into confined spaces. If your force is better at close-range combat, manipulate the terrain to create opportunities for sneaky movements unseen by ranged fire. Always consider the <b><span class=\"kw\">Mission Markers</span></b>; placing terrain near a Marker makes it easier to <span class=\"kw\">hold</span> with <span class=\"kw\">Cover</span>, while leaving a Marker exposed likely benefits those with the most aggressive ranged fire.",
+          "plain": "Abathur’s TIP: The placement of terrain is the very first strategic move of the game, made before any miniature is set on the board. If you have a force that excels at ranged combat, position your tall blocking terrain pieces towards the centre to block fire lanes along the edges and direct melee armies into confined spaces. If your force is better at close-range combat, manipulate the terrain to create opportunities for sneaky movements unseen by ranged fire. Always consider the Mission Markers ; placing terrain near a Marker makes it easier to hold with Cover , while leaving a Marker exposed likely benefits those with the most aggressive ranged fire."
+        }
+      ],
       "children": []
     }
   ]

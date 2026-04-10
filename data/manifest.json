@@ -1,0 +1,95 @@
+{
+  "title": "StarCraft TMG — Rules",
+  "subtitle": "Full rules • modular content • printable",
+  "quickPart": "part-12",
+  "parts": [
+    {
+      "num": "2",
+      "kicker": "Part II",
+      "title": "Core Concepts",
+      "id": "part-2",
+      "color": "#4f8c99",
+      "file": "data/parts/part-2.json"
+    },
+    {
+      "num": "3",
+      "kicker": "Part III",
+      "title": "Dice and Rolling",
+      "id": "part-3",
+      "color": "#9a7437",
+      "file": "data/parts/part-3.json"
+    },
+    {
+      "num": "4",
+      "kicker": "Part IV",
+      "title": "Measuring and Movement",
+      "id": "part-4",
+      "color": "#4a72b0",
+      "file": "data/parts/part-4.json"
+    },
+    {
+      "num": "5",
+      "kicker": "Part V",
+      "title": "Cards and Characteristics",
+      "id": "part-5",
+      "color": "#6f7882",
+      "file": "data/parts/part-5.json"
+    },
+    {
+      "num": "6",
+      "kicker": "Part VI",
+      "title": "The Supply System",
+      "id": "part-6",
+      "color": "#5f8452",
+      "file": "data/parts/part-6.json"
+    },
+    {
+      "num": "7",
+      "kicker": "Part VII",
+      "title": "The Battlefield",
+      "id": "part-7",
+      "color": "#a56d43",
+      "file": "data/parts/part-7.json"
+    },
+    {
+      "num": "8",
+      "kicker": "Part VIII",
+      "title": "The Game Sequence",
+      "id": "part-8",
+      "color": "#8062a5",
+      "file": "data/parts/part-8.json"
+    },
+    {
+      "num": "9",
+      "kicker": "Part IX",
+      "title": "Preparing for Battle",
+      "id": "part-9",
+      "color": "#96597d",
+      "file": "data/parts/part-9.json"
+    },
+    {
+      "num": "10",
+      "kicker": "Part X",
+      "title": "Advanced Rules",
+      "id": "part-10",
+      "color": "#8a69ae",
+      "file": "data/parts/part-10.json"
+    },
+    {
+      "num": "11",
+      "kicker": "Part XI",
+      "title": "Keyword Glossary and Definitions",
+      "id": "part-11",
+      "color": "#a95276",
+      "file": "data/parts/part-11.json"
+    },
+    {
+      "num": "12",
+      "kicker": "Part XII",
+      "title": "Quick Reference",
+      "id": "part-12",
+      "color": "#4b8a86",
+      "file": "data/parts/part-12.json"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "num": "3",
+  "kicker": "Part III",
+  "title": "Dice and Rolling",
+  "id": "part-3",
+  "color": "#9a7437",
+  "intro": "Chance plays a vital role on the battlefield, as a well-aimed volley can harmlessly ricochet off reinforced armour, or a desperate last stand can turn the tide of an entire battle. In this Part, we’ll discuss how <span class=\"kw\">dice</span>are used to resolve uncertain outcomes, from basic rolls and <span class=\"kw\">modifiers</span>to the Roll-Off, which settles disputes and decides initiative.",
+  "rules": [
+    {
+      "title": "3.1 Dice",
+      "id": "31-dice",
+      "html": "The game uses standard six-sided <span class=\"kw\">dice</span>(<strong>D6</strong>).<br/><br/>• <strong>D6:</strong>Roll one die. The result is the number shown.<br/><br/>• <strong>D3:</strong>Roll one D6 and halve the result, rounding up: 1–2 = <strong>1</strong>, 3–4 = <strong>2</strong>, 5–6 = <strong>3</strong>.<br/><br/>• <strong>Multiple <span class=\"kw\">Dice</span>(2D6, 3D6):</strong>Roll the stated number of <span class=\"kw\">dice</span>and add the results together.",
+      "children": []
+    },
+    {
+      "title": "3.2 Roll-Offs",
+      "id": "32-roll-offs",
+      "html": "When a rule calls for a Roll-Off, both players roll 2D6. The higher total wins. Ties are re-rolled until a winner is determined.",
+      "children": []
+    },
+    {
+      "title": "3.3 Re-Rolls",
+      "id": "33-re-rolls",
+      "html": "Some abilities grant the chance to re-roll, allowing a second attempt when the first result is unfavourable. Pick up the die and roll it again. The new result replaces the original, even if it is worse. Unless stated otherwise, a re-roll applies to a single die. If an ability specifies re-rolling multiple <span class=\"kw\">dice</span>, follow its instructions.",
+      "children": []
+    },
+    {
+      "title": "3.4 Modifiers",
+      "id": "34-modifiers",
+      "html": "<span class=\"kw\">Modifiers</span>adjust the Target Number of a roll. Apply all <span class=\"kw\">modifiers</span>before rolling.<br/><br/>• <strong>+X <span class=\"kw\">Modifier</span></strong>: Makes the roll easier, reducing the Target Number by X.<br/><br/>• <strong>-X <span class=\"kw\">Modifier</span>:</strong>Makes the roll harder, increasing the Target Number by X.<br/><br/><span class=\"kw\">Modifiers</span>from different named sources are cumulative unless otherwise stated.<br/><br/><strong>EXAMPLE:</strong>A <span class=\"kw\">Marine</span>needs <strong>5+</strong>to hit.<br/><br/>• A <strong>+1 <span class=\"kw\">Modifier</span></strong>reduces the Target Number by 1. He now <span class=\"kw\">hits</span>on <strong>4+</strong>.<br/><br/>• A <strong>-1 <span class=\"kw\">Modifier</span></strong>increases the Target Number by 1. He now <span class=\"kw\">hits</span>on <strong>6+</strong>.<br/><br/>Ability text: \"+1 to Armour\" means the <strong>Armour Roll</strong>improves (Target Number decreases). \"-1 to Hit\" means hitting becomes harder (Target Number increases).<br/><br/>A Target Number can never be modified below 2+ or above 6+.<br/><br/><strong>DESIGNER’S NOTE:</strong><span class=\"kw\">Modifiers</span>adjust the Target Number, not the <span class=\"kw\">dice</span>roll itself. This keeps arithmetic simple, as a player always knows exactly what the Target Number is before rolling the <span class=\"kw\">dice</span>. It also ensures that automatic successes on a roll of 6 and automatic failures on a roll of 1 are clear, no matter how many <span class=\"kw\">modifiers</span>are applied to a single roll.",
+      "children": []
+    },
+    {
+      "title": "3.5 Fixed Additions",
+      "id": "35-fixed-additions",
+      "html": "If a rule says \"D3+1\", roll the die and add 1 to the result. This is not a <span class=\"kw\">modifier</span>to a Target Number - it generates a value (e.g. 4 <strong>Damage</strong>instead of 3).",
+      "children": []
+    },
+    {
+      "title": "3.6 Automatic Results",
+      "id": "36-automatic-results",
+      "html": "No amount of preparation guarantees a perfect outcome, and no situation is ever truly hopeless. The <span class=\"kw\">dice</span>always leave room for the unexpected.<br/><br/>Regardless of the final Target Number, a natural roll of 6 always succeeds, and a natural roll of 1 always fails. No <span class=\"kw\">modifier</span>or ability can override these boundaries.<br/><br/><strong>A Null Value (-)</strong>indicates that the capability does not exist. No <span class=\"kw\">modifier</span>can grant a roll where a Null Value applies.",
+      "children": []
+    },
+    {
+      "title": "3.7 Tests",
+      "id": "37-tests",
+      "html": "Whenever the rules ask a player to roll against a number, an <strong>Armour Roll</strong>, a Hit roll, or an Evade check, that roll is a Test. Every Test follows the same logic: there is a Target Number, the player rolls, and the result either meets the threshold or it does not.<br/><br/><span class=\"kw\">Tests</span>come in two flavours:<br/><br/>• <strong>Characteristic <span class=\"kw\">Tests</span></strong>use a value from the Unit’s own profile, its Armour, its Evade, and its native resilience. When a squad of Marines takes fire and rolls their <strong>Armour Rolls</strong>, that is a Characteristic Test.<br/><br/>• <strong>Attribute <span class=\"kw\">Tests</span></strong>use a value from a Weapon Profile or Special Rule, such as a weapon’s Hit characteristic. When those same Marines fire their C-14 Rifles and roll to hit, that is an Attribute Test.<br/><br/>Not everything involving <span class=\"kw\">dice</span>is a Test. <strong>Value Generation</strong>- a <strong><span class=\"kw\">Charge</span>Roll</strong>, a D3 <strong>Damage</strong>result, simply produces a number. The player adds the die result to the base value as instructed. There is no Target Number to beat.<br/><br/>To resolve any Test: identify the base Target Number, apply all <span class=\"kw\">Modifiers</span>to determine the final Target Number, and roll the die. If the result is equal to or exceeds the Target Number, the Test succeeds. If it falls short, the Test fails.",
+      "children": []
+    },
+    {
+      "title": "3.8 Cocked Dice",
+      "id": "38-cocked-dice",
+      "html": "If a die does not land flat on the playing surface, lodged against terrain, tilted on a base, or off the table entirely, the roll is invalid. Pick it up and roll it again. Players should agree before the game on what constitutes a cocked die. The simplest test: if the result isn't obvious at a glance, re-roll it.",
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2e3136">
+<title>StarCraft TMG — Rules</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="app" id="app" data-density="comfortable">
+  <header class="topbar">
+    <div class="topbar-row">
+      <div class="brand">
+        <div class="brand-kicker">Mobile field manual</div>
+        <div class="brand-title">Rules</div>
+        <div class="brand-sub">Full rules • thumb-first • printable</div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" id="tocBtn" aria-label="Table of contents">☰</button>
+        <button class="icon-btn" id="densityBtn" aria-label="Toggle density">◫</button>
+        <button class="icon-btn" id="printBtn" aria-label="Open printable version">🖨</button>
+      </div>
+    </div>
+    <div class="progress"><span id="scrollProgress"></span></div>
+  </header>
+
+  <main class="main">
+    <section id="view-home" class="view active">
+      <div class="hero">
+        <h2>Full rules, built for play.</h2>
+        <p>This version uses progressive disclosure, thumb-reachable navigation, persistent bookmarks, and quick search so players can get to the right rule fast without losing the full rulebook.</p>
+        <div class="hero-actions">
+          <button class="cta primary" data-go="rules">Open Rules</button>
+          <button class="cta" id="continueBtn">Continue Reading</button>
+        </div>
+      </div>
+
+      <div class="section-label"><span>Quick jump</span><span class="mode-note" id="lastReadNote">No recent section yet</span></div>
+      <div class="tile-grid" id="homeParts"></div>
+
+      <div class="section-label"><span>Recent</span></div>
+      <div class="mini-list" id="recentList"></div>
+
+      <div class="section-label"><span>Saved</span><button class="ghost-btn hidden" id="clearSavedBtn"></button></div>
+      <div class="mini-list" id="savedPreview"></div>
+    </section>
+
+    <section id="view-rules" class="view">
+      <div class="search-shell">
+        <div class="searchbar">
+          <span aria-hidden="true">⌕</span>
+          <input id="browseSearch" type="search" placeholder="Search headings in the rules" inputmode="search" />
+          <button class="ghost-btn" id="clearBrowseSearch" aria-label="Clear search">×</button>
+        </div>
+      </div>
+      <div class="parts" id="rulesParts"></div>
+    </section>
+
+    <section id="view-search" class="view">
+      <div class="search-shell">
+        <div class="searchbar">
+          <span aria-hidden="true">⌕</span>
+          <input id="globalSearch" type="search" placeholder="Search the full rulebook" inputmode="search" />
+          <button class="ghost-btn" id="clearGlobalSearch" aria-label="Clear search">×</button>
+        </div>
+      </div>
+      <div class="filters" id="searchFilters"></div>
+      <div class="result-list" id="searchResults"></div>
+    </section>
+
+    <section id="view-quick" class="view">
+      <div class="section-label"><span>Quick operating pages</span></div>
+      <div class="quick-cards" id="quickCards"></div>
+    </section>
+
+    <section id="view-saved" class="view">
+      <div class="section-label"><span>Bookmarks</span><span class="mode-note">Stored on this device</span></div>
+      <div id="savedList"></div>
+      <div class="section-label"><span>Recent history</span></div>
+      <div id="historyList"></div>
+    </section>
+  </main>
+
+  <div class="float-jump" id="jumpTop"><button aria-label="Back to top">↑</button></div>
+
+  <nav class="bottom-nav" aria-label="Primary">
+    <div class="bottom-nav-inner">
+      <button class="nav-btn active" data-view="home"><span>⌂</span><span class="nav-label">Home</span></button>
+      <button class="nav-btn" data-view="rules"><span>§</span><span class="nav-label">Rules</span></button>
+      <button class="nav-btn" data-view="search"><span>⌕</span><span class="nav-label">Search</span></button>
+      <button class="nav-btn" data-view="quick"><span>⇄</span><span class="nav-label">Quick</span></button>
+    </div>
+  </nav>
+
+  <div class="sheet-scrim" id="sheetScrim"></div>
+  <aside class="sheet" id="tocSheet" aria-hidden="true">
+    <div class="sheet-head">
+      <div class="sheet-title">Table of contents</div>
+      <button class="icon-btn" id="closeSheetBtn" aria-label="Close">×</button>
+    </div>
+    <div class="sheet-body"><div class="toc-list" id="tocList"></div></div>
+  </aside>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
